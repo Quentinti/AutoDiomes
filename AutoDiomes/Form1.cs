@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace AutoDiomes
 {
-    public partial class Form1 : Form
+    public partial class Application : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
@@ -25,7 +25,7 @@ namespace AutoDiomes
             int nHeightEllipse
 
         );
-        public Form1()
+        public Application()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
