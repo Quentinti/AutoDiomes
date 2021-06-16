@@ -38,13 +38,14 @@ namespace AutoDiomes
             this.panel3 = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.PnlFormLoader = new System.Windows.Forms.Panel();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnAnalytics = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PnlFormLoader = new System.Windows.Forms.Panel();
+            this.AreaMove = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,9 +110,10 @@ namespace AutoDiomes
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.PnlFormLoader);
+            this.panel3.Controls.Add(this.AreaMove);
             this.panel3.Controls.Add(this.CloseButton);
             this.panel3.Controls.Add(this.lblTitle);
+            this.panel3.Controls.Add(this.PnlFormLoader);
             this.panel3.Location = new System.Drawing.Point(185, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(764, 577);
@@ -140,6 +142,14 @@ namespace AutoDiomes
             this.lblTitle.Size = new System.Drawing.Size(215, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Menu principal";
+            // 
+            // PnlFormLoader
+            // 
+            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PnlFormLoader.Location = new System.Drawing.Point(0, 100);
+            this.PnlFormLoader.Name = "PnlFormLoader";
+            this.PnlFormLoader.Size = new System.Drawing.Size(764, 477);
+            this.PnlFormLoader.TabIndex = 2;
             // 
             // btnAbout
             // 
@@ -242,13 +252,17 @@ namespace AutoDiomes
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // PnlFormLoader
+            // AreaMove
             // 
-            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlFormLoader.Location = new System.Drawing.Point(0, 100);
-            this.PnlFormLoader.Name = "PnlFormLoader";
-            this.PnlFormLoader.Size = new System.Drawing.Size(764, 477);
-            this.PnlFormLoader.TabIndex = 2;
+            this.AreaMove.BackColor = System.Drawing.Color.Transparent;
+            this.AreaMove.ForeColor = System.Drawing.Color.Transparent;
+            this.AreaMove.Location = new System.Drawing.Point(0, 0);
+            this.AreaMove.Name = "AreaMove";
+            this.AreaMove.Size = new System.Drawing.Size(764, 23);
+            this.AreaMove.TabIndex = 3;
+            this.AreaMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseDown);
+            this.AreaMove.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseMove);
+            this.AreaMove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseUp);
             // 
             // Application
             // 
@@ -256,9 +270,9 @@ namespace AutoDiomes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.PnlNav);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Application";
@@ -293,6 +307,7 @@ namespace AutoDiomes
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Panel PnlFormLoader;
+        private System.Windows.Forms.Panel AreaMove;
     }
 }
 

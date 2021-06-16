@@ -13,6 +13,13 @@ namespace AutoDiomes
 {
     public partial class Application : Form
     {
+        //This can be cause lag
+
+        int mov;
+        int movX;
+        int movY;
+
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
         private static extern IntPtr CreateRoundRectRgn
@@ -42,13 +49,11 @@ namespace AutoDiomes
             FrmDashboard_Verbose.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            //this will make form load on current working monitor
+            this.Location = Screen.AllScreens[1].WorkingArea.Location;
+
 
         }
 
@@ -156,37 +161,7 @@ namespace AutoDiomes
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void circularProgressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -194,6 +169,27 @@ namespace AutoDiomes
         private void CloseButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.ExitThread();
+        }
+
+        private void AreaMove_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+
+        }
+
+        private void AreaMove_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void AreaMove_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
         }
     }
 }
