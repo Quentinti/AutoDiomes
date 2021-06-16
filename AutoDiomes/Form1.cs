@@ -33,6 +33,13 @@ namespace AutoDiomes
             PnlNav.Top = btnDashboard.Top;
             PnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Menu principal";
+            this.PnlFormLoader.Controls.Clear();
+            frmDashboard FrmDashboard_Verbose = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmDashboard_Verbose.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(FrmDashboard_Verbose);
+            FrmDashboard_Verbose.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -51,6 +58,13 @@ namespace AutoDiomes
             PnlNav.Top = btnDashboard.Top;
             PnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Menu principal";
+            this.PnlFormLoader.Controls.Clear();
+            frmDashboard FrmDashboard_Verbose = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmDashboard_Verbose.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(FrmDashboard_Verbose);
+            FrmDashboard_Verbose.Show();
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
@@ -59,6 +73,13 @@ namespace AutoDiomes
             PnlNav.Top = btnAnalytics.Top;
             PnlNav.Left = btnAnalytics.Left;
             btnAnalytics.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Génération fichier";
+            this.PnlFormLoader.Controls.Clear();
+            frmAnalytics FrmAnalytics_Verbose = new frmAnalytics() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmAnalytics_Verbose.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(FrmAnalytics_Verbose);
+            FrmAnalytics_Verbose.Show();
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
@@ -67,6 +88,13 @@ namespace AutoDiomes
             PnlNav.Top = btnHelp.Top;
             PnlNav.Left = btnHelp.Left;
             btnHelp.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Aide";
+            this.PnlFormLoader.Controls.Clear();
+            frmHelp FrmHelp_Verbose = new frmHelp() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmHelp_Verbose.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(FrmHelp_Verbose);
+            FrmHelp_Verbose.Show();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -75,6 +103,13 @@ namespace AutoDiomes
             PnlNav.Top = btnSettings.Top;
             PnlNav.Left = btnSettings.Left;
             btnSettings.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Paramètres";
+            this.PnlFormLoader.Controls.Clear();
+            frmSettings FrmSettings_Verbose = new frmSettings() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmSettings_Verbose.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(FrmSettings_Verbose);
+            FrmSettings_Verbose.Show();
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
@@ -84,6 +119,12 @@ namespace AutoDiomes
             PnlNav.Left = btnAbout.Left;
             btnAbout.BackColor = Color.FromArgb(46, 51, 73);
 
+            lblTitle.Text = "Paramètres";
+            this.PnlFormLoader.Controls.Clear();
+            frmAbout FrmAbout_Verbose = new frmAbout() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmAbout_Verbose.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(FrmAbout_Verbose);
+            FrmAbout_Verbose.Show();
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)
@@ -148,6 +189,11 @@ namespace AutoDiomes
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.ExitThread();
         }
     }
 }
