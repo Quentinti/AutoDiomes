@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.DirectoryServices.AccountManagement;
 using System.IO;
+using System.IO.Ports;
 
 namespace AutoDiomes
 {
@@ -23,12 +24,12 @@ namespace AutoDiomes
         int movX;
         int movY;
         string userName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName; //get current user display name
-        string pictureAccountPath = @"C:\Users" + Environment.UserName + @"\AppData\Roaming\Microsoft\Windows\AccountPictures"; //path for the picture account
+        string userEmail = System.DirectoryServices.AccountManagement.UserPrincipal.Current.EmailAddress; //get current user display name
 
         DirectoryInfo directorymain = Directory.CreateDirectory(@"C:\AutoDiomes"); //automatic create directory if he is not present
         DirectoryInfo directorytemp = Directory.CreateDirectory(@"C:\AutoDiomes\temp"); //automatic create directory temp for temporary files
 
-        //System.IO.File.Copy("source", "destination");
+        SerialPort port;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] //import dll for create round windows forms
 
@@ -54,6 +55,7 @@ namespace AutoDiomes
 
             lblTitle.Text = "Menu principal";
             lblUserName.Text = userName;
+            lblEmail.Text = userEmail;
             this.PnlFormLoader.Controls.Clear();
             frmDashboard FrmDashboard_Verbose = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmDashboard_Verbose.FormBorderStyle = FormBorderStyle.None;
@@ -76,6 +78,7 @@ namespace AutoDiomes
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Menu principal";
+
             this.PnlFormLoader.Controls.Clear();
             frmDashboard FrmDashboard_Verbose = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmDashboard_Verbose.FormBorderStyle = FormBorderStyle.None;
@@ -135,7 +138,7 @@ namespace AutoDiomes
             PnlNav.Left = btnAbout.Left;
             btnAbout.BackColor = Color.FromArgb(46, 51, 73);
 
-            lblTitle.Text = "Paramètres";
+            lblTitle.Text = "À propos";
             this.PnlFormLoader.Controls.Clear();
             frmAbout FrmAbout_Verbose = new frmAbout() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmAbout_Verbose.FormBorderStyle = FormBorderStyle.None;
@@ -205,6 +208,11 @@ namespace AutoDiomes
         private void AreaMove_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

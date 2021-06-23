@@ -12,12 +12,39 @@ namespace AutoDiomes
 {
     public partial class frmAbout : Form
     {
+        string version = "Version : BETA 0.1";
         public frmAbout()
         {
             InitializeComponent();
+            StateText.Text = version;
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StateText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextState_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
