@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Librairies
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.DirectoryServices.AccountManagement;
+using System.IO;
 
 namespace AutoDiomes
 {
@@ -18,11 +22,17 @@ namespace AutoDiomes
         int mov;
         int movX;
         int movY;
+        string userName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName; //get current user display name
+        string pictureAccountPath = @"C:\Users" + Environment.UserName + @"\AppData\Roaming\Microsoft\Windows\AccountPictures"; //path for the picture account
 
+        DirectoryInfo directorymain = Directory.CreateDirectory(@"C:\AutoDiomes"); //automatic create directory if he is not present
+        DirectoryInfo directorytemp = Directory.CreateDirectory(@"C:\AutoDiomes\temp"); //automatic create directory temp for temporary files
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        //System.IO.File.Copy("source", "destination");
 
-        private static extern IntPtr CreateRoundRectRgn
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] //import dll for create round windows forms
+
+        private static extern IntPtr CreateRoundRectRgn //struct for create round windows forms
         (
             int nLeftRect,
             int nTopRect,
@@ -32,6 +42,7 @@ namespace AutoDiomes
             int nHeightEllipse
 
         );
+
         public Application()
         {
             InitializeComponent();
@@ -42,6 +53,7 @@ namespace AutoDiomes
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Menu principal";
+            lblUserName.Text = userName;
             this.PnlFormLoader.Controls.Clear();
             frmDashboard FrmDashboard_Verbose = new frmDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmDashboard_Verbose.FormBorderStyle = FormBorderStyle.None;
@@ -52,9 +64,8 @@ namespace AutoDiomes
         private void Form1_Load(object sender, EventArgs e)
         {
             //this will make form load on current working monitor
-            this.Location = Screen.AllScreens[1].WorkingArea.Location;
-
-
+            this.Location = Screen.AllScreens[0].WorkingArea.Location;
+            
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -168,8 +179,12 @@ namespace AutoDiomes
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            directorytemp.Delete();
             System.Windows.Forms.Application.ExitThread();
         }
+
+
+        //For move the no border form
 
         private void AreaMove_MouseDown(object sender, MouseEventArgs e)
         {
