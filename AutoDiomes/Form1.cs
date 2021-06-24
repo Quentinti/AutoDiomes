@@ -41,7 +41,6 @@ namespace AutoDiomes
             int nBottomRect,
             int nWidthEllipse,
             int nHeightEllipse
-
         );
 
         public Application()
@@ -93,7 +92,7 @@ namespace AutoDiomes
             PnlNav.Left = btnAnalytics.Left;
             btnAnalytics.BackColor = Color.FromArgb(46, 51, 73);
 
-            lblTitle.Text = "Génération fichier";
+            lblTitle.Text = "Gestion projet";
             this.PnlFormLoader.Controls.Clear();
             frmAnalytics FrmAnalytics_Verbose = new frmAnalytics() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmAnalytics_Verbose.FormBorderStyle = FormBorderStyle.None;
@@ -185,7 +184,6 @@ namespace AutoDiomes
             directorytemp.Delete();
             System.Windows.Forms.Application.ExitThread();
         }
-
 
         //For move the no border form
 
