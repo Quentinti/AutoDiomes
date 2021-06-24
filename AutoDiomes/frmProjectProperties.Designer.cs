@@ -1,7 +1,7 @@
 ﻿
 namespace AutoDiomes
 {
-    partial class frmAnalytics
+    partial class frmProjectProperties
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +29,21 @@ namespace AutoDiomes
         /// </summary>
         private void InitializeComponent()
         {
-            this.PnlProjectLoader = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // PnlProjectLoader
-            // 
-            this.PnlProjectLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlProjectLoader.Location = new System.Drawing.Point(0, 0);
-            this.PnlProjectLoader.Name = "PnlProjectLoader";
-            this.PnlProjectLoader.Size = new System.Drawing.Size(733, 477);
-            this.PnlProjectLoader.TabIndex = 0;
-            // 
-            // frmAnalytics
+            // frmProjectProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
-            this.Controls.Add(this.PnlProjectLoader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAnalytics";
-            this.Text = "frmAnalytics";
+            this.Name = "frmProjectProperties";
+            this.Text = "frmProjectProperties";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Panel PnlProjectLoader;
     }
 }

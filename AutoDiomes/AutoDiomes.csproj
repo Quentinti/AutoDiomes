@@ -115,6 +115,18 @@
     <Compile Include="frmHelp.Designer.cs">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProjectProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectProperties.Designer.cs">
+      <DependentUpon>frmProjectProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectStart.Designer.cs">
+      <DependentUpon>frmProjectStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectProperties.resx">
+      <DependentUpon>frmProjectProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectStart.resx">
+      <DependentUpon>frmProjectStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>

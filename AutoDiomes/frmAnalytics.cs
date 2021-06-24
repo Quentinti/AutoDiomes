@@ -15,6 +15,11 @@ namespace AutoDiomes
         public frmAnalytics()
         {
             InitializeComponent();
+            this.PnlProjectLoader.Controls.Clear();
+            frmProjectStart FrmProjectStart_Verbose = new frmProjectStart() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmProjectStart_Verbose.FormBorderStyle = FormBorderStyle.None;
+            this.PnlProjectLoader.Controls.Add(FrmProjectStart_Verbose);
+            FrmProjectStart_Verbose.Show();
         }
 
         private void label6_Click(object sender, EventArgs e)
