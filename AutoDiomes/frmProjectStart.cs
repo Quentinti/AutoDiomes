@@ -19,13 +19,23 @@ namespace AutoDiomes
             ths = frm;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frame_projectproperties()
         {
             ths.PnlProjectLoader.Controls.Clear();
             frmProjectProperties FrmProjectProperties_Verbose = new frmProjectProperties { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             FrmProjectProperties_Verbose.FormBorderStyle = FormBorderStyle.None;
             ths.PnlProjectLoader.Controls.Add(FrmProjectProperties_Verbose);
             FrmProjectProperties_Verbose.Show();
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            frame_projectproperties();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            frame_projectproperties();
         }
     }
 }

@@ -255,5 +255,35 @@
   <ItemGroup>
     <None Include="Resources\drop.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\partner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\state.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hardware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signal.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
