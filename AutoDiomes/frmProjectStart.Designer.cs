@@ -43,6 +43,7 @@ namespace AutoDiomes
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,7 +95,6 @@ namespace AutoDiomes
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(278, 45);
             this.panel3.TabIndex = 14;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label4
             // 
@@ -179,6 +179,7 @@ namespace AutoDiomes
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(19, 56);
@@ -210,6 +211,16 @@ namespace AutoDiomes
             this.label1.Size = new System.Drawing.Size(240, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ouvrir les éléments récents";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(117, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmProjectStart
             // 
@@ -257,5 +268,6 @@ namespace AutoDiomes
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

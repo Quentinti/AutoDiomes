@@ -12,18 +12,20 @@ namespace AutoDiomes
 {
     public partial class frmProjectStart : Form
     {
-        public frmProjectStart()
+        frmAnalytics ths;
+        public frmProjectStart(frmAnalytics frm)
         {
             InitializeComponent();
+            ths = frm;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            /*frmAnalytics.PnlProjectLoader.Controls.Clear();
-            frmProjectStart FrmProjectStart_Verbose = new frmProjectStart() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmProjectStart_Verbose.FormBorderStyle = FormBorderStyle.None;
-            frmAnalytics.PnlProjectLoader.Controls.Add(FrmProjectStart_Verbose);
-            FrmProjectStart_Verbose.Show();*/
+            ths.PnlProjectLoader.Controls.Clear();
+            frmProjectProperties FrmProjectProperties_Verbose = new frmProjectProperties { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FrmProjectProperties_Verbose.FormBorderStyle = FormBorderStyle.None;
+            ths.PnlProjectLoader.Controls.Add(FrmProjectProperties_Verbose);
+            FrmProjectProperties_Verbose.Show();
         }
     }
 }
