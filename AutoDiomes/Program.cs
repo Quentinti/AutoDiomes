@@ -8,9 +8,6 @@ namespace AutoDiomes
 {
     static class Program
     {
-        /// <summary>
-        /// Point d'entrée principal de l'application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -20,7 +17,7 @@ namespace AutoDiomes
         }
     }
 
-    static class Globals
+    static class Globals //create a class for use global variable
     {
         public static string lastFrame = "frmProjectStart"; //memorize current state for navigation
     }

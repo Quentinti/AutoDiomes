@@ -174,11 +174,6 @@ namespace AutoDiomes
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CloseButton_Click(object sender, EventArgs e)
         {
             directorytemp.Delete();
