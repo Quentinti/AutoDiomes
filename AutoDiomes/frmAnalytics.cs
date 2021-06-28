@@ -12,16 +12,28 @@ namespace AutoDiomes
 {
     public partial class frmAnalytics : Form
     {
+        public string lastFrame = "frmProjectStart"; //memorize current state for navigation
+
         public frmAnalytics()
         {
             InitializeComponent();
-            
-            this.PnlProjectLoader.Controls.Clear();
-            frmProjectStart FrmProjectStart_Verbose = new frmProjectStart(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            FrmProjectStart_Verbose.FormBorderStyle = FormBorderStyle.None;
-            this.PnlProjectLoader.Controls.Add(FrmProjectStart_Verbose);
-            FrmProjectStart_Verbose.Show();
 
+            if(lastFrame == "frmProjectStart")
+            {
+                this.PnlProjectLoader.Controls.Clear();
+                frmProjectStart FrmProjectStart_Verbose = new frmProjectStart(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                FrmProjectStart_Verbose.FormBorderStyle = FormBorderStyle.None;
+                this.PnlProjectLoader.Controls.Add(FrmProjectStart_Verbose);
+                FrmProjectStart_Verbose.Show();
+            }
+            if(lastFrame == "frmProjectProperties")
+            {
+                this.PnlProjectLoader.Controls.Clear();
+                frmProjectProperties FrmProjectProperties_Verbose = new frmProjectProperties(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                FrmProjectProperties_Verbose.FormBorderStyle = FormBorderStyle.None;
+                this.PnlProjectLoader.Controls.Add(FrmProjectProperties_Verbose);
+                FrmProjectProperties_Verbose.Show();
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)

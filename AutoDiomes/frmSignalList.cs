@@ -22,7 +22,7 @@ namespace AutoDiomes
         private void frame_signaladd()
         {
             ths.PnlProjectLoader.Controls.Clear();
-            frmSignalAdd frmSignalAdd_Verbose = new frmSignalAdd() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmSignalAdd frmSignalAdd_Verbose = new frmSignalAdd(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frmSignalAdd_Verbose.FormBorderStyle = FormBorderStyle.None;
             ths.PnlProjectLoader.Controls.Add(frmSignalAdd_Verbose);
             frmSignalAdd_Verbose.Show();

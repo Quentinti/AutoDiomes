@@ -17,6 +17,7 @@ namespace AutoDiomes
         {
             InitializeComponent();
             ths = frm;
+            ths.lastFrame = "frmProjectProperties";
         }
 
         private void frame_projectproperties()
