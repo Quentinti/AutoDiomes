@@ -136,6 +136,12 @@
     <Compile Include="frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSignalAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSignalAdd.Designer.cs">
+      <DependentUpon>frmSignalAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSignalList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSignalAdd.resx">
+      <DependentUpon>frmSignalAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignalList.resx">
       <DependentUpon>frmSignalList.cs</DependentUpon>
@@ -296,6 +305,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\signal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signal_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\period.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\positive_duty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negative_duty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

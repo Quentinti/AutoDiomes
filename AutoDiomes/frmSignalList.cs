@@ -12,9 +12,30 @@ namespace AutoDiomes
 {
     public partial class frmSignalList : Form
     {
-        public frmSignalList()
+        frmAnalytics ths;
+        public frmSignalList(frmAnalytics frm)
         {
             InitializeComponent();
+            ths = frm;
+        }
+
+        private void frame_signaladd()
+        {
+            ths.PnlProjectLoader.Controls.Clear();
+            frmSignalAdd frmSignalAdd_Verbose = new frmSignalAdd() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmSignalAdd_Verbose.FormBorderStyle = FormBorderStyle.None;
+            ths.PnlProjectLoader.Controls.Add(frmSignalAdd_Verbose);
+            frmSignalAdd_Verbose.Show();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            frame_signaladd();
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            frame_signaladd();
         }
     }
 }

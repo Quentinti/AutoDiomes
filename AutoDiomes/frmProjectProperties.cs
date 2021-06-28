@@ -22,7 +22,7 @@ namespace AutoDiomes
         private void frame_projectproperties()
         {
             ths.PnlProjectLoader.Controls.Clear();
-            frmSignalList frmSignalList_Verbose = new frmSignalList { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
             ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
             frmSignalList_Verbose.Show();
