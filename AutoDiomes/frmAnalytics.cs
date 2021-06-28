@@ -12,13 +12,12 @@ namespace AutoDiomes
 {
     public partial class frmAnalytics : Form
     {
-        public string lastFrame = "frmProjectStart"; //memorize current state for navigation
 
         public frmAnalytics()
         {
             InitializeComponent();
 
-            if(lastFrame == "frmProjectStart")
+            if (Globals.lastFrame == "frmProjectStart")
             {
                 this.PnlProjectLoader.Controls.Clear();
                 frmProjectStart FrmProjectStart_Verbose = new frmProjectStart(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -26,7 +25,7 @@ namespace AutoDiomes
                 this.PnlProjectLoader.Controls.Add(FrmProjectStart_Verbose);
                 FrmProjectStart_Verbose.Show();
             }
-            if(lastFrame == "frmProjectProperties")
+            if (Globals.lastFrame == "frmProjectProperties")
             {
                 this.PnlProjectLoader.Controls.Clear();
                 frmProjectProperties FrmProjectProperties_Verbose = new frmProjectProperties(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -34,6 +33,26 @@ namespace AutoDiomes
                 this.PnlProjectLoader.Controls.Add(FrmProjectProperties_Verbose);
                 FrmProjectProperties_Verbose.Show();
             }
+
+            if (Globals.lastFrame == "frmSignalList")
+            {
+                this.PnlProjectLoader.Controls.Clear();
+                frmSignalList frmSignalList_Verbose = new frmSignalList(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
+                this.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
+                frmSignalList_Verbose.Show();
+            }
+
+            if (Globals.lastFrame == "frmSignalAdd")
+            {
+                this.PnlProjectLoader.Controls.Clear();
+                frmSignalAdd frmSignalAdd_Verbose = new frmSignalAdd(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                frmSignalAdd_Verbose.FormBorderStyle = FormBorderStyle.None;
+                this.PnlProjectLoader.Controls.Add(frmSignalAdd_Verbose);
+                frmSignalAdd_Verbose.Show();
+            }
+
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -56,4 +75,5 @@ namespace AutoDiomes
 
         }
     }
+
 }

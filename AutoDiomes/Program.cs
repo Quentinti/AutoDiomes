@@ -19,4 +19,9 @@ namespace AutoDiomes
             System.Windows.Forms.Application.Run(new Application());
         }
     }
+
+    static class Globals
+    {
+        public static string lastFrame = "frmProjectStart"; //memorize current state for navigation
+    }
 }
