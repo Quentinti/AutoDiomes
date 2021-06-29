@@ -13,6 +13,16 @@ namespace AutoDiomes
     public partial class frmProjectProperties : Form
     {
         frmAnalytics ths;
+
+        bool txtBox_name_default = true;
+        bool txtBox_customer_default = true;
+        bool txtBox_phase_default = true;
+        bool txtBox_serial_number_default = true;
+        bool txtBox_software_default = true;
+        bool txtBox_hardware_default = true;
+        bool txtBox_error_margin_default = true;
+        bool txtBox_config_name_default = true;
+
         public frmProjectProperties(frmAnalytics frm)
         {
             InitializeComponent();
@@ -27,6 +37,7 @@ namespace AutoDiomes
             frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
             ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
             frmSignalList_Verbose.Show();
+            
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -46,6 +57,15 @@ namespace AutoDiomes
         private void label11_Click(object sender, EventArgs e)
         {
             frame_projectproperties();
+        }
+
+        private void txtBox_name_Click(object sender, EventArgs e)
+        {
+            if (txtBox_name_default)
+            {
+                txtBox_name.Clear();
+                txtBox_name_default = false;
+            }
         }
     }
 }
