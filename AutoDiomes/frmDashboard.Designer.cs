@@ -30,100 +30,104 @@ namespace AutoDiomes
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnlLastMesure = new System.Windows.Forms.Panel();
+            this.lblLastMesure_TONTOFF = new System.Windows.Forms.Label();
+            this.lblLastMesure_Duty = new System.Windows.Forms.Label();
+            this.lblLastMesure_Period = new System.Windows.Forms.Label();
+            this.lblLastMesure_Frequency = new System.Windows.Forms.Label();
+            this.pnlScope = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlCurrentMesure = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pnlProject = new System.Windows.Forms.Panel();
+            this.lblProject_Phase = new System.Windows.Forms.Label();
+            this.lblProject_Name = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.NextState = new System.Windows.Forms.Label();
-            this.StateText = new System.Windows.Forms.Label();
+            this.lblNextState = new System.Windows.Forms.Label();
+            this.lblState = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnlWaitingConfig = new System.Windows.Forms.Panel();
+            this.lblConfigState = new System.Windows.Forms.Label();
+            this.lblCurrentWaitingState = new System.Windows.Forms.Label();
+            this.pnlLastMesure.SuspendLayout();
+            this.pnlScope.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pnlCurrentMesure.SuspendLayout();
+            this.pnlProject.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.pnlWaitingConfig.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel8
+            // pnlLastMesure
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel8.Controls.Add(this.label15);
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.label11);
-            this.panel8.Location = new System.Drawing.Point(533, 5);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(189, 130);
-            this.panel8.TabIndex = 9;
+            this.pnlLastMesure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlLastMesure.Controls.Add(this.lblLastMesure_TONTOFF);
+            this.pnlLastMesure.Controls.Add(this.lblLastMesure_Duty);
+            this.pnlLastMesure.Controls.Add(this.lblLastMesure_Period);
+            this.pnlLastMesure.Controls.Add(this.lblLastMesure_Frequency);
+            this.pnlLastMesure.Location = new System.Drawing.Point(533, 5);
+            this.pnlLastMesure.Name = "pnlLastMesure";
+            this.pnlLastMesure.Size = new System.Drawing.Size(189, 130);
+            this.pnlLastMesure.TabIndex = 9;
             // 
-            // label15
+            // lblLastMesure_TONTOFF
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label15.Location = new System.Drawing.Point(9, 96);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(165, 21);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "TON : 6ms / TOFF 4ms";
+            this.lblLastMesure_TONTOFF.AutoSize = true;
+            this.lblLastMesure_TONTOFF.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastMesure_TONTOFF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblLastMesure_TONTOFF.Location = new System.Drawing.Point(9, 96);
+            this.lblLastMesure_TONTOFF.Name = "lblLastMesure_TONTOFF";
+            this.lblLastMesure_TONTOFF.Size = new System.Drawing.Size(175, 20);
+            this.lblLastMesure_TONTOFF.TabIndex = 6;
+            this.lblLastMesure_TONTOFF.Text = "TON : NVms / TOFF NVms";
             // 
-            // label14
+            // lblLastMesure_Duty
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label14.Location = new System.Drawing.Point(9, 67);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 21);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "+65% / -35%";
+            this.lblLastMesure_Duty.AutoSize = true;
+            this.lblLastMesure_Duty.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastMesure_Duty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblLastMesure_Duty.Location = new System.Drawing.Point(9, 67);
+            this.lblLastMesure_Duty.Name = "lblLastMesure_Duty";
+            this.lblLastMesure_Duty.Size = new System.Drawing.Size(111, 21);
+            this.lblLastMesure_Duty.TabIndex = 5;
+            this.lblLastMesure_Duty.Text = "+NV% / -NV%";
             // 
-            // label12
+            // lblLastMesure_Period
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label12.Location = new System.Drawing.Point(9, 42);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 21);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "10ms";
+            this.lblLastMesure_Period.AutoSize = true;
+            this.lblLastMesure_Period.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastMesure_Period.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblLastMesure_Period.Location = new System.Drawing.Point(9, 42);
+            this.lblLastMesure_Period.Name = "lblLastMesure_Period";
+            this.lblLastMesure_Period.Size = new System.Drawing.Size(52, 21);
+            this.lblLastMesure_Period.TabIndex = 4;
+            this.lblLastMesure_Period.Text = "NVms";
             // 
-            // label11
+            // lblLastMesure_Frequency
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label11.Location = new System.Drawing.Point(9, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 21);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "1000Hz";
+            this.lblLastMesure_Frequency.AutoSize = true;
+            this.lblLastMesure_Frequency.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastMesure_Frequency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblLastMesure_Frequency.Location = new System.Drawing.Point(9, 16);
+            this.lblLastMesure_Frequency.Name = "lblLastMesure_Frequency";
+            this.lblLastMesure_Frequency.Size = new System.Drawing.Size(50, 21);
+            this.lblLastMesure_Frequency.TabIndex = 3;
+            this.lblLastMesure_Frequency.Text = "NVHz";
             // 
-            // panel7
+            // pnlScope
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Location = new System.Drawing.Point(285, 147);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(437, 306);
-            this.panel7.TabIndex = 6;
+            this.pnlScope.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlScope.Controls.Add(this.pictureBox2);
+            this.pnlScope.Controls.Add(this.label13);
+            this.pnlScope.Location = new System.Drawing.Point(285, 147);
+            this.pnlScope.Name = "pnlScope";
+            this.pnlScope.Size = new System.Drawing.Size(437, 306);
+            this.pnlScope.TabIndex = 6;
             // 
             // pictureBox2
             // 
@@ -147,17 +151,17 @@ namespace AutoDiomes
             this.label13.TabIndex = 0;
             this.label13.Text = "Informations sur le signal précédent    ";
             // 
-            // panel6
+            // pnlCurrentMesure
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.circularProgressBar1);
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Location = new System.Drawing.Point(10, 147);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(258, 306);
-            this.panel6.TabIndex = 7;
+            this.pnlCurrentMesure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlCurrentMesure.Controls.Add(this.label8);
+            this.pnlCurrentMesure.Controls.Add(this.circularProgressBar1);
+            this.pnlCurrentMesure.Controls.Add(this.label9);
+            this.pnlCurrentMesure.Controls.Add(this.label10);
+            this.pnlCurrentMesure.Location = new System.Drawing.Point(10, 147);
+            this.pnlCurrentMesure.Name = "pnlCurrentMesure";
+            this.pnlCurrentMesure.Size = new System.Drawing.Size(258, 306);
+            this.pnlCurrentMesure.TabIndex = 7;
             // 
             // label8
             // 
@@ -225,38 +229,38 @@ namespace AutoDiomes
             this.label10.TabIndex = 0;
             this.label10.Text = "État de la mesure      ";
             // 
-            // panel5
+            // pnlProject
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(285, 5);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(232, 130);
-            this.panel5.TabIndex = 8;
+            this.pnlProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlProject.Controls.Add(this.lblProject_Phase);
+            this.pnlProject.Controls.Add(this.lblProject_Name);
+            this.pnlProject.Controls.Add(this.label7);
+            this.pnlProject.Location = new System.Drawing.Point(285, 5);
+            this.pnlProject.Name = "pnlProject";
+            this.pnlProject.Size = new System.Drawing.Size(232, 130);
+            this.pnlProject.TabIndex = 8;
             // 
-            // label5
+            // lblProject_Phase
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label5.Location = new System.Drawing.Point(14, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Sample C2 4 Cylindres";
+            this.lblProject_Phase.AutoSize = true;
+            this.lblProject_Phase.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProject_Phase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblProject_Phase.Location = new System.Drawing.Point(14, 96);
+            this.lblProject_Phase.Name = "lblProject_Phase";
+            this.lblProject_Phase.Size = new System.Drawing.Size(83, 21);
+            this.lblProject_Phase.TabIndex = 2;
+            this.lblProject_Phase.Text = "Non défini";
             // 
-            // label6
+            // lblProject_Name
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(226)))), ((int)(((byte)(178)))));
-            this.label6.Location = new System.Drawing.Point(12, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 32);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "EMS2910";
+            this.lblProject_Name.AutoSize = true;
+            this.lblProject_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProject_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(226)))), ((int)(((byte)(178)))));
+            this.lblProject_Name.Location = new System.Drawing.Point(12, 53);
+            this.lblProject_Name.Name = "lblProject_Name";
+            this.lblProject_Name.Size = new System.Drawing.Size(154, 32);
+            this.lblProject_Name.TabIndex = 1;
+            this.lblProject_Name.Text = "Non défini";
             // 
             // label7
             // 
@@ -274,35 +278,35 @@ namespace AutoDiomes
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.NextState);
-            this.panel4.Controls.Add(this.StateText);
+            this.panel4.Controls.Add(this.lblNextState);
+            this.panel4.Controls.Add(this.lblState);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(10, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 130);
             this.panel4.TabIndex = 5;
             // 
-            // NextState
+            // lblNextState
             // 
-            this.NextState.AutoSize = true;
-            this.NextState.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.NextState.Location = new System.Drawing.Point(14, 96);
-            this.NextState.Name = "NextState";
-            this.NextState.Size = new System.Drawing.Size(156, 21);
-            this.NextState.TabIndex = 2;
-            this.NextState.Text = "Connexion en cours...";
+            this.lblNextState.AutoSize = true;
+            this.lblNextState.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNextState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblNextState.Location = new System.Drawing.Point(14, 96);
+            this.lblNextState.Name = "lblNextState";
+            this.lblNextState.Size = new System.Drawing.Size(156, 21);
+            this.lblNextState.TabIndex = 2;
+            this.lblNextState.Text = "Connexion en cours...";
             // 
-            // StateText
+            // lblState
             // 
-            this.StateText.AutoSize = true;
-            this.StateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
-            this.StateText.Location = new System.Drawing.Point(12, 53);
-            this.StateText.Name = "StateText";
-            this.StateText.Size = new System.Drawing.Size(177, 32);
-            this.StateText.TabIndex = 1;
-            this.StateText.Text = "Déconnecté";
+            this.lblState.AutoSize = true;
+            this.lblState.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(249)))));
+            this.lblState.Location = new System.Drawing.Point(12, 53);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(177, 32);
+            this.lblState.TabIndex = 1;
+            this.lblState.Text = "Déconnecté";
             // 
             // label4
             // 
@@ -317,57 +321,96 @@ namespace AutoDiomes
             this.label4.TabIndex = 0;
             this.label4.Text = "État de la connexion        ";
             // 
+            // pnlWaitingConfig
+            // 
+            this.pnlWaitingConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlWaitingConfig.Controls.Add(this.lblCurrentWaitingState);
+            this.pnlWaitingConfig.Controls.Add(this.lblConfigState);
+            this.pnlWaitingConfig.Location = new System.Drawing.Point(10, 147);
+            this.pnlWaitingConfig.Name = "pnlWaitingConfig";
+            this.pnlWaitingConfig.Size = new System.Drawing.Size(711, 306);
+            this.pnlWaitingConfig.TabIndex = 10;
+            // 
+            // lblConfigState
+            // 
+            this.lblConfigState.AutoSize = true;
+            this.lblConfigState.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfigState.ForeColor = System.Drawing.Color.Red;
+            this.lblConfigState.Location = new System.Drawing.Point(158, 19);
+            this.lblConfigState.Name = "lblConfigState";
+            this.lblConfigState.Size = new System.Drawing.Size(410, 32);
+            this.lblConfigState.TabIndex = 2;
+            this.lblConfigState.Text = "En attente de configuration...";
+            // 
+            // lblCurrentWaitingState
+            // 
+            this.lblCurrentWaitingState.AutoSize = true;
+            this.lblCurrentWaitingState.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentWaitingState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblCurrentWaitingState.Location = new System.Drawing.Point(205, 64);
+            this.lblCurrentWaitingState.Name = "lblCurrentWaitingState";
+            this.lblCurrentWaitingState.Size = new System.Drawing.Size(311, 21);
+            this.lblCurrentWaitingState.TabIndex = 3;
+            this.lblCurrentWaitingState.Text = "Création ou ouverture de projet en attente...";
+            this.lblCurrentWaitingState.Click += new System.EventHandler(this.lblCurrentWaitingState_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pnlWaitingConfig);
+            this.Controls.Add(this.pnlCurrentMesure);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnlProject);
+            this.Controls.Add(this.pnlLastMesure);
+            this.Controls.Add(this.pnlScope);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashboard";
             this.Text = "frmDashboard";
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.pnlLastMesure.ResumeLayout(false);
+            this.pnlLastMesure.PerformLayout();
+            this.pnlScope.ResumeLayout(false);
+            this.pnlScope.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.pnlCurrentMesure.ResumeLayout(false);
+            this.pnlCurrentMesure.PerformLayout();
+            this.pnlProject.ResumeLayout(false);
+            this.pnlProject.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.pnlWaitingConfig.ResumeLayout(false);
+            this.pnlWaitingConfig.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnlLastMesure;
+        private System.Windows.Forms.Label lblLastMesure_TONTOFF;
+        private System.Windows.Forms.Label lblLastMesure_Duty;
+        private System.Windows.Forms.Label lblLastMesure_Period;
+        private System.Windows.Forms.Label lblLastMesure_Frequency;
+        private System.Windows.Forms.Panel pnlScope;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlCurrentMesure;
         private System.Windows.Forms.Label label8;
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnlProject;
+        private System.Windows.Forms.Label lblProject_Phase;
+        private System.Windows.Forms.Label lblProject_Name;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label NextState;
-        private System.Windows.Forms.Label StateText;
+        private System.Windows.Forms.Label lblNextState;
+        private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnlWaitingConfig;
+        private System.Windows.Forms.Label lblCurrentWaitingState;
+        private System.Windows.Forms.Label lblConfigState;
     }
 }

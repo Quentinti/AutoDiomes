@@ -37,7 +37,9 @@ namespace AutoDiomes
             frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
             ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
             frmSignalList_Verbose.Show();
-            
+            Globals.configState = "ConfigProperties";
+
+
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

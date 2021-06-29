@@ -32,7 +32,13 @@ namespace AutoDiomes
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Application));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnAnalytics = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.PnlNav = new System.Windows.Forms.Panel();
@@ -41,17 +47,11 @@ namespace AutoDiomes
             this.CloseButton = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.PnlFormLoader = new System.Windows.Forms.Panel();
-            this.btnAbout = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnAnalytics = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,105 +69,6 @@ namespace AutoDiomes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(186, 577);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.lblEmail);
-            this.panel2.Controls.Add(this.lblUserName);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 160);
-            this.panel2.TabIndex = 0;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.Gray;
-            this.lblEmail.Location = new System.Drawing.Point(12, 135);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(79, 13);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "Email Adress";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEmail.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.lblUserName.Location = new System.Drawing.Point(3, 110);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(83, 16);
-            this.lblUserName.TabIndex = 1;
-            this.lblUserName.Text = "User name";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PnlNav
-            // 
-            this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.PnlNav.Location = new System.Drawing.Point(0, 193);
-            this.PnlNav.Name = "PnlNav";
-            this.PnlNav.Size = new System.Drawing.Size(3, 100);
-            this.PnlNav.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.AreaMove);
-            this.panel3.Controls.Add(this.CloseButton);
-            this.panel3.Controls.Add(this.lblTitle);
-            this.panel3.Controls.Add(this.PnlFormLoader);
-            this.panel3.Location = new System.Drawing.Point(185, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(764, 577);
-            this.panel3.TabIndex = 2;
-            // 
-            // AreaMove
-            // 
-            this.AreaMove.BackColor = System.Drawing.Color.Transparent;
-            this.AreaMove.ForeColor = System.Drawing.Color.Transparent;
-            this.AreaMove.Location = new System.Drawing.Point(0, 0);
-            this.AreaMove.Name = "AreaMove";
-            this.AreaMove.Size = new System.Drawing.Size(764, 23);
-            this.AreaMove.TabIndex = 3;
-            this.AreaMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseDown);
-            this.AreaMove.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseMove);
-            this.AreaMove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseUp);
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.FlatAppearance.BorderSize = 0;
-            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButton.ForeColor = System.Drawing.Color.White;
-            this.CloseButton.Location = new System.Drawing.Point(713, 26);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(25, 25);
-            this.CloseButton.TabIndex = 1;
-            this.CloseButton.Text = "X";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.lblTitle.Location = new System.Drawing.Point(17, 42);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(256, 39);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Menu principal";
-            // 
-            // PnlFormLoader
-            // 
-            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlFormLoader.Location = new System.Drawing.Point(0, 100);
-            this.PnlFormLoader.Name = "PnlFormLoader";
-            this.PnlFormLoader.Size = new System.Drawing.Size(764, 477);
-            this.PnlFormLoader.TabIndex = 2;
             // 
             // btnAbout
             // 
@@ -259,6 +160,17 @@ namespace AutoDiomes
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.lblEmail);
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(186, 160);
+            this.panel2.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AutoDiomes.Properties.Resources.logo_vitesco_technologies1;
@@ -268,6 +180,94 @@ namespace AutoDiomes
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Gray;
+            this.lblEmail.Location = new System.Drawing.Point(12, 135);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(79, 13);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "Email Adress";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmail.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.lblUserName.Location = new System.Drawing.Point(3, 110);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(83, 16);
+            this.lblUserName.TabIndex = 1;
+            this.lblUserName.Text = "User name";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PnlNav
+            // 
+            this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.PnlNav.Location = new System.Drawing.Point(0, 193);
+            this.PnlNav.Name = "PnlNav";
+            this.PnlNav.Size = new System.Drawing.Size(3, 100);
+            this.PnlNav.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.AreaMove);
+            this.panel3.Controls.Add(this.CloseButton);
+            this.panel3.Controls.Add(this.lblTitle);
+            this.panel3.Controls.Add(this.PnlFormLoader);
+            this.panel3.Location = new System.Drawing.Point(185, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(764, 577);
+            this.panel3.TabIndex = 2;
+            // 
+            // AreaMove
+            // 
+            this.AreaMove.BackColor = System.Drawing.Color.Transparent;
+            this.AreaMove.ForeColor = System.Drawing.Color.Transparent;
+            this.AreaMove.Location = new System.Drawing.Point(0, 0);
+            this.AreaMove.Name = "AreaMove";
+            this.AreaMove.Size = new System.Drawing.Size(764, 23);
+            this.AreaMove.TabIndex = 3;
+            this.AreaMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseDown);
+            this.AreaMove.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseMove);
+            this.AreaMove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AreaMove_MouseUp);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.FlatAppearance.BorderSize = 0;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.ForeColor = System.Drawing.Color.White;
+            this.CloseButton.Location = new System.Drawing.Point(713, 26);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(25, 25);
+            this.CloseButton.TabIndex = 1;
+            this.CloseButton.Text = "X";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.lblTitle.Location = new System.Drawing.Point(17, 42);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(256, 39);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Menu principal";
+            // 
+            // PnlFormLoader
+            // 
+            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PnlFormLoader.Location = new System.Drawing.Point(0, 100);
+            this.PnlFormLoader.Name = "PnlFormLoader";
+            this.PnlFormLoader.Size = new System.Drawing.Size(764, 477);
+            this.PnlFormLoader.TabIndex = 2;
             // 
             // Application
             // 
@@ -288,9 +288,9 @@ namespace AutoDiomes
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
