@@ -60,6 +60,7 @@ namespace AutoDiomes
             FrmDashboard_Verbose.FormBorderStyle = FormBorderStyle.None;
             this.PnlFormLoader.Controls.Add(FrmDashboard_Verbose);
             FrmDashboard_Verbose.Show();
+                
         }
 
         private void Form1_Load(object sender, EventArgs e)

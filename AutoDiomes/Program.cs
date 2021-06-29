@@ -21,6 +21,7 @@ namespace AutoDiomes
     static class Globals //create a class for use global variable
     {
         public static string lastFrame = "frmProjectStart"; //memorize current state for navigation
+        public static string configState = "NoConfigLoad"; //memorize current state of configuration for blur panel
     }
 
     class Project

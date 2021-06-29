@@ -67,5 +67,70 @@ namespace AutoDiomes
                 txtBox_name_default = false;
             }
         }
+
+        private void txtBox_customer_Click(object sender, EventArgs e)
+        {
+            if (txtBox_customer_default)
+            {
+                txtBox_customer.Clear();
+                txtBox_customer_default = false;
+            }
+        }
+
+        private void txtBox_phase_Click(object sender, EventArgs e)
+        {
+            if (txtBox_phase_default)
+            {
+                txtBox_phase.Clear();
+                txtBox_phase_default = false;
+            }
+        }
+
+        private void txtBox_serial_number_Click(object sender, EventArgs e)
+        {
+            if (txtBox_serial_number_default)
+            {
+                txtBox_serial_number.Clear();
+                txtBox_serial_number_default = false;
+            }
+        }
+
+        private void txtBox_software_Click(object sender, EventArgs e)
+        {
+            if (txtBox_software_default)
+            {
+                txtBox_software.Clear();
+                txtBox_software_default = false;
+            }
+
+        }
+
+        private void txtBox_hardware_Click(object sender, EventArgs e)
+        {
+            if (txtBox_hardware_default)
+            {
+                txtBox_hardware.Clear();
+                txtBox_hardware_default = false;
+            }
+        }
+
+        private void txtBox_error_margin_Click(object sender, EventArgs e)
+        {
+            if (txtBox_error_margin_default)
+            {
+                txtBox_error_margin.Clear();
+                txtBox_error_margin_default = false;
+            }
+        }
+
+        private void txtBox_config_name_Click(object sender, EventArgs e)
+        {
+            if (txtBox_config_name_default)
+            {
+                txtBox_config_name.Clear();
+                txtBox_config_name_default = false;
+            }
+
+        }
     }
 }

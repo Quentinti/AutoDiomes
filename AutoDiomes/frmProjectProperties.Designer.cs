@@ -103,6 +103,7 @@ namespace AutoDiomes
             this.txtBox_phase.TabIndex = 10;
             this.txtBox_phase.Text = "A1, A2, B1, C1...";
             this.txtBox_phase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_phase.Click += new System.EventHandler(this.txtBox_phase_Click);
             // 
             // label3
             // 
@@ -129,6 +130,7 @@ namespace AutoDiomes
             this.txtBox_customer.TabIndex = 8;
             this.txtBox_customer.Text = "FORD, RENAULT...";
             this.txtBox_customer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_customer.Click += new System.EventHandler(this.txtBox_customer_Click);
             // 
             // label2
             // 
@@ -208,6 +210,7 @@ namespace AutoDiomes
             this.txtBox_hardware.TabIndex = 10;
             this.txtBox_hardware.Text = "HW1, HW2...";
             this.txtBox_hardware.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_hardware.Click += new System.EventHandler(this.txtBox_hardware_Click);
             // 
             // label5
             // 
@@ -234,6 +237,7 @@ namespace AutoDiomes
             this.txtBox_software.TabIndex = 8;
             this.txtBox_software.Text = "SW410, 210...";
             this.txtBox_software.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_software.Click += new System.EventHandler(this.txtBox_software_Click);
             // 
             // label6
             // 
@@ -260,6 +264,7 @@ namespace AutoDiomes
             this.txtBox_serial_number.TabIndex = 6;
             this.txtBox_serial_number.Text = "410000265, ...";
             this.txtBox_serial_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_serial_number.Click += new System.EventHandler(this.txtBox_serial_number_Click);
             // 
             // label7
             // 
@@ -309,6 +314,7 @@ namespace AutoDiomes
             this.txtBox_error_margin.TabIndex = 11;
             this.txtBox_error_margin.Text = "1%, 5%, 10%...";
             this.txtBox_error_margin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_error_margin.Click += new System.EventHandler(this.txtBox_error_margin_Click);
             // 
             // label13
             // 
@@ -380,6 +386,7 @@ namespace AutoDiomes
             this.txtBox_config_name.TabIndex = 7;
             this.txtBox_config_name.Text = "EMS2910_CEMV1...";
             this.txtBox_config_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_config_name.Click += new System.EventHandler(this.txtBox_config_name_Click);
             // 
             // label10
             // 
