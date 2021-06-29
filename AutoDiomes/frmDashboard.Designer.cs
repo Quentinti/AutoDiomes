@@ -29,6 +29,7 @@ namespace AutoDiomes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.pnlLastMesure = new System.Windows.Forms.Panel();
             this.lblLastMesure_TONTOFF = new System.Windows.Forms.Label();
@@ -52,8 +53,23 @@ namespace AutoDiomes
             this.lblState = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlWaitingConfig = new System.Windows.Forms.Panel();
-            this.lblConfigState = new System.Windows.Forms.Label();
+            this.pnlRain = new System.Windows.Forms.Panel();
+            this.pbRain1 = new System.Windows.Forms.PictureBox();
+            this.pbPuddle = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCurrentWaitingState = new System.Windows.Forms.Label();
+            this.lblConfigState = new System.Windows.Forms.Label();
+            this.pbRain2 = new System.Windows.Forms.PictureBox();
+            this.pbRain3 = new System.Windows.Forms.PictureBox();
+            this.pbRain4 = new System.Windows.Forms.PictureBox();
+            this.pbRain5 = new System.Windows.Forms.PictureBox();
+            this.pbRain6 = new System.Windows.Forms.PictureBox();
+            this.pbRain8 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pbRain7 = new System.Windows.Forms.PictureBox();
+            this.pnlPuddle = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.lblOverflow = new System.Windows.Forms.Label();
             this.pnlLastMesure.SuspendLayout();
             this.pnlScope.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,6 +77,17 @@ namespace AutoDiomes
             this.pnlProject.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlWaitingConfig.SuspendLayout();
+            this.pnlRain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPuddle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain7)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLastMesure
@@ -324,35 +351,183 @@ namespace AutoDiomes
             // pnlWaitingConfig
             // 
             this.pnlWaitingConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlWaitingConfig.Controls.Add(this.lblOverflow);
+            this.pnlWaitingConfig.Controls.Add(this.pnlPuddle);
+            this.pnlWaitingConfig.Controls.Add(this.pnlRain);
+            this.pnlWaitingConfig.Controls.Add(this.pbPuddle);
+            this.pnlWaitingConfig.Controls.Add(this.pictureBox1);
             this.pnlWaitingConfig.Controls.Add(this.lblCurrentWaitingState);
             this.pnlWaitingConfig.Controls.Add(this.lblConfigState);
             this.pnlWaitingConfig.Location = new System.Drawing.Point(10, 147);
             this.pnlWaitingConfig.Name = "pnlWaitingConfig";
-            this.pnlWaitingConfig.Size = new System.Drawing.Size(711, 306);
+            this.pnlWaitingConfig.Size = new System.Drawing.Size(711, 323);
             this.pnlWaitingConfig.TabIndex = 10;
             // 
-            // lblConfigState
+            // pnlRain
             // 
-            this.lblConfigState.AutoSize = true;
-            this.lblConfigState.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfigState.ForeColor = System.Drawing.Color.Red;
-            this.lblConfigState.Location = new System.Drawing.Point(158, 19);
-            this.lblConfigState.Name = "lblConfigState";
-            this.lblConfigState.Size = new System.Drawing.Size(410, 32);
-            this.lblConfigState.TabIndex = 2;
-            this.lblConfigState.Text = "En attente de configuration...";
+            this.pnlRain.Controls.Add(this.pbRain7);
+            this.pnlRain.Controls.Add(this.pbRain8);
+            this.pnlRain.Controls.Add(this.pbRain6);
+            this.pnlRain.Controls.Add(this.pbRain5);
+            this.pnlRain.Controls.Add(this.pbRain4);
+            this.pnlRain.Controls.Add(this.pbRain3);
+            this.pnlRain.Controls.Add(this.pbRain2);
+            this.pnlRain.Controls.Add(this.pbRain1);
+            this.pnlRain.Location = new System.Drawing.Point(264, 176);
+            this.pnlRain.Name = "pnlRain";
+            this.pnlRain.Size = new System.Drawing.Size(185, 100);
+            this.pnlRain.TabIndex = 6;
+            // 
+            // pbRain1
+            // 
+            this.pbRain1.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain1.Location = new System.Drawing.Point(14, 3);
+            this.pbRain1.Name = "pbRain1";
+            this.pbRain1.Size = new System.Drawing.Size(20, 50);
+            this.pbRain1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain1.TabIndex = 0;
+            this.pbRain1.TabStop = false;
+            // 
+            // pbPuddle
+            // 
+            this.pbPuddle.Image = global::AutoDiomes.Properties.Resources.puddle;
+            this.pbPuddle.Location = new System.Drawing.Point(277, 282);
+            this.pbPuddle.Name = "pbPuddle";
+            this.pbPuddle.Size = new System.Drawing.Size(164, 36);
+            this.pbPuddle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPuddle.TabIndex = 5;
+            this.pbPuddle.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AutoDiomes.Properties.Resources.cloud;
+            this.pictureBox1.Location = new System.Drawing.Point(264, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // lblCurrentWaitingState
             // 
             this.lblCurrentWaitingState.AutoSize = true;
             this.lblCurrentWaitingState.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentWaitingState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.lblCurrentWaitingState.Location = new System.Drawing.Point(205, 64);
+            this.lblCurrentWaitingState.Location = new System.Drawing.Point(205, 54);
             this.lblCurrentWaitingState.Name = "lblCurrentWaitingState";
             this.lblCurrentWaitingState.Size = new System.Drawing.Size(311, 21);
             this.lblCurrentWaitingState.TabIndex = 3;
             this.lblCurrentWaitingState.Text = "Création ou ouverture de projet en attente...";
             this.lblCurrentWaitingState.Click += new System.EventHandler(this.lblCurrentWaitingState_Click);
+            // 
+            // lblConfigState
+            // 
+            this.lblConfigState.AutoSize = true;
+            this.lblConfigState.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfigState.ForeColor = System.Drawing.Color.Red;
+            this.lblConfigState.Location = new System.Drawing.Point(158, 16);
+            this.lblConfigState.Name = "lblConfigState";
+            this.lblConfigState.Size = new System.Drawing.Size(410, 32);
+            this.lblConfigState.TabIndex = 2;
+            this.lblConfigState.Text = "En attente de configuration...";
+            // 
+            // pbRain2
+            // 
+            this.pbRain2.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain2.Location = new System.Drawing.Point(40, 34);
+            this.pbRain2.Name = "pbRain2";
+            this.pbRain2.Size = new System.Drawing.Size(10, 30);
+            this.pbRain2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain2.TabIndex = 1;
+            this.pbRain2.TabStop = false;
+            // 
+            // pbRain3
+            // 
+            this.pbRain3.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain3.Location = new System.Drawing.Point(56, 34);
+            this.pbRain3.Name = "pbRain3";
+            this.pbRain3.Size = new System.Drawing.Size(20, 50);
+            this.pbRain3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain3.TabIndex = 2;
+            this.pbRain3.TabStop = false;
+            // 
+            // pbRain4
+            // 
+            this.pbRain4.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain4.Location = new System.Drawing.Point(82, 13);
+            this.pbRain4.Name = "pbRain4";
+            this.pbRain4.Size = new System.Drawing.Size(10, 30);
+            this.pbRain4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain4.TabIndex = 3;
+            this.pbRain4.TabStop = false;
+            // 
+            // pbRain5
+            // 
+            this.pbRain5.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain5.Location = new System.Drawing.Point(98, 34);
+            this.pbRain5.Name = "pbRain5";
+            this.pbRain5.Size = new System.Drawing.Size(10, 43);
+            this.pbRain5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain5.TabIndex = 4;
+            this.pbRain5.TabStop = false;
+            // 
+            // pbRain6
+            // 
+            this.pbRain6.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain6.Location = new System.Drawing.Point(114, 13);
+            this.pbRain6.Name = "pbRain6";
+            this.pbRain6.Size = new System.Drawing.Size(10, 30);
+            this.pbRain6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain6.TabIndex = 5;
+            this.pbRain6.TabStop = false;
+            // 
+            // pbRain8
+            // 
+            this.pbRain8.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain8.Location = new System.Drawing.Point(148, 3);
+            this.pbRain8.Name = "pbRain8";
+            this.pbRain8.Size = new System.Drawing.Size(20, 50);
+            this.pbRain8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain8.TabIndex = 6;
+            this.pbRain8.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pbRain7
+            // 
+            this.pbRain7.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain7.Location = new System.Drawing.Point(130, 34);
+            this.pbRain7.Name = "pbRain7";
+            this.pbRain7.Size = new System.Drawing.Size(10, 30);
+            this.pbRain7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain7.TabIndex = 7;
+            this.pbRain7.TabStop = false;
+            // 
+            // pnlPuddle
+            // 
+            this.pnlPuddle.Location = new System.Drawing.Point(275, 282);
+            this.pnlPuddle.Name = "pnlPuddle";
+            this.pnlPuddle.Size = new System.Drawing.Size(174, 35);
+            this.pnlPuddle.TabIndex = 7;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // lblOverflow
+            // 
+            this.lblOverflow.AutoSize = true;
+            this.lblOverflow.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOverflow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblOverflow.Location = new System.Drawing.Point(467, 291);
+            this.lblOverflow.Name = "lblOverflow";
+            this.lblOverflow.Size = new System.Drawing.Size(176, 21);
+            this.lblOverflow.TabIndex = 8;
+            this.lblOverflow.Text = "Attention ! Ça déborde...";
             // 
             // frmDashboard
             // 
@@ -382,6 +557,17 @@ namespace AutoDiomes
             this.panel4.PerformLayout();
             this.pnlWaitingConfig.ResumeLayout(false);
             this.pnlWaitingConfig.PerformLayout();
+            this.pnlRain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPuddle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,5 +598,20 @@ namespace AutoDiomes
         private System.Windows.Forms.Panel pnlWaitingConfig;
         private System.Windows.Forms.Label lblCurrentWaitingState;
         private System.Windows.Forms.Label lblConfigState;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPuddle;
+        private System.Windows.Forms.Panel pnlRain;
+        private System.Windows.Forms.PictureBox pbRain1;
+        private System.Windows.Forms.PictureBox pbRain8;
+        private System.Windows.Forms.PictureBox pbRain6;
+        private System.Windows.Forms.PictureBox pbRain5;
+        private System.Windows.Forms.PictureBox pbRain4;
+        private System.Windows.Forms.PictureBox pbRain3;
+        private System.Windows.Forms.PictureBox pbRain2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pbRain7;
+        private System.Windows.Forms.Panel pnlPuddle;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lblOverflow;
     }
 }

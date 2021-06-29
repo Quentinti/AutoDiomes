@@ -83,6 +83,16 @@ namespace AutoDiomes.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backward {
+            get {
+                object obj = ResourceManager.GetObject("backward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barcode {
             get {
                 object obj = ResourceManager.GetObject("barcode", resourceCulture);
@@ -126,6 +136,16 @@ namespace AutoDiomes.Properties {
         internal static System.Drawing.Bitmap clock {
             get {
                 object obj = ResourceManager.GetObject("clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloud {
+            get {
+                object obj = ResourceManager.GetObject("cloud", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +406,26 @@ namespace AutoDiomes.Properties {
         internal static System.Drawing.Bitmap projectbis {
             get {
                 object obj = ResourceManager.GetObject("projectbis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap puddle {
+            get {
+                object obj = ResourceManager.GetObject("puddle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rain_L {
+            get {
+                object obj = ResourceManager.GetObject("rain_L", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

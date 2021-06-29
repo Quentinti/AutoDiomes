@@ -30,7 +30,7 @@ namespace AutoDiomes
             Globals.lastFrame = "frmProjectProperties";
         }
 
-        private void frame_projectproperties()
+        private void frame_SignalList()
         {
             ths.PnlProjectLoader.Controls.Clear();
             frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -38,7 +38,16 @@ namespace AutoDiomes
             ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
             frmSignalList_Verbose.Show();
             Globals.configState = "ConfigProperties";
+        }
 
+        private void frame_ProjectStart()
+        {
+            ths.PnlProjectLoader.Controls.Clear();
+            frmProjectStart frmProjectStart_Verbose = new frmProjectStart(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            frmProjectStart_Verbose.FormBorderStyle = FormBorderStyle.None;
+            ths.PnlProjectLoader.Controls.Add(frmProjectStart_Verbose);
+            frmProjectStart_Verbose.Show();
+            Globals.configState = "NoConfigLoad";
 
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,12 +62,12 @@ namespace AutoDiomes
 
         private void panel5_Click(object sender, EventArgs e)
         {
-            frame_projectproperties();
+            frame_SignalList();
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
-            frame_projectproperties();
+            frame_SignalList();
         }
 
         private void txtBox_name_Click(object sender, EventArgs e)
@@ -133,6 +142,16 @@ namespace AutoDiomes
                 txtBox_config_name_default = false;
             }
 
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            frame_ProjectStart();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            frame_ProjectStart();
         }
     }
 }

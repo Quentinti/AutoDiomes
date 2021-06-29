@@ -32,37 +32,40 @@ namespace AutoDiomes
             this.StateText = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtBox_phase = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtBox_customer = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtBox_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBox_hardware = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtBox_software = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtBox_serial_number = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBox_error_margin = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.cmbox_testtype = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtBox_config_name = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.file_date = new System.Windows.Forms.MonthCalendar();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // StateText
@@ -105,19 +108,6 @@ namespace AutoDiomes
             this.txtBox_phase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_phase.Click += new System.EventHandler(this.txtBox_phase_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Image = global::AutoDiomes.Properties.Resources.state;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(36, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 21);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Phase :        ";
-            // 
             // txtBox_customer
             // 
             this.txtBox_customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
@@ -131,19 +121,6 @@ namespace AutoDiomes
             this.txtBox_customer.Text = "FORD, RENAULT...";
             this.txtBox_customer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_customer.Click += new System.EventHandler(this.txtBox_customer_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Image = global::AutoDiomes.Properties.Resources.partner;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(36, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Client :        ";
             // 
             // txtBox_name
             // 
@@ -169,19 +146,6 @@ namespace AutoDiomes
             this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "Projet :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Image = global::AutoDiomes.Properties.Resources.project1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(36, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 21);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nom du projet :       ";
             // 
             // panel1
             // 
@@ -212,19 +176,6 @@ namespace AutoDiomes
             this.txtBox_hardware.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_hardware.Click += new System.EventHandler(this.txtBox_hardware_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Image = global::AutoDiomes.Properties.Resources.hardware;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(36, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 21);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Hardware :        ";
-            // 
             // txtBox_software
             // 
             this.txtBox_software.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
@@ -238,19 +189,6 @@ namespace AutoDiomes
             this.txtBox_software.Text = "SW410, 210...";
             this.txtBox_software.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_software.Click += new System.EventHandler(this.txtBox_software_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Image = global::AutoDiomes.Properties.Resources.software;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(36, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 21);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Software :         ";
             // 
             // txtBox_serial_number
             // 
@@ -276,19 +214,6 @@ namespace AutoDiomes
             this.label7.Size = new System.Drawing.Size(76, 24);
             this.label7.TabIndex = 5;
             this.label7.Text = "Produit";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Image = global::AutoDiomes.Properties.Resources.barcode;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(36, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 21);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Numéro de série :       ";
             // 
             // panel2
             // 
@@ -316,19 +241,6 @@ namespace AutoDiomes
             this.txtBox_error_margin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_error_margin.Click += new System.EventHandler(this.txtBox_error_margin_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Image = global::AutoDiomes.Properties.Resources.error;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(36, 57);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(152, 21);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Marge d\'erreur       ";
-            // 
             // cmbox_testtype
             // 
             this.cmbox_testtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -349,19 +261,6 @@ namespace AutoDiomes
             this.cmbox_testtype.TabIndex = 5;
             this.cmbox_testtype.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Image = global::AutoDiomes.Properties.Resources.test;
-            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(36, 23);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 21);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Type de test :       ";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
@@ -371,7 +270,7 @@ namespace AutoDiomes
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(474, 55);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(247, 321);
+            this.panel3.Size = new System.Drawing.Size(247, 291);
             this.panel3.TabIndex = 18;
             // 
             // txtBox_config_name
@@ -380,13 +279,44 @@ namespace AutoDiomes
             this.txtBox_config_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_config_name.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_config_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_config_name.Location = new System.Drawing.Point(11, 281);
+            this.txtBox_config_name.Location = new System.Drawing.Point(11, 252);
             this.txtBox_config_name.Name = "txtBox_config_name";
             this.txtBox_config_name.Size = new System.Drawing.Size(224, 25);
             this.txtBox_config_name.TabIndex = 7;
             this.txtBox_config_name.Text = "EMS2910_CEMV1...";
             this.txtBox_config_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_config_name.Click += new System.EventHandler(this.txtBox_config_name_Click);
+            // 
+            // file_date
+            // 
+            this.file_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.file_date.Location = new System.Drawing.Point(11, 48);
+            this.file_date.Name = "file_date";
+            this.file_date.TabIndex = 5;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Location = new System.Drawing.Point(474, 413);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(248, 52);
+            this.panel5.TabIndex = 19;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Image = global::AutoDiomes.Properties.Resources.signal;
+            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label11.Location = new System.Drawing.Point(11, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(230, 21);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Configuration des signaux :        ";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -395,18 +325,11 @@ namespace AutoDiomes
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Image = global::AutoDiomes.Properties.Resources.name_file;
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Location = new System.Drawing.Point(7, 242);
+            this.label10.Location = new System.Drawing.Point(7, 219);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(234, 21);
             this.label10.TabIndex = 6;
             this.label10.Text = "Nom de la configuration :       ";
-            // 
-            // file_date
-            // 
-            this.file_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.file_date.Location = new System.Drawing.Point(11, 48);
-            this.file_date.Name = "file_date";
-            this.file_date.TabIndex = 5;
             // 
             // label9
             // 
@@ -422,29 +345,133 @@ namespace AutoDiomes
             this.label9.Text = "Date du fichier :       ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // panel5
+            // label13
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Location = new System.Drawing.Point(474, 401);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(248, 64);
-            this.panel5.TabIndex = 19;
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Image = global::AutoDiomes.Properties.Resources.error;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Location = new System.Drawing.Point(36, 57);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(152, 21);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Marge d\'erreur       ";
             // 
-            // label11
+            // label12
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Image = global::AutoDiomes.Properties.Resources.signal;
-            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(10, 23);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(230, 21);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Configuration des signaux :        ";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Image = global::AutoDiomes.Properties.Resources.test;
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.Location = new System.Drawing.Point(36, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(137, 21);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Type de test :       ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Image = global::AutoDiomes.Properties.Resources.hardware;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Location = new System.Drawing.Point(36, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 21);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Hardware :        ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Image = global::AutoDiomes.Properties.Resources.software;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(36, 80);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 21);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Software :         ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Image = global::AutoDiomes.Properties.Resources.barcode;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(36, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(172, 21);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Numéro de série :       ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Image = global::AutoDiomes.Properties.Resources.state;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(36, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 21);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Phase :        ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Image = global::AutoDiomes.Properties.Resources.partner;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(36, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 21);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Client :        ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Image = global::AutoDiomes.Properties.Resources.project1;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(36, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 21);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Nom du projet :       ";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.panel6.Controls.Add(this.label14);
+            this.panel6.Location = new System.Drawing.Point(475, 352);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(246, 55);
+            this.panel6.TabIndex = 22;
+            this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label14.Image = global::AutoDiomes.Properties.Resources.cross;
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.Location = new System.Drawing.Point(75, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 21);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Annuler        ";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // frmProjectProperties
             // 
@@ -452,6 +479,7 @@ namespace AutoDiomes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -471,6 +499,8 @@ namespace AutoDiomes
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,5 +537,7 @@ namespace AutoDiomes
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBox_error_margin;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label14;
     }
 }

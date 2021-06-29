@@ -333,5 +333,17 @@
   <ItemGroup>
     <None Include="Resources\cross.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain_L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backward.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

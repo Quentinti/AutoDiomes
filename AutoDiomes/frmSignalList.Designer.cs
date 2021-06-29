@@ -38,6 +38,8 @@ namespace AutoDiomes
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,6 +49,7 @@ namespace AutoDiomes
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -57,7 +60,7 @@ namespace AutoDiomes
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(12, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(232, 130);
+            this.panel5.Size = new System.Drawing.Size(232, 145);
             this.panel5.TabIndex = 9;
             // 
             // label5
@@ -86,9 +89,9 @@ namespace AutoDiomes
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Location = new System.Drawing.Point(12, 159);
+            this.panel7.Location = new System.Drawing.Point(12, 168);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(697, 306);
+            this.panel7.Size = new System.Drawing.Size(697, 297);
             this.panel7.TabIndex = 10;
             // 
             // label13
@@ -110,7 +113,7 @@ namespace AutoDiomes
             this.panel6.Controls.Add(this.label10);
             this.panel6.Location = new System.Drawing.Point(264, 12);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(235, 130);
+            this.panel6.Size = new System.Drawing.Size(235, 145);
             this.panel6.TabIndex = 11;
             // 
             // label9
@@ -128,7 +131,7 @@ namespace AutoDiomes
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(505, 28);
+            this.panel3.Location = new System.Drawing.Point(505, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 45);
             this.panel3.TabIndex = 15;
@@ -138,10 +141,34 @@ namespace AutoDiomes
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(505, 97);
+            this.panel1.Location = new System.Drawing.Point(505, 112);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(204, 45);
             this.panel1.TabIndex = 16;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(505, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(204, 43);
+            this.panel2.TabIndex = 17;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Image = global::AutoDiomes.Properties.Resources.backward;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(15, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Retour propriétées        ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -163,7 +190,7 @@ namespace AutoDiomes
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Image = global::AutoDiomes.Properties.Resources.signal;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(15, 13);
+            this.label4.Location = new System.Drawing.Point(15, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 21);
             this.label4.TabIndex = 0;
@@ -202,6 +229,7 @@ namespace AutoDiomes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(733, 477);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel6);
@@ -220,6 +248,8 @@ namespace AutoDiomes
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +269,7 @@ namespace AutoDiomes
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
     }
 }
