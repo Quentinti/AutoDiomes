@@ -29,7 +29,7 @@ namespace AutoDiomes
         public string name;
         public string customer;
         public string phase;
-        public UInt32 serial_number;
+        public string serial_number;
         public string software;
         public string hardware;
         public string test_type;
@@ -39,7 +39,7 @@ namespace AutoDiomes
 
         //This constructor initializes the object Project
         public Project(string name, string customer, string phase, 
-                       UInt32 serial_number, string software, string hardware ,string test_type, 
+                       string serial_number, string software, string hardware ,string test_type, 
                        UInt16 error_margin, DateTime file_date, string config_name)
         {
             this.name = name;

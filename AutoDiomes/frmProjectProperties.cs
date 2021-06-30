@@ -14,6 +14,15 @@ namespace AutoDiomes
     {
         frmAnalytics ths;
 
+        bool txtBox_name_error = false;
+        bool txtBox_customer_error = false;
+        bool txtBox_phase_error = false;
+        bool txtBox_serial_number_error = false;
+        bool txtBox_software_error = false;
+        bool txtBox_hardware_error = true;
+        bool txtBox_error_margin_error = true;
+        bool txtBox_config_name_error = false;
+
         bool txtBox_name_default = true;
         bool txtBox_customer_default = true;
         bool txtBox_phase_default = true;
@@ -23,6 +32,17 @@ namespace AutoDiomes
         bool txtBox_error_margin_default = true;
         bool txtBox_config_name_default = true;
 
+        public string name;
+        public string customer;
+        public string phase;
+        public string serial_number;
+        public string software;
+        public string hardware;
+        public string test_type;
+        public UInt16 error_margin;
+        public DateTime date_file;
+        public string config_name;
+
         public frmProjectProperties(frmAnalytics frm)
         {
             InitializeComponent();
@@ -30,14 +50,61 @@ namespace AutoDiomes
             Globals.lastFrame = "frmProjectProperties";
         }
 
+        private void labelErrorAnimation()
+        {
+            if (check_error())
+            {
+                panel5.BackColor = Color.FromArgb(180, 30, 50);
+                label11.Location = new Point(46, 15);
+                label11.Text = "Erreur de saisie !        ";
+                label11.Image = global::AutoDiomes.Properties.Resources.cross;
+            }
+            else
+            {
+                panel5.BackColor = Color.FromArgb(20, 40, 60);
+                label11.Location = new Point(11, 15);
+                label11.Text = "Configuration des signaux :        ";
+                label11.Image = global::AutoDiomes.Properties.Resources.signal;
+            }   
+        }
+
+        private bool check_error() //for check if error are present
+        {
+            if(!txtBox_name_error && !txtBox_customer_error && 
+                !txtBox_phase_error && !txtBox_serial_number_error &&
+                !txtBox_software_error && !txtBox_hardware_error &&
+                !txtBox_error_margin_error && !txtBox_config_name_error)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         private void frame_SignalList()
         {
-            ths.PnlProjectLoader.Controls.Clear();
-            frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
-            ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
-            frmSignalList_Verbose.Show();
-            Globals.configState = "ConfigProperties";
+            if (!check_error())
+            {
+                //Create the new object project and assign value of text box
+
+
+                //Project project = new Project();
+
+                //Set the state of project config for the dashboard
+                Globals.configState = "ConfigProperties";
+
+                //Show next form with signal list
+                ths.PnlProjectLoader.Controls.Clear();
+                frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
+                ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
+                frmSignalList_Verbose.Show();
+            }
+            else
+            {
+                labelErrorAnimation(); //Update label of error if error is present
+            }   
         }
 
         private void frame_ProjectStart()
@@ -48,7 +115,6 @@ namespace AutoDiomes
             ths.PnlProjectLoader.Controls.Add(frmProjectStart_Verbose);
             frmProjectStart_Verbose.Show();
             Globals.configState = "NoConfigLoad";
-
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -153,5 +219,91 @@ namespace AutoDiomes
         {
             frame_ProjectStart();
         }
+
+        private void txtBox_name_Leave(object sender, EventArgs e)
+        {
+            name = txtBox_name.Text;
+        }
+
+        private void txtBox_customer_Leave(object sender, EventArgs e)
+        {
+            customer = txtBox_customer.Text;
+        }
+
+        private void txtBox_phase_Leave(object sender, EventArgs e)
+        {
+            phase = txtBox_phase.Text;
+        }
+
+        private void txtBox_serial_number_Leave(object sender, EventArgs e)
+        {
+            serial_number = txtBox_serial_number.Text;
+        }
+
+        private void txtBox_software_Leave(object sender, EventArgs e)
+        {
+            software = txtBox_software.Text;
+        }
+
+        private void txtBox_hardware_Leave(object sender, EventArgs e)
+        {
+            hardware = txtBox_hardware.Text;
+            if (hardware.Length < 64) //verify if the content is bellow 60 carac
+            {
+                txtBox_hardware_error = false;
+                txtBox_hardware.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                labelErrorAnimation();
+            }
+            else
+            {
+                txtBox_hardware.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_hardware.Text = "Saisie trop longue ! < 64"; //change the text of text box for indicate the error
+                txtBox_hardware_default = true; //Reset for clear after a new click
+                txtBox_hardware_error = true; //Set error to true
+                labelErrorAnimation();
+            }
+        }
+
+        private void txtBox_error_margin_Leave(object sender, EventArgs e)
+        {
+            if(UInt16.TryParse(txtBox_error_margin.Text, out error_margin)) //verify if the content is number and convert it to UINT16
+            {
+                if((error_margin >= 0) && (error_margin <= 100)) //verify if the number enter is a percent
+                {
+                    txtBox_error_margin_error = false;
+                    txtBox_error_margin.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    labelErrorAnimation();
+                }
+                else
+                {
+                    txtBox_error_margin.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_error_margin.Text = "Pas de %, 0 < valeur < 100"; //change the text of text box for indicate the error
+                    txtBox_error_margin_default = true; //Reset for clear after a new click
+                    txtBox_error_margin_error = true; //Set error to true
+                    labelErrorAnimation();
+                }
+            }
+            else
+            {
+                txtBox_error_margin.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_error_margin.Text = "Pas de %, 0 < valeur < 100"; //change the text of text box for indicate the error
+                txtBox_error_margin_default = true; //Reset for clear after a new click
+                txtBox_error_margin_error = true; //Set error to true
+                labelErrorAnimation();
+            }
+        }
+
+        //private static string ConvertLinearToString(ushort data) //Convert UINT16 to string
+        //{
+        //    var n = GetBitRange(data, 16, 5);
+        //    var y = GetBitRange(data, 21, 11);
+        //    var value = y * Math.Pow(2, n);
+        //    return value.ToString();
+        //}
+
+        //private static int GetBitRange(int data, int offset, int count)
+        //{
+        //    return data << offset >> (32 - count);
+        //}
     }
 }
