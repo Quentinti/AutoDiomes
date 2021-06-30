@@ -53,23 +53,23 @@ namespace AutoDiomes
             this.lblState = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlWaitingConfig = new System.Windows.Forms.Panel();
+            this.lblOverflow = new System.Windows.Forms.Label();
+            this.pnlPuddle = new System.Windows.Forms.Panel();
             this.pnlRain = new System.Windows.Forms.Panel();
+            this.pbRain7 = new System.Windows.Forms.PictureBox();
+            this.pbRain8 = new System.Windows.Forms.PictureBox();
+            this.pbRain6 = new System.Windows.Forms.PictureBox();
+            this.pbRain5 = new System.Windows.Forms.PictureBox();
+            this.pbRain4 = new System.Windows.Forms.PictureBox();
+            this.pbRain3 = new System.Windows.Forms.PictureBox();
+            this.pbRain2 = new System.Windows.Forms.PictureBox();
             this.pbRain1 = new System.Windows.Forms.PictureBox();
             this.pbPuddle = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCurrentWaitingState = new System.Windows.Forms.Label();
             this.lblConfigState = new System.Windows.Forms.Label();
-            this.pbRain2 = new System.Windows.Forms.PictureBox();
-            this.pbRain3 = new System.Windows.Forms.PictureBox();
-            this.pbRain4 = new System.Windows.Forms.PictureBox();
-            this.pbRain5 = new System.Windows.Forms.PictureBox();
-            this.pbRain6 = new System.Windows.Forms.PictureBox();
-            this.pbRain8 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pbRain7 = new System.Windows.Forms.PictureBox();
-            this.pnlPuddle = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.lblOverflow = new System.Windows.Forms.Label();
             this.pnlLastMesure.SuspendLayout();
             this.pnlScope.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,16 +78,16 @@ namespace AutoDiomes
             this.panel4.SuspendLayout();
             this.pnlWaitingConfig.SuspendLayout();
             this.pnlRain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRain1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPuddle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain7)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLastMesure
@@ -363,6 +363,24 @@ namespace AutoDiomes
             this.pnlWaitingConfig.Size = new System.Drawing.Size(711, 323);
             this.pnlWaitingConfig.TabIndex = 10;
             // 
+            // lblOverflow
+            // 
+            this.lblOverflow.AutoSize = true;
+            this.lblOverflow.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOverflow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lblOverflow.Location = new System.Drawing.Point(467, 291);
+            this.lblOverflow.Name = "lblOverflow";
+            this.lblOverflow.Size = new System.Drawing.Size(176, 21);
+            this.lblOverflow.TabIndex = 8;
+            this.lblOverflow.Text = "Attention ! Ça déborde...";
+            // 
+            // pnlPuddle
+            // 
+            this.pnlPuddle.Location = new System.Drawing.Point(275, 282);
+            this.pnlPuddle.Name = "pnlPuddle";
+            this.pnlPuddle.Size = new System.Drawing.Size(174, 35);
+            this.pnlPuddle.TabIndex = 7;
+            // 
             // pnlRain
             // 
             this.pnlRain.Controls.Add(this.pbRain7);
@@ -377,6 +395,76 @@ namespace AutoDiomes
             this.pnlRain.Name = "pnlRain";
             this.pnlRain.Size = new System.Drawing.Size(185, 100);
             this.pnlRain.TabIndex = 6;
+            // 
+            // pbRain7
+            // 
+            this.pbRain7.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain7.Location = new System.Drawing.Point(130, 34);
+            this.pbRain7.Name = "pbRain7";
+            this.pbRain7.Size = new System.Drawing.Size(10, 30);
+            this.pbRain7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain7.TabIndex = 7;
+            this.pbRain7.TabStop = false;
+            // 
+            // pbRain8
+            // 
+            this.pbRain8.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain8.Location = new System.Drawing.Point(148, 3);
+            this.pbRain8.Name = "pbRain8";
+            this.pbRain8.Size = new System.Drawing.Size(20, 50);
+            this.pbRain8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain8.TabIndex = 6;
+            this.pbRain8.TabStop = false;
+            // 
+            // pbRain6
+            // 
+            this.pbRain6.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain6.Location = new System.Drawing.Point(114, 13);
+            this.pbRain6.Name = "pbRain6";
+            this.pbRain6.Size = new System.Drawing.Size(10, 30);
+            this.pbRain6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain6.TabIndex = 5;
+            this.pbRain6.TabStop = false;
+            // 
+            // pbRain5
+            // 
+            this.pbRain5.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain5.Location = new System.Drawing.Point(98, 34);
+            this.pbRain5.Name = "pbRain5";
+            this.pbRain5.Size = new System.Drawing.Size(10, 43);
+            this.pbRain5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain5.TabIndex = 4;
+            this.pbRain5.TabStop = false;
+            // 
+            // pbRain4
+            // 
+            this.pbRain4.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain4.Location = new System.Drawing.Point(82, 13);
+            this.pbRain4.Name = "pbRain4";
+            this.pbRain4.Size = new System.Drawing.Size(10, 30);
+            this.pbRain4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain4.TabIndex = 3;
+            this.pbRain4.TabStop = false;
+            // 
+            // pbRain3
+            // 
+            this.pbRain3.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain3.Location = new System.Drawing.Point(56, 34);
+            this.pbRain3.Name = "pbRain3";
+            this.pbRain3.Size = new System.Drawing.Size(20, 50);
+            this.pbRain3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain3.TabIndex = 2;
+            this.pbRain3.TabStop = false;
+            // 
+            // pbRain2
+            // 
+            this.pbRain2.Image = global::AutoDiomes.Properties.Resources.rain_L;
+            this.pbRain2.Location = new System.Drawing.Point(40, 34);
+            this.pbRain2.Name = "pbRain2";
+            this.pbRain2.Size = new System.Drawing.Size(10, 30);
+            this.pbRain2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRain2.TabIndex = 1;
+            this.pbRain2.TabStop = false;
             // 
             // pbRain1
             // 
@@ -431,103 +519,15 @@ namespace AutoDiomes
             this.lblConfigState.TabIndex = 2;
             this.lblConfigState.Text = "En attente de configuration...";
             // 
-            // pbRain2
-            // 
-            this.pbRain2.Image = global::AutoDiomes.Properties.Resources.rain_L;
-            this.pbRain2.Location = new System.Drawing.Point(40, 34);
-            this.pbRain2.Name = "pbRain2";
-            this.pbRain2.Size = new System.Drawing.Size(10, 30);
-            this.pbRain2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRain2.TabIndex = 1;
-            this.pbRain2.TabStop = false;
-            // 
-            // pbRain3
-            // 
-            this.pbRain3.Image = global::AutoDiomes.Properties.Resources.rain_L;
-            this.pbRain3.Location = new System.Drawing.Point(56, 34);
-            this.pbRain3.Name = "pbRain3";
-            this.pbRain3.Size = new System.Drawing.Size(20, 50);
-            this.pbRain3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRain3.TabIndex = 2;
-            this.pbRain3.TabStop = false;
-            // 
-            // pbRain4
-            // 
-            this.pbRain4.Image = global::AutoDiomes.Properties.Resources.rain_L;
-            this.pbRain4.Location = new System.Drawing.Point(82, 13);
-            this.pbRain4.Name = "pbRain4";
-            this.pbRain4.Size = new System.Drawing.Size(10, 30);
-            this.pbRain4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRain4.TabIndex = 3;
-            this.pbRain4.TabStop = false;
-            // 
-            // pbRain5
-            // 
-            this.pbRain5.Image = global::AutoDiomes.Properties.Resources.rain_L;
-            this.pbRain5.Location = new System.Drawing.Point(98, 34);
-            this.pbRain5.Name = "pbRain5";
-            this.pbRain5.Size = new System.Drawing.Size(10, 43);
-            this.pbRain5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRain5.TabIndex = 4;
-            this.pbRain5.TabStop = false;
-            // 
-            // pbRain6
-            // 
-            this.pbRain6.Image = global::AutoDiomes.Properties.Resources.rain_L;
-            this.pbRain6.Location = new System.Drawing.Point(114, 13);
-            this.pbRain6.Name = "pbRain6";
-            this.pbRain6.Size = new System.Drawing.Size(10, 30);
-            this.pbRain6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRain6.TabIndex = 5;
-            this.pbRain6.TabStop = false;
-            // 
-            // pbRain8
-            // 
-            this.pbRain8.Image = global::AutoDiomes.Properties.Resources.rain_L;
-            this.pbRain8.Location = new System.Drawing.Point(148, 3);
-            this.pbRain8.Name = "pbRain8";
-            this.pbRain8.Size = new System.Drawing.Size(20, 50);
-            this.pbRain8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRain8.TabIndex = 6;
-            this.pbRain8.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pbRain7
-            // 
-            this.pbRain7.Image = global::AutoDiomes.Properties.Resources.rain_L;
-            this.pbRain7.Location = new System.Drawing.Point(130, 34);
-            this.pbRain7.Name = "pbRain7";
-            this.pbRain7.Size = new System.Drawing.Size(10, 30);
-            this.pbRain7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRain7.TabIndex = 7;
-            this.pbRain7.TabStop = false;
-            // 
-            // pnlPuddle
-            // 
-            this.pnlPuddle.Location = new System.Drawing.Point(275, 282);
-            this.pnlPuddle.Name = "pnlPuddle";
-            this.pnlPuddle.Size = new System.Drawing.Size(174, 35);
-            this.pnlPuddle.TabIndex = 7;
-            // 
             // timer2
             // 
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // lblOverflow
-            // 
-            this.lblOverflow.AutoSize = true;
-            this.lblOverflow.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOverflow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.lblOverflow.Location = new System.Drawing.Point(467, 291);
-            this.lblOverflow.Name = "lblOverflow";
-            this.lblOverflow.Size = new System.Drawing.Size(176, 21);
-            this.lblOverflow.TabIndex = 8;
-            this.lblOverflow.Text = "Attention ! Ça déborde...";
             // 
             // frmDashboard
             // 
@@ -558,16 +558,16 @@ namespace AutoDiomes
             this.pnlWaitingConfig.ResumeLayout(false);
             this.pnlWaitingConfig.PerformLayout();
             this.pnlRain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRain2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRain1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPuddle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRain7)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,6 +29,7 @@ namespace AutoDiomes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.StateText = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtBox_phase = new System.Windows.Forms.TextBox();
@@ -60,6 +61,7 @@ namespace AutoDiomes
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -342,7 +344,7 @@ namespace AutoDiomes
             // cmbox_testtype
             // 
             this.cmbox_testtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cmbox_testtype.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cmbox_testtype.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbox_testtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_testtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbox_testtype.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,7 +359,7 @@ namespace AutoDiomes
             this.cmbox_testtype.Name = "cmbox_testtype";
             this.cmbox_testtype.Size = new System.Drawing.Size(150, 28);
             this.cmbox_testtype.TabIndex = 5;
-            this.cmbox_testtype.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbox_testtype.SelectedIndexChanged += new System.EventHandler(this.cmbox_testtype_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -415,16 +417,16 @@ namespace AutoDiomes
             // file_date
             // 
             this.file_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.file_date.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.file_date.Cursor = System.Windows.Forms.Cursors.Hand;
             this.file_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.file_date.Location = new System.Drawing.Point(11, 48);
+            this.file_date.MaxSelectionCount = 1;
             this.file_date.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.file_date.Name = "file_date";
             this.file_date.TabIndex = 5;
             this.file_date.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.file_date.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.file_date.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.file_date.UseWaitCursor = true;
             // 
             // label9
             // 
@@ -438,14 +440,13 @@ namespace AutoDiomes
             this.label9.Size = new System.Drawing.Size(159, 21);
             this.label9.TabIndex = 4;
             this.label9.Text = "Date du fichier :       ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel5.Location = new System.Drawing.Point(474, 413);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Location = new System.Drawing.Point(475, 413);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(248, 52);
             this.panel5.TabIndex = 19;
@@ -470,6 +471,7 @@ namespace AutoDiomes
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.panel6.Controls.Add(this.label14);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel6.Location = new System.Drawing.Point(475, 352);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(246, 55);
@@ -489,6 +491,11 @@ namespace AutoDiomes
             this.label14.TabIndex = 0;
             this.label14.Text = "Annuler        ";
             this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmProjectProperties
             // 
@@ -556,5 +563,6 @@ namespace AutoDiomes
         private System.Windows.Forms.TextBox txtBox_error_margin;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Timer timer1;
     }
 }

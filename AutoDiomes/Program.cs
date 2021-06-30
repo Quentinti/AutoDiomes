@@ -34,13 +34,13 @@ namespace AutoDiomes
         public string hardware;
         public string test_type;
         public UInt16 error_margin;
-        public DateTime file_date;
+        public string file_date;
         public string config_name;
 
         //This constructor initializes the object Project
         public Project(string name, string customer, string phase, 
                        string serial_number, string software, string hardware ,string test_type, 
-                       UInt16 error_margin, DateTime file_date, string config_name)
+                       UInt16 error_margin, string file_date, string config_name)
         {
             this.name = name;
             this.customer = customer;

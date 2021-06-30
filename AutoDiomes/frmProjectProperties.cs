@@ -20,6 +20,7 @@ namespace AutoDiomes
         bool txtBox_serial_number_error = true;
         bool txtBox_software_error = true;
         bool txtBox_hardware_error = true;
+        bool cmbBox_test_type_error = true;
         bool txtBox_error_margin_error = true;
         bool txtBox_config_name_error = true;
 
@@ -32,22 +33,28 @@ namespace AutoDiomes
         bool txtBox_error_margin_default = true;
         bool txtBox_config_name_default = true;
 
-        public string name;
-        public string customer;
-        public string phase;
-        public string serial_number;
-        public string software;
-        public string hardware;
-        public string test_type;
-        public UInt16 error_margin;
-        public DateTime date_file;
-        public string config_name;
+        private string name;
+        private string customer;
+        private string phase;
+        private string serial_number;
+        private string software;
+        private string hardware;
+        private string test_type;
+        private UInt16 error_margin;
+        private string date_file;
+        private string config_name;
+
+        private string animate = "Right";
+        private ushort animate_cpt = 0;
+
+
 
         public frmProjectProperties(frmAnalytics frm)
         {
             InitializeComponent();
             ths = frm;
             Globals.lastFrame = "frmProjectProperties";
+            this.timer1.Start();
         }
 
         private void labelErrorAnimation()
@@ -65,7 +72,7 @@ namespace AutoDiomes
             else
             {
                 panel5.BackColor = Color.FromArgb(20, 40, 60);
-                panel5.Cursor = System.Windows.Forms.Cursors.Default;
+                panel5.Cursor = System.Windows.Forms.Cursors.Hand;
                 label11.Location = new Point(11, 15);
                 label11.Text = "Configuration des signaux :        ";
                 label11.Image = global::AutoDiomes.Properties.Resources.signal;
@@ -78,7 +85,8 @@ namespace AutoDiomes
             if(!txtBox_name_error && !txtBox_customer_error && 
                 !txtBox_phase_error && !txtBox_serial_number_error &&
                 !txtBox_software_error && !txtBox_hardware_error &&
-                !txtBox_error_margin_error && !txtBox_config_name_error)
+                !txtBox_error_margin_error && !txtBox_config_name_error &&
+                !cmbBox_test_type_error)
             {
                 return false;
             }
@@ -93,6 +101,7 @@ namespace AutoDiomes
             {
                 //Create the new object project and assign value of text box
 
+                date_file = file_date.SelectionRange.Start.ToShortDateString();
 
                 //Project project = new Project();
 
@@ -105,9 +114,11 @@ namespace AutoDiomes
                 frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
                 ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
                 frmSignalList_Verbose.Show();
+                this.timer1.Stop();
             }
             else
             {
+                animate_cpt = 0;
                 labelErrorAnimation(); //Update label of error if error is present
             }   
         }
@@ -120,15 +131,6 @@ namespace AutoDiomes
             ths.PnlProjectLoader.Controls.Add(frmProjectStart_Verbose);
             frmProjectStart_Verbose.Show();
             Globals.configState = "NoConfigLoad";
-        }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panel5_Click(object sender, EventArgs e)
@@ -339,7 +341,6 @@ namespace AutoDiomes
             }
         }
 
-
         private void txtBox_error_margin_Leave(object sender, EventArgs e)
         {
             if(UInt16.TryParse(txtBox_error_margin.Text, out error_margin)) //verify if the content is number and convert it to UINT16
@@ -386,6 +387,47 @@ namespace AutoDiomes
                 txtBox_config_name_error = true; //Set error to true
                 labelErrorAnimation();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (label11.Text == "Erreur de saisie !        ")
+            {
+                if (animate_cpt == 6)
+                {
+                    panel5.Location = new Point(475, 413);
+                }
+                if (animate_cpt < 6)
+                {
+
+                    if (animate == "Right")
+                    {
+                        panel5.Location = new Point(panel5.Location.X + 6, panel5.Location.Y);
+                    }
+                    else if (animate == "Left")
+                    {
+                        panel5.Location = new Point(panel5.Location.X - 6, panel5.Location.Y);
+                    }
+
+                    if (panel5.Location.X > 490)
+                    {
+                        animate = "Left";
+                        animate_cpt++;
+                    }
+                    else if (panel5.Location.X < 460)
+                    {
+                        animate = "Right";
+                        animate_cpt++;
+                    }
+                }
+            }
+            
+        }
+
+        private void cmbox_testtype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            test_type = cmbox_testtype.Text;
+            cmbBox_test_type_error = false;
         }
 
         //private static string ConvertLinearToString(ushort data) //Convert UINT16 to string

@@ -72,6 +72,7 @@ namespace AutoDiomes
             // 
             // btnAbout
             // 
+            this.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbout.FlatAppearance.BorderSize = 0;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,6 +90,7 @@ namespace AutoDiomes
             // 
             // btnSettings
             // 
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -107,6 +109,7 @@ namespace AutoDiomes
             // 
             // btnHelp
             // 
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -126,6 +129,7 @@ namespace AutoDiomes
             // 
             // btnAnalytics
             // 
+            this.btnAnalytics.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnalytics.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAnalytics.FlatAppearance.BorderSize = 0;
             this.btnAnalytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -144,6 +148,7 @@ namespace AutoDiomes
             // 
             // btnDashboard
             // 
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -228,6 +233,7 @@ namespace AutoDiomes
             // AreaMove
             // 
             this.AreaMove.BackColor = System.Drawing.Color.Transparent;
+            this.AreaMove.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.AreaMove.ForeColor = System.Drawing.Color.Transparent;
             this.AreaMove.Location = new System.Drawing.Point(0, 0);
             this.AreaMove.Name = "AreaMove";
@@ -239,6 +245,7 @@ namespace AutoDiomes
             // 
             // CloseButton
             // 
+            this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.FlatAppearance.BorderSize = 0;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.ForeColor = System.Drawing.Color.White;
