@@ -14,14 +14,14 @@ namespace AutoDiomes
     {
         frmAnalytics ths;
 
-        bool txtBox_name_error = false;
-        bool txtBox_customer_error = false;
-        bool txtBox_phase_error = false;
-        bool txtBox_serial_number_error = false;
-        bool txtBox_software_error = false;
+        bool txtBox_name_error = true;
+        bool txtBox_customer_error = true;
+        bool txtBox_phase_error = true;
+        bool txtBox_serial_number_error = true;
+        bool txtBox_software_error = true;
         bool txtBox_hardware_error = true;
         bool txtBox_error_margin_error = true;
-        bool txtBox_config_name_error = false;
+        bool txtBox_config_name_error = true;
 
         bool txtBox_name_default = true;
         bool txtBox_customer_default = true;
@@ -55,16 +55,21 @@ namespace AutoDiomes
             if (check_error())
             {
                 panel5.BackColor = Color.FromArgb(180, 30, 50);
+                panel5.Cursor = System.Windows.Forms.Cursors.No;
                 label11.Location = new Point(46, 15);
                 label11.Text = "Erreur de saisie !        ";
                 label11.Image = global::AutoDiomes.Properties.Resources.cross;
+                label11.Cursor = System.Windows.Forms.Cursors.No;
+
             }
             else
             {
                 panel5.BackColor = Color.FromArgb(20, 40, 60);
+                panel5.Cursor = System.Windows.Forms.Cursors.Default;
                 label11.Location = new Point(11, 15);
                 label11.Text = "Configuration des signaux :        ";
                 label11.Image = global::AutoDiomes.Properties.Resources.signal;
+                label11.Cursor = System.Windows.Forms.Cursors.Default;
             }   
         }
 
@@ -223,26 +228,96 @@ namespace AutoDiomes
         private void txtBox_name_Leave(object sender, EventArgs e)
         {
             name = txtBox_name.Text;
+            if (name.Length < 64) //verify if the content is bellow 60 carac
+            {
+                txtBox_name_error = false;
+                txtBox_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                labelErrorAnimation();
+            }
+            else
+            {
+                txtBox_name.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_name.Text = "Saisie trop longue ! < 64"; //change the text of text box for indicate the error
+                txtBox_name_default = true; //Reset for clear after a new click
+                txtBox_name_error = true; //Set error to true
+                labelErrorAnimation();
+            }
         }
 
         private void txtBox_customer_Leave(object sender, EventArgs e)
         {
             customer = txtBox_customer.Text;
+            if (customer.Length < 64) //verify if the content is bellow 60 carac
+            {
+                txtBox_customer_error = false;
+                txtBox_customer.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                labelErrorAnimation();
+            }
+            else
+            {
+                txtBox_customer.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_customer.Text = "Saisie trop longue ! < 64"; //change the text of text box for indicate the error
+                txtBox_customer_default = true; //Reset for clear after a new click
+                txtBox_customer_error = true; //Set error to true
+                labelErrorAnimation();
+            }
         }
 
         private void txtBox_phase_Leave(object sender, EventArgs e)
         {
             phase = txtBox_phase.Text;
+            if (phase.Length < 64) //verify if the content is bellow 60 carac
+            {
+                txtBox_phase_error = false;
+                txtBox_phase.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                labelErrorAnimation();
+            }
+            else
+            {
+                txtBox_phase.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_phase.Text = "Saisie trop longue ! < 64"; //change the text of text box for indicate the error
+                txtBox_phase_default = true; //Reset for clear after a new click
+                txtBox_phase_error = true; //Set error to true
+                labelErrorAnimation();
+            }
         }
 
         private void txtBox_serial_number_Leave(object sender, EventArgs e)
         {
             serial_number = txtBox_serial_number.Text;
+            if (serial_number.Length < 64) //verify if the content is bellow 60 carac
+            {
+                txtBox_serial_number_error = false;
+                txtBox_serial_number.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                labelErrorAnimation();
+            }
+            else
+            {
+                txtBox_serial_number.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_serial_number.Text = "Saisie trop longue ! < 64"; //change the text of text box for indicate the error
+                txtBox_serial_number_default = true; //Reset for clear after a new click
+                txtBox_serial_number_error = true; //Set error to true
+                labelErrorAnimation();
+            }
         }
 
         private void txtBox_software_Leave(object sender, EventArgs e)
         {
             software = txtBox_software.Text;
+            if (software.Length < 64) //verify if the content is bellow 60 carac
+            {
+                txtBox_software_error = false;
+                txtBox_software.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                labelErrorAnimation();
+            }
+            else
+            {
+                txtBox_software.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_software.Text = "Saisie trop longue ! < 64"; //change the text of text box for indicate the error
+                txtBox_software_default = true; //Reset for clear after a new click
+                txtBox_software_error = true; //Set error to true
+                labelErrorAnimation();
+            }
         }
 
         private void txtBox_hardware_Leave(object sender, EventArgs e)
@@ -263,6 +338,7 @@ namespace AutoDiomes
                 labelErrorAnimation();
             }
         }
+
 
         private void txtBox_error_margin_Leave(object sender, EventArgs e)
         {
@@ -289,6 +365,25 @@ namespace AutoDiomes
                 txtBox_error_margin.Text = "Pas de %, 0 < valeur < 100"; //change the text of text box for indicate the error
                 txtBox_error_margin_default = true; //Reset for clear after a new click
                 txtBox_error_margin_error = true; //Set error to true
+                labelErrorAnimation();
+            }
+        }
+
+        private void txtBox_config_name_Leave(object sender, EventArgs e)
+        {
+            config_name = txtBox_config_name.Text;
+            if (config_name.Length < 64) //verify if the content is bellow 60 carac
+            {
+                txtBox_config_name_error = false;
+                txtBox_config_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                labelErrorAnimation();
+            }
+            else
+            {
+                txtBox_config_name.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_config_name.Text = "Saisie trop longue ! < 64"; //change the text of text box for indicate the error
+                txtBox_config_name_default = true; //Reset for clear after a new click
+                txtBox_config_name_error = true; //Set error to true
                 labelErrorAnimation();
             }
         }

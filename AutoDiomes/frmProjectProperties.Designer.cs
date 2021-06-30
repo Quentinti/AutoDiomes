@@ -397,6 +397,7 @@ namespace AutoDiomes
             this.txtBox_config_name.Text = "EMS2910_CEMV1...";
             this.txtBox_config_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_config_name.Click += new System.EventHandler(this.txtBox_config_name_Click);
+            this.txtBox_config_name.Leave += new System.EventHandler(this.txtBox_config_name_Leave);
             // 
             // label10
             // 
@@ -414,9 +415,16 @@ namespace AutoDiomes
             // file_date
             // 
             this.file_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.file_date.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.file_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.file_date.Location = new System.Drawing.Point(11, 48);
+            this.file_date.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.file_date.Name = "file_date";
             this.file_date.TabIndex = 5;
+            this.file_date.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.file_date.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.file_date.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.file_date.UseWaitCursor = true;
             // 
             // label9
             // 
@@ -436,6 +444,7 @@ namespace AutoDiomes
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.panel5.Controls.Add(this.label11);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel5.Location = new System.Drawing.Point(474, 413);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(248, 52);

@@ -23,8 +23,9 @@ namespace AutoDiomes
         int mov;
         int movX;
         int movY;
-        string userName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName; //get current user display name
-        string userEmail = System.DirectoryServices.AccountManagement.UserPrincipal.Current.EmailAddress; //get current user display name
+
+        string userName = "Read Error";  
+        string userEmail = "Read Error"; 
 
         DirectoryInfo directorymain = Directory.CreateDirectory(@"C:\AutoDiomes"); //automatic create directory if he is not present
         DirectoryInfo directorytemp = Directory.CreateDirectory(@"C:\AutoDiomes\temp"); //automatic create directory temp for temporary files
@@ -53,6 +54,14 @@ namespace AutoDiomes
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
 
             lblTitle.Text = "Menu principal";
+
+            try
+            {
+                userName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName; //get current user display name
+                userEmail = System.DirectoryServices.AccountManagement.UserPrincipal.Current.EmailAddress; //get current user display name
+            }
+            catch (IOException e) { }
+
             lblUserName.Text = userName;
             lblEmail.Text = userEmail;
             this.PnlFormLoader.Controls.Clear();
