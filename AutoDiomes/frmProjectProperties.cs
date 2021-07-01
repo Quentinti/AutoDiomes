@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.IO.Ports;
+using System.Runtime.InteropServices;
+using Newtonsoft.Json;
 
 namespace AutoDiomes
 {
@@ -34,7 +38,9 @@ namespace AutoDiomes
         private bool txtBox_config_name_default = true;
 
         private string animate = "Right";
-        private ushort animate_cpt = 0;
+        private ushort animate_cpt = 10;
+
+        private ushort error_margin;
 
         public frmProjectProperties(frmAnalytics frm)
         {
@@ -120,14 +126,33 @@ namespace AutoDiomes
         }
         private void frame_SignalList()
         {
-            if (!check_error())
+            if (!check_error()) //if no error present
             {
                 //Create the new object project and assign value of text box
-
+                Globals.project.name = txtBox_name.Text;
+                Globals.project.customer = txtBox_customer.Text;
+                Globals.project.phase = txtBox_phase.Text;
+                Globals.project.serial_number = txtBox_serial_number.Text;
+                Globals.project.software = txtBox_software.Text;
+                Globals.project.hardware = txtBox_hardware.Text;
+                Globals.project.error_margin = error_margin;
+                Globals.project.config_name = txtBox_config_name.Text;
                 Globals.project.file_date = file_date.SelectionRange.Start.ToShortDateString();
 
                 //Set the state of project config for the dashboard
                 Globals.configState = "ConfigProperties";
+
+                //Create a temporary directory for the project configuration and create file in json
+                DirectoryInfo directoryproject = Directory.CreateDirectory(@"C:\AutoDiomes\temp\" + Globals.project.config_name); //automatic create directory temp for temporary files
+                string file_path = @"C:\AutoDiomes\temp\" + Globals.project.config_name + @"\" + Globals.project.config_name + @"_properties.json";
+                
+                if (System.IO.File.Exists(file_path))
+                {
+                    System.IO.File.Delete(file_path);
+                }
+
+                string json = JsonConvert.SerializeObject(Globals.project, Formatting.Indented);
+                System.IO.File.WriteAllText(file_path, json);
 
                 //Show next form with signal list
                 ths.PnlProjectLoader.Controls.Clear();
@@ -250,8 +275,7 @@ namespace AutoDiomes
 
         private void txtBox_name_Leave(object sender, EventArgs e)
         {
-            Globals.project.name = txtBox_name.Text;
-            if (Globals.project.name.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_name.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_name_error = false;
                 txtBox_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -269,8 +293,7 @@ namespace AutoDiomes
 
         private void txtBox_customer_Leave(object sender, EventArgs e)
         {
-            Globals.project.customer = txtBox_customer.Text;
-            if (Globals.project.customer.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_customer.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_customer_error = false;
                 txtBox_customer.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -288,8 +311,7 @@ namespace AutoDiomes
 
         private void txtBox_phase_Leave(object sender, EventArgs e)
         {
-            Globals.project.phase = txtBox_phase.Text;
-            if (Globals.project.phase.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_phase.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_phase_error = false;
                 txtBox_phase.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -307,8 +329,7 @@ namespace AutoDiomes
 
         private void txtBox_serial_number_Leave(object sender, EventArgs e)
         {
-            Globals.project.serial_number = txtBox_serial_number.Text;
-            if (Globals.project.serial_number.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_serial_number.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_serial_number_error = false;
                 txtBox_serial_number.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -326,8 +347,7 @@ namespace AutoDiomes
 
         private void txtBox_software_Leave(object sender, EventArgs e)
         {
-            Globals.project.software = txtBox_software.Text;
-            if (Globals.project.software.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_software.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_software_error = false;
                 txtBox_software.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -345,8 +365,7 @@ namespace AutoDiomes
 
         private void txtBox_hardware_Leave(object sender, EventArgs e)
         {
-            Globals.project.hardware = txtBox_hardware.Text;
-            if (Globals.project.hardware.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_hardware.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_hardware_error = false;
                 txtBox_hardware.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -364,9 +383,9 @@ namespace AutoDiomes
 
         private void txtBox_error_margin_Leave(object sender, EventArgs e)
         {
-            if(UInt16.TryParse(txtBox_error_margin.Text, out Globals.project.error_margin)) //verify if the content is number and convert it to UINT16
+            if(UInt16.TryParse(txtBox_error_margin.Text, out error_margin)) //verify if the content is number and convert it to UINT16
             {
-                if((Globals.project.error_margin >= 0) && (Globals.project.error_margin <= 100)) //verify if the number enter is a percent
+                if((error_margin >= 0) && (error_margin <= 100)) //verify if the number enter is a percent
                 {
                     txtBox_error_margin_error = false;
                     txtBox_error_margin.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -390,11 +409,9 @@ namespace AutoDiomes
                 labelErrorAnimation();
             }
         }
-
         private void txtBox_config_name_Leave(object sender, EventArgs e)
         {
-            Globals.project.config_name = txtBox_config_name.Text;
-            if (Globals.project.config_name.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_config_name.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_config_name_error = false;
                 txtBox_config_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box

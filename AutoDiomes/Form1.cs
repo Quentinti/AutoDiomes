@@ -185,7 +185,7 @@ namespace AutoDiomes
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            directorytemp.Delete();
+            //directorytemp.Delete();
             System.Windows.Forms.Application.ExitThread();
         }
 
