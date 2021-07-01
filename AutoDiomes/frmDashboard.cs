@@ -38,7 +38,10 @@ namespace AutoDiomes
                     pnlLastMesure.Hide();
                     pnlCurrentMesure.Hide();
                     pnlScope.Hide();
+
                     lblCurrentWaitingState.Text = "Création des signaux du projet en attente...";
+                    lblProject_Name.Text = Globals.project.name;
+                    lblProject_Phase.Text = Globals.project.phase;
                     timer1.Start();
                     timer2.Start();
                     break;

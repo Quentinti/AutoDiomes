@@ -14,47 +14,70 @@ namespace AutoDiomes
     {
         frmAnalytics ths;
 
-        bool txtBox_name_error = true;
-        bool txtBox_customer_error = true;
-        bool txtBox_phase_error = true;
-        bool txtBox_serial_number_error = true;
-        bool txtBox_software_error = true;
-        bool txtBox_hardware_error = true;
-        bool cmbBox_test_type_error = true;
-        bool txtBox_error_margin_error = true;
-        bool txtBox_config_name_error = true;
+        private bool txtBox_name_error = true;
+        private bool txtBox_customer_error = true;
+        private bool txtBox_phase_error = true;
+        private bool txtBox_serial_number_error = true;
+        private bool txtBox_software_error = true;
+        private bool txtBox_hardware_error = true;
+        private bool cmbBox_test_type_error = true;
+        private bool txtBox_error_margin_error = true;
+        private bool txtBox_config_name_error = true;
 
-        bool txtBox_name_default = true;
-        bool txtBox_customer_default = true;
-        bool txtBox_phase_default = true;
-        bool txtBox_serial_number_default = true;
-        bool txtBox_software_default = true;
-        bool txtBox_hardware_default = true;
-        bool txtBox_error_margin_default = true;
-        bool txtBox_config_name_default = true;
-
-        private string name;
-        private string customer;
-        private string phase;
-        private string serial_number;
-        private string software;
-        private string hardware;
-        private string test_type;
-        private UInt16 error_margin;
-        private string date_file;
-        private string config_name;
+        private bool txtBox_name_default = true;
+        private bool txtBox_customer_default = true;
+        private bool txtBox_phase_default = true;
+        private bool txtBox_serial_number_default = true;
+        private bool txtBox_software_default = true;
+        private bool txtBox_hardware_default = true;
+        private bool txtBox_error_margin_default = true;
+        private bool txtBox_config_name_default = true;
 
         private string animate = "Right";
         private ushort animate_cpt = 0;
-
-
 
         public frmProjectProperties(frmAnalytics frm)
         {
             InitializeComponent();
             ths = frm;
+            if(Globals.lastFrame == "frmSignalList")
+            {
+                keepvalue();
+            }
             Globals.lastFrame = "frmProjectProperties";
             this.timer1.Start();
+        }
+
+        private void keepvalue()
+        {
+            txtBox_name_error = false;
+            txtBox_customer_error = false;
+            txtBox_phase_error = false;
+            txtBox_serial_number_error = false;
+            txtBox_software_error = false;
+            txtBox_hardware_error = false;
+            cmbBox_test_type_error = false;
+            txtBox_error_margin_error = false;
+            txtBox_config_name_error = false;
+
+            txtBox_name_default = false;
+            txtBox_customer_default = false;
+            txtBox_phase_default = false;
+            txtBox_serial_number_default = false;
+            txtBox_software_default = false;
+            txtBox_hardware_default = false;
+            txtBox_error_margin_default = false;
+            txtBox_config_name_default = false;
+
+            txtBox_name.Text = Globals.project.name;
+            txtBox_customer.Text = Globals.project.customer;
+            txtBox_phase.Text = Globals.project.phase;
+            txtBox_serial_number.Text = Globals.project.serial_number;
+            txtBox_software.Text = Globals.project.software;
+            txtBox_hardware.Text = Globals.project.hardware;
+            txtBox_error_margin.Text = ConvertLinearToString(Globals.project.error_margin);
+            txtBox_config_name.Text = Globals.project.config_name;
+            cmbox_testtype.Text = Globals.project.test_type;
         }
 
         private void labelErrorAnimation()
@@ -101,9 +124,7 @@ namespace AutoDiomes
             {
                 //Create the new object project and assign value of text box
 
-                date_file = file_date.SelectionRange.Start.ToShortDateString();
-
-                //Project project = new Project();
+                Globals.project.file_date = file_date.SelectionRange.Start.ToShortDateString();
 
                 //Set the state of project config for the dashboard
                 Globals.configState = "ConfigProperties";
@@ -229,8 +250,8 @@ namespace AutoDiomes
 
         private void txtBox_name_Leave(object sender, EventArgs e)
         {
-            name = txtBox_name.Text;
-            if (name.Length < 64) //verify if the content is bellow 60 carac
+            Globals.project.name = txtBox_name.Text;
+            if (Globals.project.name.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_name_error = false;
                 txtBox_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -248,8 +269,8 @@ namespace AutoDiomes
 
         private void txtBox_customer_Leave(object sender, EventArgs e)
         {
-            customer = txtBox_customer.Text;
-            if (customer.Length < 64) //verify if the content is bellow 60 carac
+            Globals.project.customer = txtBox_customer.Text;
+            if (Globals.project.customer.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_customer_error = false;
                 txtBox_customer.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -267,8 +288,8 @@ namespace AutoDiomes
 
         private void txtBox_phase_Leave(object sender, EventArgs e)
         {
-            phase = txtBox_phase.Text;
-            if (phase.Length < 64) //verify if the content is bellow 60 carac
+            Globals.project.phase = txtBox_phase.Text;
+            if (Globals.project.phase.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_phase_error = false;
                 txtBox_phase.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -286,8 +307,8 @@ namespace AutoDiomes
 
         private void txtBox_serial_number_Leave(object sender, EventArgs e)
         {
-            serial_number = txtBox_serial_number.Text;
-            if (serial_number.Length < 64) //verify if the content is bellow 60 carac
+            Globals.project.serial_number = txtBox_serial_number.Text;
+            if (Globals.project.serial_number.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_serial_number_error = false;
                 txtBox_serial_number.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -305,8 +326,8 @@ namespace AutoDiomes
 
         private void txtBox_software_Leave(object sender, EventArgs e)
         {
-            software = txtBox_software.Text;
-            if (software.Length < 64) //verify if the content is bellow 60 carac
+            Globals.project.software = txtBox_software.Text;
+            if (Globals.project.software.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_software_error = false;
                 txtBox_software.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -324,8 +345,8 @@ namespace AutoDiomes
 
         private void txtBox_hardware_Leave(object sender, EventArgs e)
         {
-            hardware = txtBox_hardware.Text;
-            if (hardware.Length < 64) //verify if the content is bellow 60 carac
+            Globals.project.hardware = txtBox_hardware.Text;
+            if (Globals.project.hardware.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_hardware_error = false;
                 txtBox_hardware.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -343,9 +364,9 @@ namespace AutoDiomes
 
         private void txtBox_error_margin_Leave(object sender, EventArgs e)
         {
-            if(UInt16.TryParse(txtBox_error_margin.Text, out error_margin)) //verify if the content is number and convert it to UINT16
+            if(UInt16.TryParse(txtBox_error_margin.Text, out Globals.project.error_margin)) //verify if the content is number and convert it to UINT16
             {
-                if((error_margin >= 0) && (error_margin <= 100)) //verify if the number enter is a percent
+                if((Globals.project.error_margin >= 0) && (Globals.project.error_margin <= 100)) //verify if the number enter is a percent
                 {
                     txtBox_error_margin_error = false;
                     txtBox_error_margin.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -354,7 +375,7 @@ namespace AutoDiomes
                 else
                 {
                     txtBox_error_margin.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
-                    txtBox_error_margin.Text = "Pas de %, 0 < valeur < 100"; //change the text of text box for indicate the error
+                    txtBox_error_margin.Text = "0 < valeur < 100"; //change the text of text box for indicate the error
                     txtBox_error_margin_default = true; //Reset for clear after a new click
                     txtBox_error_margin_error = true; //Set error to true
                     labelErrorAnimation();
@@ -363,7 +384,7 @@ namespace AutoDiomes
             else
             {
                 txtBox_error_margin.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
-                txtBox_error_margin.Text = "Pas de %, 0 < valeur < 100"; //change the text of text box for indicate the error
+                txtBox_error_margin.Text = "Pas de % ou autre caractères"; //change the text of text box for indicate the error
                 txtBox_error_margin_default = true; //Reset for clear after a new click
                 txtBox_error_margin_error = true; //Set error to true
                 labelErrorAnimation();
@@ -372,8 +393,8 @@ namespace AutoDiomes
 
         private void txtBox_config_name_Leave(object sender, EventArgs e)
         {
-            config_name = txtBox_config_name.Text;
-            if (config_name.Length < 64) //verify if the content is bellow 60 carac
+            Globals.project.config_name = txtBox_config_name.Text;
+            if (Globals.project.config_name.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_config_name_error = false;
                 txtBox_config_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -426,21 +447,22 @@ namespace AutoDiomes
 
         private void cmbox_testtype_SelectedIndexChanged(object sender, EventArgs e)
         {
-            test_type = cmbox_testtype.Text;
+            Globals.project.test_type = cmbox_testtype.Text;
             cmbBox_test_type_error = false;
+            labelErrorAnimation();
         }
 
-        //private static string ConvertLinearToString(ushort data) //Convert UINT16 to string
-        //{
-        //    var n = GetBitRange(data, 16, 5);
-        //    var y = GetBitRange(data, 21, 11);
-        //    var value = y * Math.Pow(2, n);
-        //    return value.ToString();
-        //}
+        private static string ConvertLinearToString(ushort data) //Convert UINT16 to string
+        {
+            var n = GetBitRange(data, 16, 5);
+            var y = GetBitRange(data, 21, 11);
+            var value = y * Math.Pow(2, n);
+            return value.ToString();
+        }
 
-        //private static int GetBitRange(int data, int offset, int count)
-        //{
-        //    return data << offset >> (32 - count);
-        //}
+        private static int GetBitRange(int data, int offset, int count)
+        {
+            return data << offset >> (32 - count);
+        }
     }
 }
