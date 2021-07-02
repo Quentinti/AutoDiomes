@@ -156,7 +156,7 @@ namespace AutoDiomes
                 Globals.project.serial_number = txtBox_serial_number.Text;
                 Globals.project.software = txtBox_software.Text;
                 Globals.project.hardware = txtBox_hardware.Text;
-                Globals.project.error_margin = error_margin;
+                Globals.project.error_margin = Globals.temporary_project.error_margin;
                 Globals.project.config_name = txtBox_config_name.Text;
                 Globals.project.file_date = file_date.SelectionRange.Start.ToShortDateString();
 
@@ -204,6 +204,7 @@ namespace AutoDiomes
 
         private void frame_ProjectStart()
         {
+            Globals.automatic_test_defined = false;
             ths.PnlProjectLoader.Controls.Clear();
             frmProjectStart frmProjectStart_Verbose = new frmProjectStart(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frmProjectStart_Verbose.FormBorderStyle = FormBorderStyle.None;
