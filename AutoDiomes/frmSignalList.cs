@@ -12,7 +12,7 @@ namespace AutoDiomes
 {
     public partial class frmSignalList : Form
     {
-        frmAnalytics ths;
+        readonly frmAnalytics ths;
         public frmSignalList(frmAnalytics frm)
         {
             InitializeComponent();

@@ -24,11 +24,11 @@ namespace AutoDiomes
         int movX;
         int movY;
 
-        string userName = "Read Error";  
-        string userEmail = "Read Error"; 
+        readonly string userName = "Read Error";
+        readonly string userEmail = "Read Error";
 
-        DirectoryInfo directorymain = Directory.CreateDirectory(@"C:\AutoDiomes"); //automatic create directory if he is not present
-        DirectoryInfo directorytemp = Directory.CreateDirectory(@"C:\AutoDiomes\temp"); //automatic create directory temp for temporary files
+        readonly DirectoryInfo directorymain = Directory.CreateDirectory(@"C:\AutoDiomes"); //automatic create directory if he is not present
+        readonly DirectoryInfo directorytemp = Directory.CreateDirectory(@"C:\AutoDiomes\temp"); //automatic create directory temp for temporary files
 
         SerialPort port;
 
@@ -60,7 +60,7 @@ namespace AutoDiomes
                 userName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName; //get current user display name
                 userEmail = System.DirectoryServices.AccountManagement.UserPrincipal.Current.EmailAddress; //get current user display name
             }
-            catch (IOException e) { }
+            catch (IOException) { }
 
             lblUserName.Text = userName;
             lblEmail.Text = userEmail;
@@ -78,7 +78,7 @@ namespace AutoDiomes
             
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
             PnlNav.Height = btnDashboard.Height;
             PnlNav.Top = btnDashboard.Top;
@@ -94,7 +94,7 @@ namespace AutoDiomes
             FrmDashboard_Verbose.Show();
         }
 
-        private void btnAnalytics_Click(object sender, EventArgs e)
+        private void BtnAnalytics_Click(object sender, EventArgs e)
         {
             PnlNav.Height = btnAnalytics.Height;
             PnlNav.Top = btnAnalytics.Top;
@@ -109,7 +109,7 @@ namespace AutoDiomes
             FrmAnalytics_Verbose.Show();
         }
 
-        private void btnHelp_Click(object sender, EventArgs e)
+        private void BtnHelp_Click(object sender, EventArgs e)
         {
             PnlNav.Height = btnHelp.Height;
             PnlNav.Top = btnHelp.Top;
@@ -139,7 +139,7 @@ namespace AutoDiomes
             FrmSettings_Verbose.Show();
         }
 
-        private void btnAbout_Click(object sender, EventArgs e)
+        private void BtnAbout_Click(object sender, EventArgs e)
         {
             PnlNav.Height = btnAbout.Height;
             PnlNav.Top = btnAbout.Top;

@@ -85,7 +85,7 @@ namespace AutoDiomes
             this.btnAbout.Text = "À propos";
             this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.btnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             this.btnAbout.Leave += new System.EventHandler(this.btnAbout_Leave);
             // 
             // btnSettings
@@ -124,7 +124,7 @@ namespace AutoDiomes
             this.btnHelp.Text = "Aide";
             this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnHelp.UseVisualStyleBackColor = true;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            this.btnHelp.Click += new System.EventHandler(this.BtnHelp_Click);
             this.btnHelp.Leave += new System.EventHandler(this.btnHelp_Leave);
             // 
             // btnAnalytics
@@ -143,7 +143,7 @@ namespace AutoDiomes
             this.btnAnalytics.Text = "Gestion projet";
             this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytics.UseVisualStyleBackColor = true;
-            this.btnAnalytics.Click += new System.EventHandler(this.btnAnalytics_Click);
+            this.btnAnalytics.Click += new System.EventHandler(this.BtnAnalytics_Click);
             this.btnAnalytics.Leave += new System.EventHandler(this.btnAnalytics_Leave);
             // 
             // btnDashboard
@@ -162,7 +162,7 @@ namespace AutoDiomes
             this.btnDashboard.Text = "Menu principal";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
             // panel2
