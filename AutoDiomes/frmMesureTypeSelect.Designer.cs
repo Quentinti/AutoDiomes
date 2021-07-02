@@ -60,12 +60,11 @@ namespace AutoDiomes
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.Location = new System.Drawing.Point(12, 125);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(709, 63);
             this.panel4.TabIndex = 18;
-            this.panel4.Click += new System.EventHandler(this.panel4_Click);
+            this.panel4.Click += new System.EventHandler(this.Panel4_Click);
             // 
             // label10
             // 
@@ -88,7 +87,7 @@ namespace AutoDiomes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 63);
             this.panel1.TabIndex = 19;
-            this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Click += new System.EventHandler(this.Panel1_Click);
             // 
             // label2
             // 
@@ -125,7 +124,7 @@ namespace AutoDiomes
             this.label3.Size = new System.Drawing.Size(377, 37);
             this.label3.TabIndex = 6;
             this.label3.Text = "       Pas de comparaison        ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label1
             // 
@@ -139,7 +138,7 @@ namespace AutoDiomes
             this.label1.Size = new System.Drawing.Size(465, 37);
             this.label1.TabIndex = 6;
             this.label1.Text = "       Comparaison automatique        ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // panel2
             // 
@@ -150,7 +149,7 @@ namespace AutoDiomes
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(204, 43);
             this.panel2.TabIndex = 21;
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.Click += new System.EventHandler(this.Panel2_Click);
             // 
             // label5
             // 
@@ -164,7 +163,7 @@ namespace AutoDiomes
             this.label5.Size = new System.Drawing.Size(107, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "J\'ai mal lu       ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // frmMesureTypeSelect
             // 

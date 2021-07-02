@@ -12,7 +12,7 @@ namespace AutoDiomes
 {
     public partial class frmMesureType : Form
     {
-        frmAnalytics ths;
+        readonly frmAnalytics ths;
 
         public frmMesureType(frmAnalytics frm)
         {
@@ -21,7 +21,7 @@ namespace AutoDiomes
             Globals.lastFrame = "frmMesureType";
         }
 
-        private void nextFrame()
+        private void NextFrame()
         {
             ths.PnlProjectLoader.Controls.Clear();
             frmMesureTypeSelect frmMesureTypeSelect_Verbose = new frmMesureTypeSelect(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -30,19 +30,19 @@ namespace AutoDiomes
             frmMesureTypeSelect_Verbose.Show();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void Label7_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void Label13_Click(object sender, EventArgs e)
         {
-            nextFrame();
+            NextFrame();
         }
 
-        private void panel3_Click(object sender, EventArgs e)
+        private void Panel3_Click(object sender, EventArgs e)
         {
-            nextFrame();
+            NextFrame();
         }
     }
 }

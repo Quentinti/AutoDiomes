@@ -506,7 +506,7 @@ namespace AutoDiomes
             this.lblCurrentWaitingState.Size = new System.Drawing.Size(311, 21);
             this.lblCurrentWaitingState.TabIndex = 3;
             this.lblCurrentWaitingState.Text = "Création ou ouverture de projet en attente...";
-            this.lblCurrentWaitingState.Click += new System.EventHandler(this.lblCurrentWaitingState_Click);
+            this.lblCurrentWaitingState.Click += new System.EventHandler(this.LblCurrentWaitingState_Click);
             // 
             // lblConfigState
             // 
@@ -522,12 +522,12 @@ namespace AutoDiomes
             // timer1
             // 
             this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // timer2
             // 
             this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
             // frmDashboard
             // 

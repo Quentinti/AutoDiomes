@@ -14,8 +14,8 @@ namespace AutoDiomes
 {
     public partial class frmDashboard : Form
     {
-        int[] rainSpeed = { 4, 6, 8, 3, 5, 6, 7, 4 };
-        int loadingSpeed = 1;
+        readonly int[] rainSpeed = { 4, 6, 8, 3, 5, 6, 7, 4 };
+        readonly int loadingSpeed = 1;
 
         public frmDashboard()
         {
@@ -65,12 +65,12 @@ namespace AutoDiomes
             }
         }
 
-        private void lblCurrentWaitingState_Click(object sender, EventArgs e)
+        private void LblCurrentWaitingState_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             for(int i = 0; i < 8; i++)
             {
@@ -138,7 +138,7 @@ namespace AutoDiomes
             }
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void Timer2_Tick(object sender, EventArgs e)
         {
             pnlPuddle.Location = new Point(pnlPuddle.Location.X, pnlPuddle.Location.Y + loadingSpeed);
             if (pnlPuddle.Location.Y > pbPuddle.Location.Y + pbPuddle.Height)

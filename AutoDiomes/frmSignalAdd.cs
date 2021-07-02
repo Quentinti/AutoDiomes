@@ -12,7 +12,7 @@ namespace AutoDiomes
 {
     public partial class frmSignalAdd : Form
     {
-        frmAnalytics ths;
+        readonly frmAnalytics ths;
         public frmSignalAdd(frmAnalytics frm)
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace AutoDiomes
             circularProgressBar1.Text = ConvertLinearToString(Globals.project.error_margin) + @"%";
         }
 
-        private void frame_projectproperties()
+        private void Frame_projectproperties()
         {
             ths.PnlProjectLoader.Controls.Clear();
             frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -49,24 +49,19 @@ namespace AutoDiomes
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void Label9_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        private void Panel5_Click(object sender, EventArgs e)
         {
-
+            Frame_projectproperties();
         }
 
-        private void panel5_Click(object sender, EventArgs e)
+        private void Label11_Click(object sender, EventArgs e)
         {
-            frame_projectproperties();
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            frame_projectproperties();
+            Frame_projectproperties();
         }
     }
 }

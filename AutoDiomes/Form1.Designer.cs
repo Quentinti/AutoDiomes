@@ -86,7 +86,7 @@ namespace AutoDiomes
             this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
-            this.btnAbout.Leave += new System.EventHandler(this.btnAbout_Leave);
+            this.btnAbout.Leave += new System.EventHandler(this.BtnAbout_Leave);
             // 
             // btnSettings
             // 
@@ -104,8 +104,8 @@ namespace AutoDiomes
             this.btnSettings.Text = "Paramètres";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave);
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
+            this.btnSettings.Leave += new System.EventHandler(this.BtnSettings_Leave);
             // 
             // btnHelp
             // 
@@ -125,7 +125,7 @@ namespace AutoDiomes
             this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.BtnHelp_Click);
-            this.btnHelp.Leave += new System.EventHandler(this.btnHelp_Leave);
+            this.btnHelp.Leave += new System.EventHandler(this.BtnHelp_Leave);
             // 
             // btnAnalytics
             // 
@@ -144,7 +144,7 @@ namespace AutoDiomes
             this.btnAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytics.UseVisualStyleBackColor = true;
             this.btnAnalytics.Click += new System.EventHandler(this.BtnAnalytics_Click);
-            this.btnAnalytics.Leave += new System.EventHandler(this.btnAnalytics_Leave);
+            this.btnAnalytics.Leave += new System.EventHandler(this.BtnAnalytics_Leave);
             // 
             // btnDashboard
             // 
@@ -163,7 +163,7 @@ namespace AutoDiomes
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
-            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
+            this.btnDashboard.Leave += new System.EventHandler(this.BtnDashboard_Leave);
             // 
             // panel2
             // 
@@ -197,7 +197,7 @@ namespace AutoDiomes
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email Adress";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEmail.Click += new System.EventHandler(this.label1_Click);
+            this.lblEmail.Click += new System.EventHandler(this.Label1_Click);
             // 
             // lblUserName
             // 

@@ -199,7 +199,7 @@ namespace AutoDiomes
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 57);
             this.panel3.TabIndex = 21;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            this.panel3.Click += new System.EventHandler(this.Panel3_Click);
             // 
             // label13
             // 
@@ -213,7 +213,7 @@ namespace AutoDiomes
             this.label13.Size = new System.Drawing.Size(140, 21);
             this.label13.TabIndex = 0;
             this.label13.Text = "C\'est compris         ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.label13.Click += new System.EventHandler(this.Label13_Click);
             // 
             // label7
             // 
@@ -227,7 +227,7 @@ namespace AutoDiomes
             this.label7.Size = new System.Drawing.Size(221, 21);
             this.label7.TabIndex = 11;
             this.label7.Text = "       Pas de comparaison        ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
             // label1
             // 

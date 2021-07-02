@@ -161,7 +161,7 @@ namespace AutoDiomes
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 45);
             this.panel3.TabIndex = 15;
-            this.panel3.Click += new System.EventHandler(this.panel3_Click);
+            this.panel3.Click += new System.EventHandler(this.Panel3_Click);
             // 
             // label4
             // 
@@ -175,7 +175,7 @@ namespace AutoDiomes
             this.label4.Size = new System.Drawing.Size(150, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nouveau signal        ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // panel1
             // 
@@ -207,7 +207,7 @@ namespace AutoDiomes
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(204, 43);
             this.panel2.TabIndex = 17;
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.Click += new System.EventHandler(this.Panel2_Click);
             // 
             // label2
             // 
@@ -221,7 +221,7 @@ namespace AutoDiomes
             this.label2.Size = new System.Drawing.Size(172, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Retour propriétées        ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // frmSignalList
             // 

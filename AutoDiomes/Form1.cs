@@ -30,7 +30,7 @@ namespace AutoDiomes
         readonly DirectoryInfo directorymain = Directory.CreateDirectory(@"C:\AutoDiomes"); //automatic create directory if he is not present
         readonly DirectoryInfo directorytemp = Directory.CreateDirectory(@"C:\AutoDiomes\temp"); //automatic create directory temp for temporary files
 
-        SerialPort port;
+        //SerialPort port;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")] //import dll for create round windows forms
 
@@ -124,7 +124,7 @@ namespace AutoDiomes
             FrmHelp_Verbose.Show();
         }
 
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void BtnSettings_Click(object sender, EventArgs e)
         {
             PnlNav.Height = btnSettings.Height;
             PnlNav.Top = btnSettings.Top;
@@ -154,30 +154,30 @@ namespace AutoDiomes
             FrmAbout_Verbose.Show();
         }
 
-        private void btnDashboard_Leave(object sender, EventArgs e)
+        private void BtnDashboard_Leave(object sender, EventArgs e)
         {
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void btnAnalytics_Leave(object sender, EventArgs e)
+        private void BtnAnalytics_Leave(object sender, EventArgs e)
         {
             btnAnalytics.BackColor = Color.FromArgb(24, 30, 54);
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void btnHelp_Leave(object sender, EventArgs e)
+        private void BtnHelp_Leave(object sender, EventArgs e)
         {
             btnHelp.BackColor = Color.FromArgb(24, 30, 54);
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void btnSettings_Leave(object sender, EventArgs e)
+        private void BtnSettings_Leave(object sender, EventArgs e)
         {
             btnSettings.BackColor = Color.FromArgb(24, 30, 54);
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void btnAbout_Leave(object sender, EventArgs e)
+        private void BtnAbout_Leave(object sender, EventArgs e)
         {
             btnAbout.BackColor = Color.FromArgb(24, 30, 54);
             btnDashboard.BackColor = Color.FromArgb(24, 30, 54);
@@ -212,7 +212,7 @@ namespace AutoDiomes
             mov = 0;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }

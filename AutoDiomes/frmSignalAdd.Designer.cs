@@ -387,7 +387,7 @@ namespace AutoDiomes
             this.label9.Size = new System.Drawing.Size(152, 21);
             this.label9.TabIndex = 18;
             this.label9.Text = "Marge d\'erreur       ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.label9.Click += new System.EventHandler(this.Label9_Click);
             // 
             // panel3
             // 
@@ -419,8 +419,7 @@ namespace AutoDiomes
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(204, 57);
             this.panel5.TabIndex = 21;
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.panel5.Click += new System.EventHandler(this.Panel5_Click);
             // 
             // label11
             // 
@@ -434,7 +433,7 @@ namespace AutoDiomes
             this.label11.Size = new System.Drawing.Size(97, 21);
             this.label11.TabIndex = 0;
             this.label11.Text = "Annuler        ";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label11.Click += new System.EventHandler(this.Label11_Click);
             // 
             // frmSignalAdd
             // 

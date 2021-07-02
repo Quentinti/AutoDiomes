@@ -14,7 +14,7 @@ namespace AutoDiomes
 {
     public partial class frmMesureTypeSelect : Form
     {
-        frmAnalytics ths;
+        readonly frmAnalytics ths;
         public frmMesureTypeSelect(frmAnalytics frm)
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace AutoDiomes
             Globals.lastFrame = "frmMesureTypeSelect";
         }
         
-        private void reWriteProperties()
+        private void ReWriteProperties()
         {
             string file_path = @"C:\AutoDiomes\temp\" + Globals.project.config_name + @"\" + Globals.project.config_name + @"_properties.json";
 
@@ -35,7 +35,7 @@ namespace AutoDiomes
             System.IO.File.WriteAllText(file_path, json);
         }
 
-        private void goBack()
+        private void GoBack()
         {
             ths.PnlProjectLoader.Controls.Clear();
             frmMesureType frmMesureType_Verbose = new frmMesureType(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -44,11 +44,11 @@ namespace AutoDiomes
             frmMesureType_Verbose.Show();
         }
 
-        private void compare()
+        private void Compare()
         {
             Globals.automatic_test_defined = true;
             Globals.project.compare = true;
-            reWriteProperties();
+            ReWriteProperties();
             ths.PnlProjectLoader.Controls.Clear();
             frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
@@ -56,11 +56,11 @@ namespace AutoDiomes
             frmSignalList_Verbose.Show();
         }
 
-        private void noCompare()
+        private void NoCompare()
         {
             Globals.automatic_test_defined = true;
             Globals.project.compare = false;
-            reWriteProperties();
+            ReWriteProperties();
             ths.PnlProjectLoader.Controls.Clear();
             frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
@@ -70,38 +70,38 @@ namespace AutoDiomes
 
         //Go back
 
-        private void panel2_Click(object sender, EventArgs e)
+        private void Panel2_Click(object sender, EventArgs e)
         {
-            goBack();
+            GoBack();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void Label5_Click(object sender, EventArgs e)
         {
-            goBack();
+            GoBack();
         }
 
         //Compare
 
-        private void panel4_Click(object sender, EventArgs e)
+        private void Panel4_Click(object sender, EventArgs e)
         {
-            compare();
+            Compare();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
-            compare();
+            Compare();
         }
 
         //No compare
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Label3_Click(object sender, EventArgs e)
         {
-            noCompare();
+            NoCompare();
         }
 
-        private void panel1_Click(object sender, EventArgs e)
+        private void Panel1_Click(object sender, EventArgs e)
         {
-            noCompare();
+            NoCompare();
         }
     }
 }

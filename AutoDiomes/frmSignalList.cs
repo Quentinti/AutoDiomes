@@ -23,7 +23,7 @@ namespace AutoDiomes
             lblProject_SignalNumber.Text = ConvertLinearToString(Globals.project.number_signal);
         }
 
-        private void frame_signaladd()
+        private void Frame_signaladd()
         {
             ths.PnlProjectLoader.Controls.Clear();
             frmSignalAdd frmSignalAdd_Verbose = new frmSignalAdd(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -32,7 +32,7 @@ namespace AutoDiomes
             frmSignalAdd_Verbose.Show();
         }
 
-        private void frame_projectproperties()
+        private void Frame_projectproperties()
         {
             ths.PnlProjectLoader.Controls.Clear();
             frmProjectProperties FrmProjectProperties_Verbose = new frmProjectProperties(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
@@ -54,24 +54,24 @@ namespace AutoDiomes
             return data << offset >> (32 - count);
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void Label4_Click(object sender, EventArgs e)
         {
-            frame_signaladd();
+            Frame_signaladd();
         }
 
-        private void panel3_Click(object sender, EventArgs e)
+        private void Panel3_Click(object sender, EventArgs e)
         {
-            frame_signaladd();
+            Frame_signaladd();
         }
 
-        private void panel2_Click(object sender, EventArgs e)
+        private void Panel2_Click(object sender, EventArgs e)
         {
-            frame_projectproperties();
+            Frame_projectproperties();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Label2_Click(object sender, EventArgs e)
         {
-            frame_projectproperties();
+            Frame_projectproperties();
         }
     }
 }

@@ -108,8 +108,8 @@ namespace AutoDiomes
             this.txtBox_phase.TabIndex = 10;
             this.txtBox_phase.Text = "A1, A2, B1, C1...";
             this.txtBox_phase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_phase.Click += new System.EventHandler(this.txtBox_phase_Click);
-            this.txtBox_phase.Leave += new System.EventHandler(this.txtBox_phase_Leave);
+            this.txtBox_phase.Click += new System.EventHandler(this.TxtBox_phase_Click);
+            this.txtBox_phase.Leave += new System.EventHandler(this.TxtBox_phase_Leave);
             // 
             // label3
             // 
@@ -136,8 +136,8 @@ namespace AutoDiomes
             this.txtBox_customer.TabIndex = 8;
             this.txtBox_customer.Text = "FORD, RENAULT...";
             this.txtBox_customer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_customer.Click += new System.EventHandler(this.txtBox_customer_Click);
-            this.txtBox_customer.Leave += new System.EventHandler(this.txtBox_customer_Leave);
+            this.txtBox_customer.Click += new System.EventHandler(this.TxtBox_customer_Click);
+            this.txtBox_customer.Leave += new System.EventHandler(this.TxtBox_customer_Leave);
             // 
             // label2
             // 
@@ -164,8 +164,8 @@ namespace AutoDiomes
             this.txtBox_name.TabIndex = 6;
             this.txtBox_name.Text = "EMS2910, EMS3191...";
             this.txtBox_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_name.Click += new System.EventHandler(this.txtBox_name_Click);
-            this.txtBox_name.Leave += new System.EventHandler(this.txtBox_name_Leave);
+            this.txtBox_name.Click += new System.EventHandler(this.TxtBox_name_Click);
+            this.txtBox_name.Leave += new System.EventHandler(this.TxtBox_name_Leave);
             // 
             // label1
             // 
@@ -218,8 +218,8 @@ namespace AutoDiomes
             this.txtBox_hardware.TabIndex = 10;
             this.txtBox_hardware.Text = "HW1, HW2...";
             this.txtBox_hardware.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_hardware.Click += new System.EventHandler(this.txtBox_hardware_Click);
-            this.txtBox_hardware.Leave += new System.EventHandler(this.txtBox_hardware_Leave);
+            this.txtBox_hardware.Click += new System.EventHandler(this.TxtBox_hardware_Click);
+            this.txtBox_hardware.Leave += new System.EventHandler(this.TxtBox_hardware_Leave);
             // 
             // label5
             // 
@@ -246,8 +246,8 @@ namespace AutoDiomes
             this.txtBox_software.TabIndex = 8;
             this.txtBox_software.Text = "SW410, 210...";
             this.txtBox_software.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_software.Click += new System.EventHandler(this.txtBox_software_Click);
-            this.txtBox_software.Leave += new System.EventHandler(this.txtBox_software_Leave);
+            this.txtBox_software.Click += new System.EventHandler(this.TxtBox_software_Click);
+            this.txtBox_software.Leave += new System.EventHandler(this.TxtBox_software_Leave);
             // 
             // label6
             // 
@@ -274,8 +274,8 @@ namespace AutoDiomes
             this.txtBox_serial_number.TabIndex = 6;
             this.txtBox_serial_number.Text = "410000265, ...";
             this.txtBox_serial_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_serial_number.Click += new System.EventHandler(this.txtBox_serial_number_Click);
-            this.txtBox_serial_number.Leave += new System.EventHandler(this.txtBox_serial_number_Leave);
+            this.txtBox_serial_number.Click += new System.EventHandler(this.TxtBox_serial_number_Click);
+            this.txtBox_serial_number.Leave += new System.EventHandler(this.TxtBox_serial_number_Leave);
             // 
             // label7
             // 
@@ -325,8 +325,8 @@ namespace AutoDiomes
             this.txtBox_error_margin.TabIndex = 11;
             this.txtBox_error_margin.Text = "1%, 5%, 10%...";
             this.txtBox_error_margin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_error_margin.Click += new System.EventHandler(this.txtBox_error_margin_Click);
-            this.txtBox_error_margin.Leave += new System.EventHandler(this.txtBox_error_margin_Leave);
+            this.txtBox_error_margin.Click += new System.EventHandler(this.TxtBox_error_margin_Click);
+            this.txtBox_error_margin.Leave += new System.EventHandler(this.TxtBox_error_margin_Leave);
             // 
             // label13
             // 
@@ -359,7 +359,7 @@ namespace AutoDiomes
             this.cmbox_testtype.Name = "cmbox_testtype";
             this.cmbox_testtype.Size = new System.Drawing.Size(150, 28);
             this.cmbox_testtype.TabIndex = 5;
-            this.cmbox_testtype.SelectedIndexChanged += new System.EventHandler(this.cmbox_testtype_SelectedIndexChanged);
+            this.cmbox_testtype.SelectedIndexChanged += new System.EventHandler(this.Cmbox_testtype_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -398,8 +398,8 @@ namespace AutoDiomes
             this.txtBox_config_name.TabIndex = 7;
             this.txtBox_config_name.Text = "EMS2910_CEMV1...";
             this.txtBox_config_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBox_config_name.Click += new System.EventHandler(this.txtBox_config_name_Click);
-            this.txtBox_config_name.Leave += new System.EventHandler(this.txtBox_config_name_Leave);
+            this.txtBox_config_name.Click += new System.EventHandler(this.TxtBox_config_name_Click);
+            this.txtBox_config_name.Leave += new System.EventHandler(this.TxtBox_config_name_Leave);
             // 
             // label10
             // 
@@ -450,7 +450,7 @@ namespace AutoDiomes
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(248, 52);
             this.panel5.TabIndex = 19;
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            this.panel5.Click += new System.EventHandler(this.Panel5_Click);
             // 
             // label11
             // 
@@ -465,7 +465,7 @@ namespace AutoDiomes
             this.label11.Size = new System.Drawing.Size(230, 21);
             this.label11.TabIndex = 0;
             this.label11.Text = "Configuration des signaux :        ";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label11.Click += new System.EventHandler(this.Label11_Click);
             // 
             // panel6
             // 
@@ -476,7 +476,7 @@ namespace AutoDiomes
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(246, 55);
             this.panel6.TabIndex = 22;
-            this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            this.panel6.Click += new System.EventHandler(this.Panel6_Click);
             // 
             // label14
             // 
@@ -490,12 +490,12 @@ namespace AutoDiomes
             this.label14.Size = new System.Drawing.Size(97, 21);
             this.label14.TabIndex = 0;
             this.label14.Text = "Annuler        ";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.label14.Click += new System.EventHandler(this.Label14_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // frmProjectProperties
             // 
