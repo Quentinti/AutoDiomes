@@ -118,6 +118,18 @@
     <Compile Include="frmHelp.Designer.cs">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMesureType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMesureType.Designer.cs">
+      <DependentUpon>frmMesureType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMesureTypeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMesureTypeSelect.Designer.cs">
+      <DependentUpon>frmMesureTypeSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProjectProperties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMesureType.resx">
+      <DependentUpon>frmMesureType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMesureTypeSelect.resx">
+      <DependentUpon>frmMesureTypeSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProjectProperties.resx">
       <DependentUpon>frmProjectProperties.cs</DependentUpon>
@@ -344,6 +362,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,7 +22,9 @@ namespace AutoDiomes
     {
         public static string lastFrame = "frmProjectStart"; //memorize current state for navigation
         public static string configState = "NoConfigLoad"; //memorize current state of configuration for blur panel
-        public static Project project = new Project();
+        public static bool automatic_test_defined = false;
+        public static Project project = new Project(); //project
+        public static Temporary_Project temporary_project = new Temporary_Project(); //real time edited value (for avoid reload of frame)
     }
 
     class Project
@@ -38,23 +40,18 @@ namespace AutoDiomes
         public string file_date;
         public string config_name;
         public UInt16 number_signal;
-
-        ////this constructor initializes the object project
-        //public Project(string name, string customer, string phase,
-        //               string serial_number, string software, string hardware, string test_type,
-        //               UInt16 error_margin, string file_date, string config_name)
-        //{
-        //    this.name = name;
-        //    this.customer = customer;
-        //    this.phase = phase;
-        //    this.serial_number = serial_number;
-        //    this.software = software;
-        //    this.hardware = hardware;
-        //    this.test_type = test_type;
-        //    this.error_margin = error_margin;
-        //    this.file_date = file_date;
-        //    this.config_name = config_name;
-        //}
+        public bool compare;
+    }
+    class Temporary_Project
+    {
+        public string name;
+        public string customer;
+        public string phase;
+        public string serial_number;
+        public string software;
+        public string hardware;
+        public UInt16 error_margin;
+        public string config_name;
     }
     class Signal
     {

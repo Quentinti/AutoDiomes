@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.IO.Ports;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 
@@ -46,15 +45,21 @@ namespace AutoDiomes
         {
             InitializeComponent();
             ths = frm;
-            if(Globals.lastFrame == "frmSignalList")
+            if(Globals.lastFrame == "frmSignalList") //if you come form frmSignalList
             {
-                keepvalue();
+                keepvalue(false); //keep value in text box
             }
+            if(Globals.lastFrame == "frmProjectProperties")
+            {
+                keepvalue(true); //keep value in text box
+            }
+
             Globals.lastFrame = "frmProjectProperties";
+
             this.timer1.Start();
         }
 
-        private void keepvalue()
+        private void keepvalue(bool reload)
         {
             txtBox_name_error = false;
             txtBox_customer_error = false;
@@ -75,14 +80,30 @@ namespace AutoDiomes
             txtBox_error_margin_default = false;
             txtBox_config_name_default = false;
 
-            txtBox_name.Text = Globals.project.name;
-            txtBox_customer.Text = Globals.project.customer;
-            txtBox_phase.Text = Globals.project.phase;
-            txtBox_serial_number.Text = Globals.project.serial_number;
-            txtBox_software.Text = Globals.project.software;
-            txtBox_hardware.Text = Globals.project.hardware;
-            txtBox_error_margin.Text = ConvertLinearToString(Globals.project.error_margin);
-            txtBox_config_name.Text = Globals.project.config_name;
+            if (reload)
+            {
+                txtBox_name.Text = Globals.temporary_project.name;
+                txtBox_customer.Text = Globals.temporary_project.customer;
+                txtBox_phase.Text = Globals.temporary_project.phase;
+                txtBox_serial_number.Text = Globals.temporary_project.serial_number;
+                txtBox_software.Text = Globals.temporary_project.software;
+                txtBox_hardware.Text = Globals.temporary_project.hardware;
+                txtBox_error_margin.Text = ConvertLinearToString(Globals.temporary_project.error_margin);
+                txtBox_config_name.Text = Globals.temporary_project.config_name;
+                
+            }
+            else
+            {
+                txtBox_name.Text = Globals.project.name;
+                txtBox_customer.Text = Globals.project.customer;
+                txtBox_phase.Text = Globals.project.phase;
+                txtBox_serial_number.Text = Globals.project.serial_number;
+                txtBox_software.Text = Globals.project.software;
+                txtBox_hardware.Text = Globals.project.hardware;
+                txtBox_error_margin.Text = ConvertLinearToString(Globals.project.error_margin);
+                txtBox_config_name.Text = Globals.project.config_name;
+            }
+
             cmbox_testtype.Text = Globals.project.test_type;
         }
 
@@ -124,7 +145,7 @@ namespace AutoDiomes
                 return true;
             }
         }
-        private void frame_SignalList()
+        private void frame_SignalList_MesureType()
         {
             if (!check_error()) //if no error present
             {
@@ -154,12 +175,24 @@ namespace AutoDiomes
                 string json = JsonConvert.SerializeObject(Globals.project, Formatting.Indented);
                 System.IO.File.WriteAllText(file_path, json);
 
-                //Show next form with signal list
-                ths.PnlProjectLoader.Controls.Clear();
-                frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
-                ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
-                frmSignalList_Verbose.Show();
+                if (!Globals.automatic_test_defined) //Show next form when you choose test type
+                {
+                    ths.PnlProjectLoader.Controls.Clear();
+                    frmMesureType frmMesureType_Verbose = new frmMesureType(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    frmMesureType_Verbose.FormBorderStyle = FormBorderStyle.None;
+                    ths.PnlProjectLoader.Controls.Add(frmMesureType_Verbose);
+                    frmMesureType_Verbose.Show();
+                }
+                else //Show next form with list of signal
+                {
+                    ths.PnlProjectLoader.Controls.Clear();
+                    frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
+                    ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
+                    frmSignalList_Verbose.Show();
+                }
+             
+
                 this.timer1.Stop();
             }
             else
@@ -181,12 +214,12 @@ namespace AutoDiomes
 
         private void panel5_Click(object sender, EventArgs e)
         {
-            frame_SignalList();
+            frame_SignalList_MesureType();
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
-            frame_SignalList();
+            frame_SignalList_MesureType();
         }
 
         private void txtBox_name_Click(object sender, EventArgs e)
@@ -279,6 +312,7 @@ namespace AutoDiomes
             {
                 txtBox_name_error = false;
                 txtBox_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                Globals.temporary_project.name = txtBox_name.Text;
                 labelErrorAnimation();
             }
             else
@@ -297,6 +331,7 @@ namespace AutoDiomes
             {
                 txtBox_customer_error = false;
                 txtBox_customer.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                Globals.temporary_project.customer = txtBox_customer.Text;
                 labelErrorAnimation();
             }
             else
@@ -315,6 +350,7 @@ namespace AutoDiomes
             {
                 txtBox_phase_error = false;
                 txtBox_phase.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                Globals.temporary_project.phase = txtBox_phase.Text;
                 labelErrorAnimation();
             }
             else
@@ -333,6 +369,7 @@ namespace AutoDiomes
             {
                 txtBox_serial_number_error = false;
                 txtBox_serial_number.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                Globals.temporary_project.serial_number = txtBox_serial_number.Text;
                 labelErrorAnimation();
             }
             else
@@ -351,6 +388,7 @@ namespace AutoDiomes
             {
                 txtBox_software_error = false;
                 txtBox_software.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                Globals.temporary_project.software = txtBox_software.Text;
                 labelErrorAnimation();
             }
             else
@@ -369,6 +407,7 @@ namespace AutoDiomes
             {
                 txtBox_hardware_error = false;
                 txtBox_hardware.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                Globals.temporary_project.hardware = txtBox_hardware.Text;
                 labelErrorAnimation();
             }
             else
@@ -389,6 +428,7 @@ namespace AutoDiomes
                 {
                     txtBox_error_margin_error = false;
                     txtBox_error_margin.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    Globals.temporary_project.error_margin = error_margin;
                     labelErrorAnimation();
                 }
                 else
@@ -415,6 +455,7 @@ namespace AutoDiomes
             {
                 txtBox_config_name_error = false;
                 txtBox_config_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                Globals.temporary_project.config_name = txtBox_config_name.Text;
                 labelErrorAnimation();
             }
             else

@@ -70,9 +70,9 @@ namespace AutoDiomes
             this.lblProject_Phase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
             this.lblProject_Phase.Location = new System.Drawing.Point(14, 96);
             this.lblProject_Phase.Name = "lblProject_Phase";
-            this.lblProject_Phase.Size = new System.Drawing.Size(29, 21);
+            this.lblProject_Phase.Size = new System.Drawing.Size(102, 21);
             this.lblProject_Phase.TabIndex = 2;
-            this.lblProject_Phase.Text = "C2";
+            this.lblProject_Phase.Text = "Default Value";
             // 
             // lblProject_Name
             // 
@@ -81,9 +81,9 @@ namespace AutoDiomes
             this.lblProject_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(226)))), ((int)(((byte)(178)))));
             this.lblProject_Name.Location = new System.Drawing.Point(12, 53);
             this.lblProject_Name.Name = "lblProject_Name";
-            this.lblProject_Name.Size = new System.Drawing.Size(147, 32);
+            this.lblProject_Name.Size = new System.Drawing.Size(200, 32);
             this.lblProject_Name.TabIndex = 1;
-            this.lblProject_Name.Text = "EMS2910";
+            this.lblProject_Name.Text = "Default Value";
             // 
             // label7
             // 

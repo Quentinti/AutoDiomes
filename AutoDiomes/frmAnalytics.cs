@@ -44,6 +44,24 @@ namespace AutoDiomes
                     frmSignalAdd_Verbose.Show();
                     break;
 
+                case "frmMesureType":
+                    this.PnlProjectLoader.Controls.Clear();
+                    frmMesureType frmMesureType_Verbose = new frmMesureType(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    frmMesureType_Verbose.FormBorderStyle = FormBorderStyle.None;
+                    this.PnlProjectLoader.Controls.Add(frmMesureType_Verbose);
+                    frmMesureType_Verbose.Show();
+                    break;
+
+                case "frmMesureTypeSelect":
+                    this.PnlProjectLoader.Controls.Clear();
+                    frmMesureTypeSelect frmMesureTypeSelect_Verbose = new frmMesureTypeSelect(this) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    frmMesureTypeSelect_Verbose.FormBorderStyle = FormBorderStyle.None;
+                    this.PnlProjectLoader.Controls.Add(frmMesureTypeSelect_Verbose);
+                    frmMesureTypeSelect_Verbose.Show();
+                    break;
+
+
+
                 default:
                     break;
             }

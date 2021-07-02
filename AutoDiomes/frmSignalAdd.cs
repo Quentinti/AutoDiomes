@@ -18,6 +18,8 @@ namespace AutoDiomes
             InitializeComponent();
             ths = frm;
             Globals.lastFrame = "frmSignalAdd";
+            circularProgressBar1.Value = Globals.project.error_margin;
+            circularProgressBar1.Text = ConvertLinearToString(Globals.project.error_margin) + @"%";
         }
 
         private void frame_projectproperties()
@@ -27,6 +29,19 @@ namespace AutoDiomes
             frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
             ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
             frmSignalList_Verbose.Show();
+        }
+
+        private static string ConvertLinearToString(ushort data) //Convert UINT16 to string
+        {
+            var n = GetBitRange(data, 16, 5);
+            var y = GetBitRange(data, 21, 11);
+            var value = y * Math.Pow(2, n);
+            return value.ToString();
+        }
+
+        private static int GetBitRange(int data, int offset, int count)
+        {
+            return data << offset >> (32 - count);
         }
 
         private void NextState_Click(object sender, EventArgs e)
