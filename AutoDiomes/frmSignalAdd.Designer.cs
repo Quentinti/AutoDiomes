@@ -31,25 +31,9 @@ namespace AutoDiomes
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignalAdd));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbox_ONOFF = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.StateText = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NextState = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,45 +41,74 @@ namespace AutoDiomes
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NextState = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBox_frequency = new System.Windows.Forms.TextBox();
+            this.txtBox_period = new System.Windows.Forms.TextBox();
+            this.txtBox_positive_duty = new System.Windows.Forms.TextBox();
+            this.txtBox_negative_duty = new System.Windows.Forms.TextBox();
+            this.txtBox_TON = new System.Windows.Forms.TextBox();
+            this.txtBox_TOFF = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_Frequency = new System.Windows.Forms.Panel();
+            this.pnl_Period = new System.Windows.Forms.Panel();
+            this.pnl_Positive_duty = new System.Windows.Forms.Panel();
+            this.pnl_Negative_duty = new System.Windows.Forms.Panel();
+            this.pnl_TON = new System.Windows.Forms.Panel();
+            this.pnl_TOFF = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.pnl_Frequency.SuspendLayout();
+            this.pnl_Period.SuspendLayout();
+            this.pnl_Positive_duty.SuspendLayout();
+            this.pnl_Negative_duty.SuspendLayout();
+            this.pnl_TON.SuspendLayout();
+            this.pnl_TOFF.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.cmbox_ONOFF);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(18, 60);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(446, 57);
             this.panel4.TabIndex = 16;
             // 
-            // comboBox1
+            // cmbox_ONOFF
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cmbox_ONOFF.AutoCompleteCustomSource.AddRange(new string[] {
             "Non",
             "ON",
             "OFF"});
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(226)))), ((int)(((byte)(178)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbox_ONOFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbox_ONOFF.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cmbox_ONOFF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_ONOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbox_ONOFF.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbox_ONOFF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(226)))), ((int)(((byte)(178)))));
+            this.cmbox_ONOFF.FormattingEnabled = true;
+            this.cmbox_ONOFF.Items.AddRange(new object[] {
             "Non",
             "ON",
             "OFF"});
-            this.comboBox1.Location = new System.Drawing.Point(253, 14);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 28);
-            this.comboBox1.TabIndex = 6;
+            this.cmbox_ONOFF.Location = new System.Drawing.Point(253, 14);
+            this.cmbox_ONOFF.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbox_ONOFF.Name = "cmbox_ONOFF";
+            this.cmbox_ONOFF.Size = new System.Drawing.Size(150, 28);
+            this.cmbox_ONOFF.TabIndex = 6;
+            this.cmbox_ONOFF.SelectedIndexChanged += new System.EventHandler(this.cmbox_ONOFF_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -120,218 +133,6 @@ namespace AutoDiomes
             this.StateText.Size = new System.Drawing.Size(392, 32);
             this.StateText.TabIndex = 15;
             this.StateText.Text = "Ajoutez un nouveau signal :";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.NextState);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(18, 135);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 330);
-            this.panel1.TabIndex = 17;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox6.Location = new System.Drawing.Point(253, 288);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(212, 21);
-            this.textBox6.TabIndex = 31;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox5.Location = new System.Drawing.Point(253, 249);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(212, 21);
-            this.textBox5.TabIndex = 30;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox4.Location = new System.Drawing.Point(253, 210);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 21);
-            this.textBox4.TabIndex = 29;
-            this.textBox4.Text = "2 à 98%";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox3.Location = new System.Drawing.Point(253, 168);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 21);
-            this.textBox3.TabIndex = 28;
-            this.textBox3.Text = "2 à 98%";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox2.Location = new System.Drawing.Point(253, 129);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 21);
-            this.textBox2.TabIndex = 27;
-            this.textBox2.Text = "0,2secondes - 0.02ms";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBox1.Location = new System.Drawing.Point(253, 88);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 21);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.Text = "5Hz min - 50KHz max";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Image = global::AutoDiomes.Properties.Resources.off;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(16, 288);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 21);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "TOFF :        ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Image = global::AutoDiomes.Properties.Resources.on_off;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(16, 249);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 21);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "TON :        ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(15, 15);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(294, 25);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Configuration signal non ON/OFF";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Image = global::AutoDiomes.Properties.Resources.negative_duty;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(16, 210);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 21);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Rapport cyclique (-) :        ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Image = global::AutoDiomes.Properties.Resources.positive_duty;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(16, 168);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(206, 21);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Rapport cyclique (+) :        ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Image = global::AutoDiomes.Properties.Resources.period;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(16, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 21);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Période :        ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Image = global::AutoDiomes.Properties.Resources.signal;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(16, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 21);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Fréquence :        ";
-            // 
-            // NextState
-            // 
-            this.NextState.AutoSize = true;
-            this.NextState.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.NextState.Location = new System.Drawing.Point(42, 49);
-            this.NextState.Name = "NextState";
-            this.NextState.Size = new System.Drawing.Size(274, 21);
-            this.NextState.TabIndex = 18;
-            this.NextState.Text = "Laissez les champs non mesurés vides";
-            this.NextState.Click += new System.EventHandler(this.NextState_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(15, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
-            this.label1.TabIndex = 2;
             // 
             // panel2
             // 
@@ -374,6 +175,7 @@ namespace AutoDiomes
             this.circularProgressBar1.TabIndex = 19;
             this.circularProgressBar1.Text = "10%";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(5, 8, 0, 0);
+            this.circularProgressBar1.Value = 68;
             // 
             // label9
             // 
@@ -435,6 +237,290 @@ namespace AutoDiomes
             this.label11.Text = "Annuler        ";
             this.label11.Click += new System.EventHandler(this.Label11_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(15, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.TabIndex = 2;
+            // 
+            // NextState
+            // 
+            this.NextState.AutoSize = true;
+            this.NextState.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.NextState.Location = new System.Drawing.Point(42, 40);
+            this.NextState.Name = "NextState";
+            this.NextState.Size = new System.Drawing.Size(211, 21);
+            this.NextState.TabIndex = 18;
+            this.NextState.Text = "Cliquez dessus pour mesurer";
+            this.NextState.Click += new System.EventHandler(this.NextState_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Image = global::AutoDiomes.Properties.Resources.signal;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 21);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Fréquence :        ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Image = global::AutoDiomes.Properties.Resources.period;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(3, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Période :        ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Image = global::AutoDiomes.Properties.Resources.positive_duty;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Location = new System.Drawing.Point(3, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(206, 21);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Rapport cyclique (+) :        ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Image = global::AutoDiomes.Properties.Resources.negative_duty;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(3, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(201, 21);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Rapport cyclique (-) :        ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Location = new System.Drawing.Point(15, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(294, 25);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Configuration signal non ON/OFF";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Image = global::AutoDiomes.Properties.Resources.on_off;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Location = new System.Drawing.Point(3, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 21);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "TON :        ";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Image = global::AutoDiomes.Properties.Resources.off;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(3, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 21);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "TOFF :        ";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // txtBox_frequency
+            // 
+            this.txtBox_frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtBox_frequency.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_frequency.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_frequency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtBox_frequency.Location = new System.Drawing.Point(233, 10);
+            this.txtBox_frequency.Multiline = true;
+            this.txtBox_frequency.Name = "txtBox_frequency";
+            this.txtBox_frequency.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_frequency.TabIndex = 26;
+            this.txtBox_frequency.Text = "5Hz min - 50KHz max";
+            this.txtBox_frequency.Click += new System.EventHandler(this.txtBox_frequency_Click);
+            // 
+            // txtBox_period
+            // 
+            this.txtBox_period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtBox_period.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_period.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_period.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtBox_period.Location = new System.Drawing.Point(233, 10);
+            this.txtBox_period.Multiline = true;
+            this.txtBox_period.Name = "txtBox_period";
+            this.txtBox_period.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_period.TabIndex = 27;
+            this.txtBox_period.Text = "0,2secondes - 0.02ms";
+            this.txtBox_period.Click += new System.EventHandler(this.txtBox_period_Click);
+            // 
+            // txtBox_positive_duty
+            // 
+            this.txtBox_positive_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtBox_positive_duty.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_positive_duty.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_positive_duty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtBox_positive_duty.Location = new System.Drawing.Point(233, 6);
+            this.txtBox_positive_duty.Multiline = true;
+            this.txtBox_positive_duty.Name = "txtBox_positive_duty";
+            this.txtBox_positive_duty.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_positive_duty.TabIndex = 28;
+            this.txtBox_positive_duty.Text = "2 à 98%";
+            this.txtBox_positive_duty.Click += new System.EventHandler(this.txtBox_positive_duty_Click);
+            // 
+            // txtBox_negative_duty
+            // 
+            this.txtBox_negative_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtBox_negative_duty.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_negative_duty.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_negative_duty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtBox_negative_duty.Location = new System.Drawing.Point(233, 9);
+            this.txtBox_negative_duty.Multiline = true;
+            this.txtBox_negative_duty.Name = "txtBox_negative_duty";
+            this.txtBox_negative_duty.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_negative_duty.TabIndex = 29;
+            this.txtBox_negative_duty.Text = "2 à 98%";
+            this.txtBox_negative_duty.Click += new System.EventHandler(this.txtBox_negative_duty_Click);
+            // 
+            // txtBox_TON
+            // 
+            this.txtBox_TON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtBox_TON.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_TON.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_TON.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtBox_TON.Location = new System.Drawing.Point(233, 12);
+            this.txtBox_TON.Multiline = true;
+            this.txtBox_TON.Name = "txtBox_TON";
+            this.txtBox_TON.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_TON.TabIndex = 30;
+            this.txtBox_TON.Click += new System.EventHandler(this.txtBox_TON_Click);
+            // 
+            // txtBox_TOFF
+            // 
+            this.txtBox_TOFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtBox_TOFF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_TOFF.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_TOFF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtBox_TOFF.Location = new System.Drawing.Point(233, 7);
+            this.txtBox_TOFF.Multiline = true;
+            this.txtBox_TOFF.Name = "txtBox_TOFF";
+            this.txtBox_TOFF.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_TOFF.TabIndex = 31;
+            this.txtBox_TOFF.Click += new System.EventHandler(this.txtBox_TOFF_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pnl_TOFF);
+            this.panel1.Controls.Add(this.pnl_TON);
+            this.panel1.Controls.Add(this.pnl_Negative_duty);
+            this.panel1.Controls.Add(this.pnl_Positive_duty);
+            this.panel1.Controls.Add(this.pnl_Period);
+            this.panel1.Controls.Add(this.pnl_Frequency);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.NextState);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(18, 135);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(493, 330);
+            this.panel1.TabIndex = 17;
+            // 
+            // pnl_Frequency
+            // 
+            this.pnl_Frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnl_Frequency.Controls.Add(this.label2);
+            this.pnl_Frequency.Controls.Add(this.txtBox_frequency);
+            this.pnl_Frequency.Location = new System.Drawing.Point(20, 70);
+            this.pnl_Frequency.Name = "pnl_Frequency";
+            this.pnl_Frequency.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Frequency.TabIndex = 32;
+            this.pnl_Frequency.Click += new System.EventHandler(this.pnl_Frequency_Click);
+            // 
+            // pnl_Period
+            // 
+            this.pnl_Period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnl_Period.Controls.Add(this.txtBox_period);
+            this.pnl_Period.Controls.Add(this.label3);
+            this.pnl_Period.Location = new System.Drawing.Point(20, 112);
+            this.pnl_Period.Name = "pnl_Period";
+            this.pnl_Period.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Period.TabIndex = 33;
+            this.pnl_Period.Click += new System.EventHandler(this.pnl_Period_Click);
+            // 
+            // pnl_Positive_duty
+            // 
+            this.pnl_Positive_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnl_Positive_duty.Controls.Add(this.txtBox_positive_duty);
+            this.pnl_Positive_duty.Controls.Add(this.label5);
+            this.pnl_Positive_duty.Location = new System.Drawing.Point(20, 154);
+            this.pnl_Positive_duty.Name = "pnl_Positive_duty";
+            this.pnl_Positive_duty.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Positive_duty.TabIndex = 34;
+            this.pnl_Positive_duty.Click += new System.EventHandler(this.pnl_Positive_duty_Click);
+            // 
+            // pnl_Negative_duty
+            // 
+            this.pnl_Negative_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnl_Negative_duty.Controls.Add(this.label6);
+            this.pnl_Negative_duty.Controls.Add(this.txtBox_negative_duty);
+            this.pnl_Negative_duty.Location = new System.Drawing.Point(20, 193);
+            this.pnl_Negative_duty.Name = "pnl_Negative_duty";
+            this.pnl_Negative_duty.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Negative_duty.TabIndex = 35;
+            this.pnl_Negative_duty.Click += new System.EventHandler(this.pnl_Negative_duty_Click);
+            // 
+            // pnl_TON
+            // 
+            this.pnl_TON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnl_TON.Controls.Add(this.label7);
+            this.pnl_TON.Controls.Add(this.txtBox_TON);
+            this.pnl_TON.Location = new System.Drawing.Point(20, 232);
+            this.pnl_TON.Name = "pnl_TON";
+            this.pnl_TON.Size = new System.Drawing.Size(445, 42);
+            this.pnl_TON.TabIndex = 36;
+            this.pnl_TON.Click += new System.EventHandler(this.pnl_TON_Click);
+            // 
+            // pnl_TOFF
+            // 
+            this.pnl_TOFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnl_TOFF.Controls.Add(this.label8);
+            this.pnl_TOFF.Controls.Add(this.txtBox_TOFF);
+            this.pnl_TOFF.Location = new System.Drawing.Point(20, 274);
+            this.pnl_TOFF.Name = "pnl_TOFF";
+            this.pnl_TOFF.Size = new System.Drawing.Size(445, 42);
+            this.pnl_TOFF.TabIndex = 37;
+            this.pnl_TOFF.Click += new System.EventHandler(this.pnl_TOFF_Click);
+            // 
             // frmSignalAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,14 +538,26 @@ namespace AutoDiomes
             this.Text = "frmSignalAdd";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.pnl_Frequency.ResumeLayout(false);
+            this.pnl_Frequency.PerformLayout();
+            this.pnl_Period.ResumeLayout(false);
+            this.pnl_Period.PerformLayout();
+            this.pnl_Positive_duty.ResumeLayout(false);
+            this.pnl_Positive_duty.PerformLayout();
+            this.pnl_Negative_duty.ResumeLayout(false);
+            this.pnl_Negative_duty.PerformLayout();
+            this.pnl_TON.ResumeLayout(false);
+            this.pnl_TON.PerformLayout();
+            this.pnl_TOFF.ResumeLayout(false);
+            this.pnl_TOFF.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,23 +568,7 @@ namespace AutoDiomes
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label StateText;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label NextState;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbox_ONOFF;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
@@ -494,5 +576,27 @@ namespace AutoDiomes
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NextState;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtBox_frequency;
+        private System.Windows.Forms.TextBox txtBox_period;
+        private System.Windows.Forms.TextBox txtBox_positive_duty;
+        private System.Windows.Forms.TextBox txtBox_negative_duty;
+        private System.Windows.Forms.TextBox txtBox_TON;
+        private System.Windows.Forms.TextBox txtBox_TOFF;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_TOFF;
+        private System.Windows.Forms.Panel pnl_TON;
+        private System.Windows.Forms.Panel pnl_Negative_duty;
+        private System.Windows.Forms.Panel pnl_Positive_duty;
+        private System.Windows.Forms.Panel pnl_Period;
+        private System.Windows.Forms.Panel pnl_Frequency;
     }
 }

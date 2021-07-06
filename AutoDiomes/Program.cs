@@ -39,7 +39,8 @@ namespace AutoDiomes
         public UInt16 error_margin;
         public string file_date;
         public string config_name;
-        public UInt16 number_signal;
+        public UInt16 number_signal = 0;
+        public UInt16 number_signal_pos = 0;
         public bool compare;
     }
     class Temporary_Project
@@ -55,32 +56,33 @@ namespace AutoDiomes
     }
     class Signal
     {
-        public bool ON_OFF;
+        public string ON_OFF;
         public UInt32 frequency;
         public UInt32 period;
         public UInt16 duty_positive;
         public UInt16 duty_negative;
         public UInt32 TON;
         public UInt32 TOFF;
+        public UInt16 signal_number;
 
-        //This constructor initializes the object Signal in case of ON/OFF signal
-        public Signal(bool ON_OFF)
+        //Methods for add signal
+        public void AddSignal(string ON_OFF, UInt32 frequency, UInt32 period, UInt16 duty_positive, UInt16 duty_negative, UInt32 TON, UInt32 TOFF)
         {
             this.ON_OFF = ON_OFF;
-        }
-
-        //This constructor initializes the object Signal in case of none ON/OFF signal
-        public Signal(UInt32 frequency, UInt32 period, UInt16 duty_positive, UInt16 duty_negative, UInt32 TON, UInt32 TOFF)
-        {
             this.frequency = frequency;
             this.period = period;
             this.duty_positive = duty_positive;
             this.duty_negative = duty_negative;
             this.TON = TON;
             this.TOFF = TOFF;
+
+            Globals.project.number_signal++;
+            Globals.project.number_signal_pos++;
+
+        }
+        public void RemoveSignal(UInt16 signal_number)
+        {
+            Globals.project.number_signal--;
         }
     }
-
-    
-
 }
