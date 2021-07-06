@@ -29,6 +29,7 @@ namespace AutoDiomes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignalAdd));
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbox_ONOFF = new System.Windows.Forms.ComboBox();
@@ -63,6 +64,7 @@ namespace AutoDiomes
             this.pnl_Positive_duty = new System.Windows.Forms.Panel();
             this.pnl_Period = new System.Windows.Forms.Panel();
             this.pnl_Frequency = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -195,10 +197,12 @@ namespace AutoDiomes
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.panel3.Controls.Add(this.label10);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel3.Location = new System.Drawing.Point(517, 60);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 57);
             this.panel3.TabIndex = 20;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // label10
             // 
@@ -212,11 +216,13 @@ namespace AutoDiomes
             this.label10.Size = new System.Drawing.Size(160, 21);
             this.label10.TabIndex = 0;
             this.label10.Text = "Fin configuration        ";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.panel5.Controls.Add(this.label11);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel5.Location = new System.Drawing.Point(517, 408);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(204, 57);
@@ -540,6 +546,11 @@ namespace AutoDiomes
             this.pnl_Frequency.Click += new System.EventHandler(this.pnl_Frequency_Click);
             this.pnl_Frequency.DoubleClick += new System.EventHandler(this.pnl_Frequency_DoubleClick);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
             // frmSignalAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,5 +628,6 @@ namespace AutoDiomes
         private System.Windows.Forms.Panel pnl_Positive_duty;
         private System.Windows.Forms.Panel pnl_Period;
         private System.Windows.Forms.Panel pnl_Frequency;
+        private System.Windows.Forms.Timer timer1;
     }
 }

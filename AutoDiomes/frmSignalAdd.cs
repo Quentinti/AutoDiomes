@@ -29,6 +29,17 @@ namespace AutoDiomes
         private bool txtBox_TON_default = true;
         private bool txtBox_TOFF_default = true;
 
+        private bool txtBox_frequency_error = false;
+        private bool txtBox_period_error = false;
+        private bool txtBox_positive_duty_error = false;
+        private bool txtBox_negative_duty_error = false;
+        private bool txtBox_TON_error = false;
+        private bool txtBox_TOFF_error = false;
+
+        private string animate = "Right";
+        private ushort animate_cpt = 10;
+
+
         public frmSignalAdd(frmAnalytics frm)
         {
             InitializeComponent();
@@ -37,15 +48,65 @@ namespace AutoDiomes
             circularProgressBar1.Value = Globals.project.error_margin;
             circularProgressBar1.Text = ConvertLinearToString(Globals.project.error_margin) + @"%";
             cmbox_ONOFF.Text = "Non";
+
+            this.timer1.Start();
         }
 
-        private void Frame_projectproperties()
+        private void Frame_SignalList(string button)
         {
-            ths.PnlProjectLoader.Controls.Clear();
-            frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
-            ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
-            frmSignalList_Verbose.Show();
+            if (button == "Validate")
+            {
+                if (!Check_error())
+                {
+                    ths.PnlProjectLoader.Controls.Clear();
+                    frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
+                    ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
+                    frmSignalList_Verbose.Show();
+                    this.timer1.Stop();
+                }
+                else
+                {
+                    animate_cpt = 0;
+                    LabelErrorAnimation(); //Update label of error if error is present
+                }
+            }
+            else if(button == "Cancel")
+            {
+                ths.PnlProjectLoader.Controls.Clear();
+                frmSignalList frmSignalList_Verbose = new frmSignalList(ths) { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                frmSignalList_Verbose.FormBorderStyle = FormBorderStyle.None;
+                ths.PnlProjectLoader.Controls.Add(frmSignalList_Verbose);
+                frmSignalList_Verbose.Show();
+            }
+        }
+
+        private bool Check_error()
+        {
+            return true;
+        }
+
+        private void LabelErrorAnimation()
+        {
+            if (Check_error())
+            {
+                panel3.BackColor = Color.FromArgb(180, 30, 50);
+                panel3.Cursor = System.Windows.Forms.Cursors.No;
+                label10.Location = new Point(31, 16);
+                label10.Text = "Erreur de saisie !       ";
+                label10.Image = global::AutoDiomes.Properties.Resources.cross;
+                label10.Cursor = System.Windows.Forms.Cursors.No;
+
+            }
+            else
+            {
+                panel3.BackColor = Color.FromArgb(20, 40, 60);
+                panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+                label10.Location = new Point(24, 16);
+                label10.Text = "Fin configuration        ";
+                label10.Image = global::AutoDiomes.Properties.Resources.signal;
+                label10.Cursor = System.Windows.Forms.Cursors.Hand;
+            }
         }
 
         private static string ConvertLinearToString(ushort data) //Convert UINT16 to string
@@ -163,12 +224,12 @@ namespace AutoDiomes
 
         private void Panel5_Click(object sender, EventArgs e)
         {
-            Frame_projectproperties();
+            Frame_SignalList("Cancel");
         }
 
         private void Label11_Click(object sender, EventArgs e)
         {
-            Frame_projectproperties();
+            Frame_SignalList("Cancel");
         }
 
         private void cmbox_ONOFF_SelectedIndexChanged(object sender, EventArgs e)
@@ -407,20 +468,71 @@ namespace AutoDiomes
             {
                 if ((frequency >= 5) && (frequency <= 50000)) //verify if the number enter is a percent
                 {
-                    txtBox_error_margin_error = false;
-                    txtBox_error_margin.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
-                    Globals.temporary_project.error_margin = error_margin;
+                    txtBox_frequency_error = false;
+                    txtBox_frequency.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
                     LabelErrorAnimation();
                 }
                 else
                 {
-                    txtBox_error_margin.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
-                    txtBox_error_margin.Text = "0 < valeur < 100"; //change the text of text box for indicate the error
-                    txtBox_error_margin_default = true; //Reset for clear after a new click
-                    txtBox_error_margin_error = true; //Set error to true
+                    txtBox_frequency.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_frequency.Text = "5 < valeur < 50 000"; //change the text of text box for indicate the error
+                    txtBox_frequency_default = true; //Reset for clear after a new click
+                    txtBox_frequency_error = true; //Set error to true
                     LabelErrorAnimation();
                 }
             }
+            else
+            {
+                txtBox_frequency.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_frequency.Text = "Pas de Hz ou autre caractères"; //change the text of text box for indicate the error
+                txtBox_frequency_default = true; //Reset for clear after a new click
+                txtBox_frequency_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            if (label10.Text == "Erreur de saisie !       ")
+            {
+                if (animate_cpt == 6)
+                {
+                    panel3.Location = new Point(516, 60);
+                }
+                if (animate_cpt < 6)
+                {
+
+                    if (animate == "Right")
+                    {
+                        panel3.Location = new Point(panel3.Location.X + 6, panel3.Location.Y);
+                    }
+                    else if (animate == "Left")
+                    {
+                        panel3.Location = new Point(panel3.Location.X - 6, panel3.Location.Y);
+                    }
+
+                    if (panel3.Location.X > 530)
+                    {
+                        animate = "Left";
+                        animate_cpt++;
+                    }
+                    else if (panel3.Location.X < 500)
+                    {
+                        animate = "Right";
+                        animate_cpt++;
+                    }
+                }
+            }
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            Frame_SignalList("Validate");
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Frame_SignalList("Validate");
         }
     }
 }

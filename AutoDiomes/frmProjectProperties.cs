@@ -126,7 +126,7 @@ namespace AutoDiomes
                 label11.Location = new Point(11, 15);
                 label11.Text = "Configuration des signaux :        ";
                 label11.Image = global::AutoDiomes.Properties.Resources.signal;
-                label11.Cursor = System.Windows.Forms.Cursors.Default;
+                label11.Cursor = System.Windows.Forms.Cursors.Hand;
             }   
         }
 

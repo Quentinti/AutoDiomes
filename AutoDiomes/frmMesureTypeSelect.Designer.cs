@@ -32,11 +32,11 @@ namespace AutoDiomes
             this.StateText = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
@@ -60,6 +60,7 @@ namespace AutoDiomes
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label1);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.Location = new System.Drawing.Point(12, 125);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(709, 63);
@@ -76,6 +77,20 @@ namespace AutoDiomes
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 21);
             this.label10.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Image = global::AutoDiomes.Properties.Resources.robot;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(154, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(465, 37);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "       Comparaison automatique        ";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // panel1
             // 
@@ -100,18 +115,6 @@ namespace AutoDiomes
             this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 14;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(332, 237);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 37);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "OU     ";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -126,19 +129,17 @@ namespace AutoDiomes
             this.label3.Text = "       Pas de comparaison        ";
             this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Image = global::AutoDiomes.Properties.Resources.robot;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(154, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(465, 37);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "       Comparaison automatique        ";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(332, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 37);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "OU     ";
             // 
             // panel2
             // 
