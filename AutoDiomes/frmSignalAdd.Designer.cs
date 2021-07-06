@@ -57,23 +57,23 @@ namespace AutoDiomes
             this.txtBox_TON = new System.Windows.Forms.TextBox();
             this.txtBox_TOFF = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_Frequency = new System.Windows.Forms.Panel();
-            this.pnl_Period = new System.Windows.Forms.Panel();
-            this.pnl_Positive_duty = new System.Windows.Forms.Panel();
-            this.pnl_Negative_duty = new System.Windows.Forms.Panel();
-            this.pnl_TON = new System.Windows.Forms.Panel();
             this.pnl_TOFF = new System.Windows.Forms.Panel();
+            this.pnl_TON = new System.Windows.Forms.Panel();
+            this.pnl_Negative_duty = new System.Windows.Forms.Panel();
+            this.pnl_Positive_duty = new System.Windows.Forms.Panel();
+            this.pnl_Period = new System.Windows.Forms.Panel();
+            this.pnl_Frequency = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnl_Frequency.SuspendLayout();
-            this.pnl_Period.SuspendLayout();
-            this.pnl_Positive_duty.SuspendLayout();
-            this.pnl_Negative_duty.SuspendLayout();
-            this.pnl_TON.SuspendLayout();
             this.pnl_TOFF.SuspendLayout();
+            this.pnl_TON.SuspendLayout();
+            this.pnl_Negative_duty.SuspendLayout();
+            this.pnl_Positive_duty.SuspendLayout();
+            this.pnl_Period.SuspendLayout();
+            this.pnl_Frequency.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -273,6 +273,7 @@ namespace AutoDiomes
             this.label2.TabIndex = 19;
             this.label2.Text = "Fréquence :        ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.DoubleClick += new System.EventHandler(this.label2_DoubleClick);
             // 
             // label3
             // 
@@ -287,6 +288,7 @@ namespace AutoDiomes
             this.label3.TabIndex = 20;
             this.label3.Text = "Période :        ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.DoubleClick += new System.EventHandler(this.label3_DoubleClick);
             // 
             // label5
             // 
@@ -301,6 +303,7 @@ namespace AutoDiomes
             this.label5.TabIndex = 21;
             this.label5.Text = "Rapport cyclique (+) :        ";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.DoubleClick += new System.EventHandler(this.label5_DoubleClick);
             // 
             // label6
             // 
@@ -315,6 +318,7 @@ namespace AutoDiomes
             this.label6.TabIndex = 22;
             this.label6.Text = "Rapport cyclique (-) :        ";
             this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.DoubleClick += new System.EventHandler(this.label6_DoubleClick);
             // 
             // label13
             // 
@@ -341,6 +345,7 @@ namespace AutoDiomes
             this.label7.TabIndex = 24;
             this.label7.Text = "TON :        ";
             this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label7.DoubleClick += new System.EventHandler(this.label7_DoubleClick);
             // 
             // label8
             // 
@@ -355,6 +360,7 @@ namespace AutoDiomes
             this.label8.TabIndex = 25;
             this.label8.Text = "TOFF :        ";
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label8.DoubleClick += new System.EventHandler(this.label8_DoubleClick);
             // 
             // txtBox_frequency
             // 
@@ -362,13 +368,15 @@ namespace AutoDiomes
             this.txtBox_frequency.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_frequency.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_frequency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_frequency.Location = new System.Drawing.Point(233, 10);
+            this.txtBox_frequency.Location = new System.Drawing.Point(230, 10);
             this.txtBox_frequency.Multiline = true;
             this.txtBox_frequency.Name = "txtBox_frequency";
             this.txtBox_frequency.Size = new System.Drawing.Size(212, 21);
             this.txtBox_frequency.TabIndex = 26;
             this.txtBox_frequency.Text = "5Hz min - 50KHz max";
             this.txtBox_frequency.Click += new System.EventHandler(this.txtBox_frequency_Click);
+            this.txtBox_frequency.DoubleClick += new System.EventHandler(this.txtBox_frequency_DoubleClick);
+            this.txtBox_frequency.Leave += new System.EventHandler(this.txtBox_frequency_Leave);
             // 
             // txtBox_period
             // 
@@ -376,13 +384,14 @@ namespace AutoDiomes
             this.txtBox_period.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_period.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_period.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_period.Location = new System.Drawing.Point(233, 10);
+            this.txtBox_period.Location = new System.Drawing.Point(230, 10);
             this.txtBox_period.Multiline = true;
             this.txtBox_period.Name = "txtBox_period";
             this.txtBox_period.Size = new System.Drawing.Size(212, 21);
             this.txtBox_period.TabIndex = 27;
             this.txtBox_period.Text = "0,2secondes - 0.02ms";
             this.txtBox_period.Click += new System.EventHandler(this.txtBox_period_Click);
+            this.txtBox_period.DoubleClick += new System.EventHandler(this.txtBox_period_DoubleClick);
             // 
             // txtBox_positive_duty
             // 
@@ -390,13 +399,14 @@ namespace AutoDiomes
             this.txtBox_positive_duty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_positive_duty.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_positive_duty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_positive_duty.Location = new System.Drawing.Point(233, 6);
+            this.txtBox_positive_duty.Location = new System.Drawing.Point(230, 6);
             this.txtBox_positive_duty.Multiline = true;
             this.txtBox_positive_duty.Name = "txtBox_positive_duty";
             this.txtBox_positive_duty.Size = new System.Drawing.Size(212, 21);
             this.txtBox_positive_duty.TabIndex = 28;
             this.txtBox_positive_duty.Text = "2 à 98%";
             this.txtBox_positive_duty.Click += new System.EventHandler(this.txtBox_positive_duty_Click);
+            this.txtBox_positive_duty.DoubleClick += new System.EventHandler(this.txtBox_positive_duty_DoubleClick);
             // 
             // txtBox_negative_duty
             // 
@@ -404,13 +414,14 @@ namespace AutoDiomes
             this.txtBox_negative_duty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_negative_duty.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_negative_duty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_negative_duty.Location = new System.Drawing.Point(233, 9);
+            this.txtBox_negative_duty.Location = new System.Drawing.Point(230, 9);
             this.txtBox_negative_duty.Multiline = true;
             this.txtBox_negative_duty.Name = "txtBox_negative_duty";
             this.txtBox_negative_duty.Size = new System.Drawing.Size(212, 21);
             this.txtBox_negative_duty.TabIndex = 29;
             this.txtBox_negative_duty.Text = "2 à 98%";
             this.txtBox_negative_duty.Click += new System.EventHandler(this.txtBox_negative_duty_Click);
+            this.txtBox_negative_duty.DoubleClick += new System.EventHandler(this.txtBox_negative_duty_DoubleClick);
             // 
             // txtBox_TON
             // 
@@ -418,12 +429,13 @@ namespace AutoDiomes
             this.txtBox_TON.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_TON.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_TON.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_TON.Location = new System.Drawing.Point(233, 12);
+            this.txtBox_TON.Location = new System.Drawing.Point(230, 14);
             this.txtBox_TON.Multiline = true;
             this.txtBox_TON.Name = "txtBox_TON";
             this.txtBox_TON.Size = new System.Drawing.Size(212, 21);
             this.txtBox_TON.TabIndex = 30;
             this.txtBox_TON.Click += new System.EventHandler(this.txtBox_TON_Click);
+            this.txtBox_TON.DoubleClick += new System.EventHandler(this.txtBox_TON_DoubleClick);
             // 
             // txtBox_TOFF
             // 
@@ -431,12 +443,13 @@ namespace AutoDiomes
             this.txtBox_TOFF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_TOFF.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_TOFF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_TOFF.Location = new System.Drawing.Point(233, 7);
+            this.txtBox_TOFF.Location = new System.Drawing.Point(230, 7);
             this.txtBox_TOFF.Multiline = true;
             this.txtBox_TOFF.Name = "txtBox_TOFF";
             this.txtBox_TOFF.Size = new System.Drawing.Size(212, 21);
             this.txtBox_TOFF.TabIndex = 31;
             this.txtBox_TOFF.Click += new System.EventHandler(this.txtBox_TOFF_Click);
+            this.txtBox_TOFF.DoubleClick += new System.EventHandler(this.txtBox_TOFF_DoubleClick);
             // 
             // panel1
             // 
@@ -455,53 +468,21 @@ namespace AutoDiomes
             this.panel1.Size = new System.Drawing.Size(493, 330);
             this.panel1.TabIndex = 17;
             // 
-            // pnl_Frequency
+            // pnl_TOFF
             // 
-            this.pnl_Frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.pnl_Frequency.Controls.Add(this.label2);
-            this.pnl_Frequency.Controls.Add(this.txtBox_frequency);
-            this.pnl_Frequency.Location = new System.Drawing.Point(20, 70);
-            this.pnl_Frequency.Name = "pnl_Frequency";
-            this.pnl_Frequency.Size = new System.Drawing.Size(445, 42);
-            this.pnl_Frequency.TabIndex = 32;
-            this.pnl_Frequency.Click += new System.EventHandler(this.pnl_Frequency_Click);
-            // 
-            // pnl_Period
-            // 
-            this.pnl_Period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.pnl_Period.Controls.Add(this.txtBox_period);
-            this.pnl_Period.Controls.Add(this.label3);
-            this.pnl_Period.Location = new System.Drawing.Point(20, 112);
-            this.pnl_Period.Name = "pnl_Period";
-            this.pnl_Period.Size = new System.Drawing.Size(445, 42);
-            this.pnl_Period.TabIndex = 33;
-            this.pnl_Period.Click += new System.EventHandler(this.pnl_Period_Click);
-            // 
-            // pnl_Positive_duty
-            // 
-            this.pnl_Positive_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.pnl_Positive_duty.Controls.Add(this.txtBox_positive_duty);
-            this.pnl_Positive_duty.Controls.Add(this.label5);
-            this.pnl_Positive_duty.Location = new System.Drawing.Point(20, 154);
-            this.pnl_Positive_duty.Name = "pnl_Positive_duty";
-            this.pnl_Positive_duty.Size = new System.Drawing.Size(445, 42);
-            this.pnl_Positive_duty.TabIndex = 34;
-            this.pnl_Positive_duty.Click += new System.EventHandler(this.pnl_Positive_duty_Click);
-            // 
-            // pnl_Negative_duty
-            // 
-            this.pnl_Negative_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.pnl_Negative_duty.Controls.Add(this.label6);
-            this.pnl_Negative_duty.Controls.Add(this.txtBox_negative_duty);
-            this.pnl_Negative_duty.Location = new System.Drawing.Point(20, 193);
-            this.pnl_Negative_duty.Name = "pnl_Negative_duty";
-            this.pnl_Negative_duty.Size = new System.Drawing.Size(445, 42);
-            this.pnl_Negative_duty.TabIndex = 35;
-            this.pnl_Negative_duty.Click += new System.EventHandler(this.pnl_Negative_duty_Click);
+            this.pnl_TOFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.pnl_TOFF.Controls.Add(this.label8);
+            this.pnl_TOFF.Controls.Add(this.txtBox_TOFF);
+            this.pnl_TOFF.Location = new System.Drawing.Point(20, 273);
+            this.pnl_TOFF.Name = "pnl_TOFF";
+            this.pnl_TOFF.Size = new System.Drawing.Size(445, 42);
+            this.pnl_TOFF.TabIndex = 37;
+            this.pnl_TOFF.Click += new System.EventHandler(this.pnl_TOFF_Click);
+            this.pnl_TOFF.DoubleClick += new System.EventHandler(this.pnl_TOFF_DoubleClick);
             // 
             // pnl_TON
             // 
-            this.pnl_TON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnl_TON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.pnl_TON.Controls.Add(this.label7);
             this.pnl_TON.Controls.Add(this.txtBox_TON);
             this.pnl_TON.Location = new System.Drawing.Point(20, 232);
@@ -509,17 +490,55 @@ namespace AutoDiomes
             this.pnl_TON.Size = new System.Drawing.Size(445, 42);
             this.pnl_TON.TabIndex = 36;
             this.pnl_TON.Click += new System.EventHandler(this.pnl_TON_Click);
+            this.pnl_TON.DoubleClick += new System.EventHandler(this.pnl_TON_DoubleClick);
             // 
-            // pnl_TOFF
+            // pnl_Negative_duty
             // 
-            this.pnl_TOFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.pnl_TOFF.Controls.Add(this.label8);
-            this.pnl_TOFF.Controls.Add(this.txtBox_TOFF);
-            this.pnl_TOFF.Location = new System.Drawing.Point(20, 274);
-            this.pnl_TOFF.Name = "pnl_TOFF";
-            this.pnl_TOFF.Size = new System.Drawing.Size(445, 42);
-            this.pnl_TOFF.TabIndex = 37;
-            this.pnl_TOFF.Click += new System.EventHandler(this.pnl_TOFF_Click);
+            this.pnl_Negative_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.pnl_Negative_duty.Controls.Add(this.label6);
+            this.pnl_Negative_duty.Controls.Add(this.txtBox_negative_duty);
+            this.pnl_Negative_duty.Location = new System.Drawing.Point(20, 193);
+            this.pnl_Negative_duty.Name = "pnl_Negative_duty";
+            this.pnl_Negative_duty.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Negative_duty.TabIndex = 35;
+            this.pnl_Negative_duty.Click += new System.EventHandler(this.pnl_Negative_duty_Click);
+            this.pnl_Negative_duty.DoubleClick += new System.EventHandler(this.pnl_Negative_duty_DoubleClick);
+            // 
+            // pnl_Positive_duty
+            // 
+            this.pnl_Positive_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.pnl_Positive_duty.Controls.Add(this.txtBox_positive_duty);
+            this.pnl_Positive_duty.Controls.Add(this.label5);
+            this.pnl_Positive_duty.Location = new System.Drawing.Point(20, 154);
+            this.pnl_Positive_duty.Name = "pnl_Positive_duty";
+            this.pnl_Positive_duty.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Positive_duty.TabIndex = 34;
+            this.pnl_Positive_duty.Click += new System.EventHandler(this.pnl_Positive_duty_Click);
+            this.pnl_Positive_duty.DoubleClick += new System.EventHandler(this.pnl_Positive_duty_DoubleClick);
+            // 
+            // pnl_Period
+            // 
+            this.pnl_Period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.pnl_Period.Controls.Add(this.txtBox_period);
+            this.pnl_Period.Controls.Add(this.label3);
+            this.pnl_Period.Location = new System.Drawing.Point(20, 112);
+            this.pnl_Period.Name = "pnl_Period";
+            this.pnl_Period.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Period.TabIndex = 33;
+            this.pnl_Period.Click += new System.EventHandler(this.pnl_Period_Click);
+            this.pnl_Period.DoubleClick += new System.EventHandler(this.pnl_Period_DoubleClick);
+            // 
+            // pnl_Frequency
+            // 
+            this.pnl_Frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.pnl_Frequency.Controls.Add(this.label2);
+            this.pnl_Frequency.Controls.Add(this.txtBox_frequency);
+            this.pnl_Frequency.Location = new System.Drawing.Point(20, 70);
+            this.pnl_Frequency.Name = "pnl_Frequency";
+            this.pnl_Frequency.Size = new System.Drawing.Size(445, 42);
+            this.pnl_Frequency.TabIndex = 32;
+            this.pnl_Frequency.Click += new System.EventHandler(this.pnl_Frequency_Click);
+            this.pnl_Frequency.DoubleClick += new System.EventHandler(this.pnl_Frequency_DoubleClick);
             // 
             // frmSignalAdd
             // 
@@ -546,18 +565,18 @@ namespace AutoDiomes
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnl_Frequency.ResumeLayout(false);
-            this.pnl_Frequency.PerformLayout();
-            this.pnl_Period.ResumeLayout(false);
-            this.pnl_Period.PerformLayout();
-            this.pnl_Positive_duty.ResumeLayout(false);
-            this.pnl_Positive_duty.PerformLayout();
-            this.pnl_Negative_duty.ResumeLayout(false);
-            this.pnl_Negative_duty.PerformLayout();
-            this.pnl_TON.ResumeLayout(false);
-            this.pnl_TON.PerformLayout();
             this.pnl_TOFF.ResumeLayout(false);
             this.pnl_TOFF.PerformLayout();
+            this.pnl_TON.ResumeLayout(false);
+            this.pnl_TON.PerformLayout();
+            this.pnl_Negative_duty.ResumeLayout(false);
+            this.pnl_Negative_duty.PerformLayout();
+            this.pnl_Positive_duty.ResumeLayout(false);
+            this.pnl_Positive_duty.PerformLayout();
+            this.pnl_Period.ResumeLayout(false);
+            this.pnl_Period.PerformLayout();
+            this.pnl_Frequency.ResumeLayout(false);
+            this.pnl_Frequency.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

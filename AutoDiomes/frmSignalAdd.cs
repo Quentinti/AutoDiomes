@@ -22,6 +22,13 @@ namespace AutoDiomes
         public UInt32 TON;
         public UInt32 TOFF;
 
+        private bool txtBox_frequency_default = true;
+        private bool txtBox_period_default = true;
+        private bool txtBox_positive_duty_default = true;
+        private bool txtBox_negative_duty_default = true;
+        private bool txtBox_TON_default = true;
+        private bool txtBox_TOFF_default = true;
+
         public frmSignalAdd(frmAnalytics frm)
         {
             InitializeComponent();
@@ -56,32 +63,92 @@ namespace AutoDiomes
 
         private void frequency_enable()
         {
+            if(txtBox_frequency_default)
+            {
+                txtBox_frequency.Clear();
+                txtBox_frequency_default = false;
+            }
+            pnl_Frequency.BackColor = Color.FromArgb(50, 170, 50);
+        }
 
+        private void frequency_disable()
+        {
+            pnl_Frequency.BackColor = Color.FromArgb(180, 30, 50);
         }
 
         private void period_enable()
         {
+            if (txtBox_period_default)
+            {
+                txtBox_period.Clear();
+                txtBox_period_default = false;
+            }
+            pnl_Period.BackColor = Color.FromArgb(50, 170, 50);
+        }
 
+        private void period_disable()
+        {
+            pnl_Period.BackColor = Color.FromArgb(180, 30, 50);
         }
 
         private void positive_duty_enable()
         {
+            if (txtBox_positive_duty_default)
+            {
+                txtBox_positive_duty.Clear();
+                txtBox_positive_duty_default = false;
+            }
+            pnl_Positive_duty.BackColor = Color.FromArgb(50, 170, 50);
+        }
 
+        private void positive_duty_disable()
+        {
+            pnl_Positive_duty.BackColor = Color.FromArgb(180, 30, 50);
         }
 
         private void negative_duty_enable()
         {
+            if (txtBox_negative_duty_default)
+            {
+                txtBox_negative_duty.Clear();
+                txtBox_negative_duty_default = false;
+            }
+            pnl_Negative_duty.BackColor = Color.FromArgb(50, 170, 50);
+        }
 
+        private void negative_duty_disable()
+        {
+            pnl_Negative_duty.BackColor = Color.FromArgb(180, 30, 50);
         }
 
         private void TON_enable()
         {
+            if (txtBox_TON_default)
+            {
+                txtBox_TON.Clear();
+                txtBox_TON_default = false;
+            }
+            pnl_TON.BackColor = Color.FromArgb(50, 170, 50);
+        }
 
+        private void TON_disable()
+        {
+            pnl_TON.BackColor = Color.FromArgb(180, 30, 50);
         }
 
         private void TOFF_enable()
         {
+            if (txtBox_TOFF_default)
+            {
+                txtBox_TOFF.Clear();
+                txtBox_TOFF_default = false;
+            }
+            pnl_TOFF.BackColor = Color.FromArgb(50, 170, 50);
+        }
 
+        private void TOFF_disable()
+        {
+            pnl_TOFF.BackColor = Color.FromArgb(180, 30, 50);
         }
 
         private void NextState_Click(object sender, EventArgs e)
@@ -123,8 +190,12 @@ namespace AutoDiomes
                 panel1.Show();
                 panel4.Location = new Point(18, 60);
             }
-            
         }
+
+        /* This part is action for enable or disable items of mesure.
+         * On simple click, you enable the item
+         * On double click, you disable the item
+        */
 
         //Frequency enable
 
@@ -226,6 +297,130 @@ namespace AutoDiomes
         private void pnl_TOFF_Click(object sender, EventArgs e)
         {
             TOFF_enable();
+        }
+
+        //Frequency Disable
+
+        private void pnl_Frequency_DoubleClick(object sender, EventArgs e)
+        {
+            frequency_disable();
+        }
+
+        private void label2_DoubleClick(object sender, EventArgs e)
+        {
+            frequency_disable();
+        }
+
+        private void txtBox_frequency_DoubleClick(object sender, EventArgs e)
+        {
+            frequency_disable();
+        }
+
+        //Period Disable
+
+        private void pnl_Period_DoubleClick(object sender, EventArgs e)
+        {
+            period_disable();
+        }
+
+        private void label3_DoubleClick(object sender, EventArgs e)
+        {
+            period_disable();
+        }
+
+        private void txtBox_period_DoubleClick(object sender, EventArgs e)
+        {
+            period_disable();
+        }
+
+        //Positive Duty Cycle Disable
+
+        private void pnl_Positive_duty_DoubleClick(object sender, EventArgs e)
+        {
+            positive_duty_disable();
+        }
+
+        private void label5_DoubleClick(object sender, EventArgs e)
+        {
+            positive_duty_disable();
+        }
+
+        private void txtBox_positive_duty_DoubleClick(object sender, EventArgs e)
+        {
+            positive_duty_disable();
+        }
+
+        //Negative Duty Cycle Disable
+
+        private void pnl_Negative_duty_DoubleClick(object sender, EventArgs e)
+        {
+            negative_duty_disable();
+        }
+
+        private void label6_DoubleClick(object sender, EventArgs e)
+        {
+            negative_duty_disable();
+        }
+
+        private void txtBox_negative_duty_DoubleClick(object sender, EventArgs e)
+        {
+            negative_duty_disable();
+        }
+
+        //TON Disable
+
+        private void pnl_TON_DoubleClick(object sender, EventArgs e)
+        {
+            TON_disable();
+        }
+
+        private void label7_DoubleClick(object sender, EventArgs e)
+        {
+            TON_disable();
+        }
+
+        private void txtBox_TON_DoubleClick(object sender, EventArgs e)
+        {
+            TON_disable();
+        }
+
+        //TOFF Disable
+
+        private void pnl_TOFF_DoubleClick(object sender, EventArgs e)
+        {
+            TOFF_disable();
+        }
+
+        private void label8_DoubleClick(object sender, EventArgs e)
+        {
+            TOFF_disable();
+        }
+
+        private void txtBox_TOFF_DoubleClick(object sender, EventArgs e)
+        {
+            TOFF_disable();
+        }
+
+        private void txtBox_frequency_Leave(object sender, EventArgs e)
+        {
+            if (UInt32.TryParse(txtBox_frequency.Text, out frequency)) //verify if the content is number and convert it to UINT16
+            {
+                if ((frequency >= 5) && (frequency <= 50000)) //verify if the number enter is a percent
+                {
+                    txtBox_error_margin_error = false;
+                    txtBox_error_margin.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    Globals.temporary_project.error_margin = error_margin;
+                    LabelErrorAnimation();
+                }
+                else
+                {
+                    txtBox_error_margin.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_error_margin.Text = "0 < valeur < 100"; //change the text of text box for indicate the error
+                    txtBox_error_margin_default = true; //Reset for clear after a new click
+                    txtBox_error_margin_error = true; //Set error to true
+                    LabelErrorAnimation();
+                }
+            }
         }
     }
 }
