@@ -16,11 +16,11 @@ namespace AutoDiomes
 
         public string ON_OFF;
         public UInt32 frequency;
-        public UInt32 period;
-        public UInt16 duty_positive;
-        public UInt16 duty_negative;
-        public UInt32 TON;
-        public UInt32 TOFF;
+        public double period;
+        public UInt16 positive_duty;
+        public UInt16 negative_duty;
+        public double TON;
+        public double TOFF;
 
         private bool txtBox_frequency_default = true;
         private bool txtBox_period_default = true;
@@ -124,11 +124,6 @@ namespace AutoDiomes
 
         private void frequency_enable()
         {
-            if(txtBox_frequency_default)
-            {
-                txtBox_frequency.Clear();
-                txtBox_frequency_default = false;
-            }
             pnl_Frequency.BackColor = Color.FromArgb(50, 170, 50);
         }
 
@@ -139,11 +134,6 @@ namespace AutoDiomes
 
         private void period_enable()
         {
-            if (txtBox_period_default)
-            {
-                txtBox_period.Clear();
-                txtBox_period_default = false;
-            }
             pnl_Period.BackColor = Color.FromArgb(50, 170, 50);
         }
 
@@ -154,11 +144,6 @@ namespace AutoDiomes
 
         private void positive_duty_enable()
         {
-            if (txtBox_positive_duty_default)
-            {
-                txtBox_positive_duty.Clear();
-                txtBox_positive_duty_default = false;
-            }
             pnl_Positive_duty.BackColor = Color.FromArgb(50, 170, 50);
         }
 
@@ -169,11 +154,6 @@ namespace AutoDiomes
 
         private void negative_duty_enable()
         {
-            if (txtBox_negative_duty_default)
-            {
-                txtBox_negative_duty.Clear();
-                txtBox_negative_duty_default = false;
-            }
             pnl_Negative_duty.BackColor = Color.FromArgb(50, 170, 50);
         }
 
@@ -184,11 +164,6 @@ namespace AutoDiomes
 
         private void TON_enable()
         {
-            if (txtBox_TON_default)
-            {
-                txtBox_TON.Clear();
-                txtBox_TON_default = false;
-            }
             pnl_TON.BackColor = Color.FromArgb(50, 170, 50);
         }
 
@@ -199,11 +174,6 @@ namespace AutoDiomes
 
         private void TOFF_enable()
         {
-            if (txtBox_TOFF_default)
-            {
-                txtBox_TOFF.Clear();
-                txtBox_TOFF_default = false;
-            }
             pnl_TOFF.BackColor = Color.FromArgb(50, 170, 50);
         }
 
@@ -232,6 +202,16 @@ namespace AutoDiomes
             Frame_SignalList("Cancel");
         }
 
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            Frame_SignalList("Validate");
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Frame_SignalList("Validate");
+        }
+
         private void cmbox_ONOFF_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cmbox_ONOFF.Text == "ON")
@@ -239,17 +219,20 @@ namespace AutoDiomes
                 ON_OFF = "ON";
                 panel1.Hide();
                 panel4.Location = new Point(37, 222);
+                LabelErrorAnimation();
             }
             else if(cmbox_ONOFF.Text == "OFF")
             {
                 ON_OFF = "OFF";
                 panel1.Hide();
                 panel4.Location = new Point(37, 222);
+                LabelErrorAnimation();
             }
             else if(cmbox_ONOFF.Text == "Non"){
                 ON_OFF = "Non";
                 panel1.Show();
                 panel4.Location = new Point(18, 60);
+                LabelErrorAnimation();
             }
         }
 
@@ -272,6 +255,12 @@ namespace AutoDiomes
 
         private void txtBox_frequency_Click(object sender, EventArgs e)
         {
+            if (txtBox_frequency_default)
+            {
+                txtBox_frequency.Clear();
+                txtBox_frequency_default = false;
+                txtBox_frequency.BackColor = Color.FromArgb(74, 79, 99);
+            }
             frequency_enable();
         }
 
@@ -279,6 +268,12 @@ namespace AutoDiomes
 
         private void txtBox_period_Click(object sender, EventArgs e)
         {
+            if (txtBox_period_default)
+            {
+                txtBox_period.Clear();
+                txtBox_period_default = false;
+                txtBox_period.BackColor = Color.FromArgb(74, 79, 99);
+            }  
             period_enable();
         }
 
@@ -301,6 +296,12 @@ namespace AutoDiomes
 
         private void txtBox_positive_duty_Click(object sender, EventArgs e)
         {
+            if (txtBox_positive_duty_default)
+            {
+                txtBox_positive_duty.Clear();
+                txtBox_positive_duty_default = false;
+                txtBox_positive_duty.BackColor = Color.FromArgb(74, 79, 99);
+            }
             positive_duty_enable();
         }
 
@@ -323,6 +324,12 @@ namespace AutoDiomes
 
         private void txtBox_negative_duty_Click(object sender, EventArgs e)
         {
+            if (txtBox_negative_duty_default)
+            {
+                txtBox_negative_duty.Clear();
+                txtBox_negative_duty_default = false;
+                txtBox_negative_duty.BackColor = Color.FromArgb(74, 79, 99);
+            }
             negative_duty_enable();
         }
 
@@ -340,6 +347,12 @@ namespace AutoDiomes
 
         private void txtBox_TON_Click(object sender, EventArgs e)
         {
+            if (txtBox_TON_default)
+            {
+                txtBox_TON.Clear();
+                txtBox_TON_default = false;
+                txtBox_TON.BackColor = Color.FromArgb(74, 79, 99);
+            }
             TON_enable();
         }
 
@@ -347,6 +360,12 @@ namespace AutoDiomes
 
         private void txtBox_TOFF_Click(object sender, EventArgs e)
         {
+            if (txtBox_TOFF_default)
+            {
+                txtBox_TOFF.Clear();
+                txtBox_TOFF_default = false;
+                txtBox_TOFF.BackColor = Color.FromArgb(74, 79, 99);
+            }
             TOFF_enable();
         }
 
@@ -464,9 +483,9 @@ namespace AutoDiomes
 
         private void txtBox_frequency_Leave(object sender, EventArgs e)
         {
-            if (UInt32.TryParse(txtBox_frequency.Text, out frequency)) //verify if the content is number and convert it to UINT16
+            if (UInt32.TryParse(txtBox_frequency.Text, out frequency)) //verify if the content is number and convert it to UINT32
             {
-                if ((frequency >= 5) && (frequency <= 50000)) //verify if the number enter is a percent
+                if ((frequency >= 5) && (frequency <= 50000)) //verify if the number enter is between the plage
                 {
                     txtBox_frequency_error = false;
                     txtBox_frequency.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -488,6 +507,147 @@ namespace AutoDiomes
                 txtBox_frequency_default = true; //Reset for clear after a new click
                 txtBox_frequency_error = true; //Set error to true
                 LabelErrorAnimation();
+            }
+        }
+
+        private void txtBox_period_Leave(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtBox_period.Text, out period)) //verify if the content is number and convert it to double
+            {
+                if ((period >= 0.02) && (period <= 200)) //verify if the number enter is between the plage
+                {
+                    txtBox_period_error = false;
+                    txtBox_period.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    LabelErrorAnimation();
+                }
+                else
+                {
+                    txtBox_period.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_period.Text = "0,02 < valeur < 200"; //change the text of text box for indicate the error
+                    txtBox_period_default = true; //Reset for clear after a new click
+                    txtBox_period_error = true; //Set error to true
+                    LabelErrorAnimation();
+                }
+            }
+            else
+            {
+                txtBox_period.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_period.Text = "Pas de ms/. ou autre caractères"; //change the text of text box for indicate the error
+                txtBox_period_default = true; //Reset for clear after a new click
+                txtBox_period_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+        }
+
+        private void txtBox_positive_duty_Leave(object sender, EventArgs e)
+        {
+            if (UInt16.TryParse(txtBox_positive_duty.Text, out positive_duty)) //verify if the content is number and convert it to UInt16
+            {
+                if ((positive_duty >= 2) && (positive_duty <= 98)) //verify if the number enter is between the plage
+                {
+                    txtBox_positive_duty_error = false;
+                    txtBox_positive_duty.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    LabelErrorAnimation();
+                }
+                else
+                {
+                    txtBox_positive_duty.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_positive_duty.Text = "2 < valeur < 98"; //change the text of text box for indicate the error
+                    txtBox_positive_duty_default = true; //Reset for clear after a new click
+                    txtBox_positive_duty_error = true; //Set error to true
+                    LabelErrorAnimation();
+                }
+            }
+            else
+            {
+                txtBox_positive_duty.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_positive_duty.Text = "Pas de % ou autre caractères"; //change the text of text box for indicate the error
+                txtBox_positive_duty_default = true; //Reset for clear after a new click
+                txtBox_positive_duty_error = true; //Set error to true
+            }
+        }
+
+        private void txtBox_negative_duty_Leave(object sender, EventArgs e)
+        {
+            if (UInt16.TryParse(txtBox_negative_duty.Text, out negative_duty)) //verify if the content is number and convert it to UInt16
+            {
+                if ((negative_duty >= 2) && (negative_duty <= 98)) //verify if the number enter is between the plage
+                {
+                    txtBox_negative_duty_error = false;
+                    txtBox_negative_duty.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    LabelErrorAnimation();
+                }
+                else
+                {
+                    txtBox_negative_duty.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_negative_duty.Text = "2 < valeur < 98"; //change the text of text box for indicate the error
+                    txtBox_negative_duty_default = true; //Reset for clear after a new click
+                    txtBox_negative_duty_error = true; //Set error to true
+                    LabelErrorAnimation();
+                }
+            }
+            else
+            {
+                txtBox_negative_duty.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_negative_duty.Text = "Pas de % ou autre caractères"; //change the text of text box for indicate the error
+                txtBox_negative_duty_default = true; //Reset for clear after a new click
+                txtBox_negative_duty_error = true; //Set error to true
+            }
+        }
+
+        private void txtBox_TON_Leave(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtBox_TON.Text, out TON)) //verify if the content is number and convert it to double
+            {
+                if ((TON >= 0.0004) && (TON <= 196)) //verify if the number enter is between the plage
+                {
+                    txtBox_TON_error = false;
+                    txtBox_TON.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    LabelErrorAnimation();
+                }
+                else
+                {
+                    txtBox_TON.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_TON.Text = "0,0004 < valeur < 196"; //change the text of text box for indicate the error
+                    txtBox_TON_default = true; //Reset for clear after a new click
+                    txtBox_TON_error = true; //Set error to true
+                    LabelErrorAnimation();
+                }
+            }
+            else
+            {
+                txtBox_TON.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_TON.Text = "Pas de ms/. ou autre caractères"; //change the text of text box for indicate the error
+                txtBox_TON_default = true; //Reset for clear after a new click
+                txtBox_TON_error = true; //Set error to true
+            }
+        }
+
+        private void txtBox_TOFF_Leave(object sender, EventArgs e)
+        {
+            if (double.TryParse(txtBox_TOFF.Text, out TOFF)) //verify if the content is number and convert it to double
+            {
+                if ((TOFF >= 0.0004) && (TOFF <= 196)) //verify if the number enter is between the plage
+                {
+                    txtBox_TOFF_error = false;
+                    txtBox_TOFF.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
+                    LabelErrorAnimation();
+                }
+                else
+                {
+                    txtBox_TOFF.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                    txtBox_TOFF.Text = "0,0004 < valeur < 196"; //change the text of text box for indicate the error
+                    txtBox_TOFF_default = true; //Reset for clear after a new click
+                    txtBox_TOFF_error = true; //Set error to true
+                    LabelErrorAnimation();
+                }
+            }
+            else
+            {
+                txtBox_TOFF.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_TOFF.Text = "Pas de ms/. ou autre caractères"; //change the text of text box for indicate the error
+                txtBox_TOFF_default = true; //Reset for clear after a new click
+                txtBox_TOFF_error = true; //Set error to true
             }
         }
 
@@ -523,16 +683,6 @@ namespace AutoDiomes
                     }
                 }
             }
-        }
-
-        private void panel3_Click(object sender, EventArgs e)
-        {
-            Frame_SignalList("Validate");
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            Frame_SignalList("Validate");
         }
     }
 }

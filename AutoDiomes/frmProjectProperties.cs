@@ -229,6 +229,7 @@ namespace AutoDiomes
             {
                 txtBox_name.Clear();
                 txtBox_name_default = false;
+                txtBox_name.BackColor = Color.FromArgb(74, 79, 99);
             }
         }
 
@@ -238,6 +239,7 @@ namespace AutoDiomes
             {
                 txtBox_customer.Clear();
                 txtBox_customer_default = false;
+                txtBox_customer.BackColor = Color.FromArgb(74, 79, 99);
             }
         }
 
@@ -247,6 +249,7 @@ namespace AutoDiomes
             {
                 txtBox_phase.Clear();
                 txtBox_phase_default = false;
+                txtBox_phase.BackColor = Color.FromArgb(74, 79, 99);
             }
         }
 
@@ -256,6 +259,7 @@ namespace AutoDiomes
             {
                 txtBox_serial_number.Clear();
                 txtBox_serial_number_default = false;
+                txtBox_serial_number.BackColor = Color.FromArgb(74, 79, 99);
             }
         }
 
@@ -265,8 +269,8 @@ namespace AutoDiomes
             {
                 txtBox_software.Clear();
                 txtBox_software_default = false;
+                txtBox_software.BackColor = Color.FromArgb(74, 79, 99);
             }
-
         }
 
         private void TxtBox_hardware_Click(object sender, EventArgs e)
@@ -275,6 +279,7 @@ namespace AutoDiomes
             {
                 txtBox_hardware.Clear();
                 txtBox_hardware_default = false;
+                txtBox_hardware.BackColor = Color.FromArgb(74, 79, 99);
             }
         }
 
@@ -284,6 +289,7 @@ namespace AutoDiomes
             {
                 txtBox_error_margin.Clear();
                 txtBox_error_margin_default = false;
+                txtBox_error_margin.BackColor = Color.FromArgb(74, 79, 99);
             }
         }
 
@@ -293,8 +299,8 @@ namespace AutoDiomes
             {
                 txtBox_config_name.Clear();
                 txtBox_config_name_default = false;
+                txtBox_config_name.BackColor = Color.FromArgb(74, 79, 99);
             }
-
         }
 
         private void Panel6_Click(object sender, EventArgs e)
@@ -309,7 +315,15 @@ namespace AutoDiomes
 
         private void TxtBox_name_Leave(object sender, EventArgs e)
         {
-            if (txtBox_name.Text.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_name.Text == "")
+            {
+                txtBox_name.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_name.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_name_default = true; //Reset for clear after a new click
+                txtBox_name_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (txtBox_name.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_name_error = false;
                 txtBox_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -328,7 +342,15 @@ namespace AutoDiomes
 
         private void TxtBox_customer_Leave(object sender, EventArgs e)
         {
-            if (txtBox_customer.Text.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_customer.Text == "")
+            {
+                txtBox_customer.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_customer.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_customer_default = true; //Reset for clear after a new click
+                txtBox_customer_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (txtBox_customer.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_customer_error = false;
                 txtBox_customer.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -347,7 +369,15 @@ namespace AutoDiomes
 
         private void TxtBox_phase_Leave(object sender, EventArgs e)
         {
-            if (txtBox_phase.Text.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_phase.Text == "")
+            {
+                txtBox_phase.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_phase.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_phase_default = true; //Reset for clear after a new click
+                txtBox_phase_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (txtBox_phase.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_phase_error = false;
                 txtBox_phase.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -366,7 +396,15 @@ namespace AutoDiomes
 
         private void TxtBox_serial_number_Leave(object sender, EventArgs e)
         {
-            if (txtBox_serial_number.Text.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_serial_number.Text == "")
+            {
+                txtBox_serial_number.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_serial_number.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_serial_number_default = true; //Reset for clear after a new click
+                txtBox_serial_number_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (txtBox_serial_number.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_serial_number_error = false;
                 txtBox_serial_number.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -385,7 +423,15 @@ namespace AutoDiomes
 
         private void TxtBox_software_Leave(object sender, EventArgs e)
         {
-            if (txtBox_software.Text.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_software.Text == "")
+            {
+                txtBox_software.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_software.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_software_default = true; //Reset for clear after a new click
+                txtBox_software_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (txtBox_software.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_software_error = false;
                 txtBox_software.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -404,7 +450,15 @@ namespace AutoDiomes
 
         private void TxtBox_hardware_Leave(object sender, EventArgs e)
         {
-            if (txtBox_hardware.Text.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_hardware.Text == "")
+            {
+                txtBox_hardware.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_hardware.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_hardware_default = true; //Reset for clear after a new click
+                txtBox_hardware_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (txtBox_hardware.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_hardware_error = false;
                 txtBox_hardware.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box
@@ -423,7 +477,15 @@ namespace AutoDiomes
 
         private void TxtBox_error_margin_Leave(object sender, EventArgs e)
         {
-            if(UInt16.TryParse(txtBox_error_margin.Text, out error_margin)) //verify if the content is number and convert it to UINT16
+            if (txtBox_error_margin.Text == "")
+            {
+                txtBox_error_margin.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_error_margin.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_error_margin_default = true; //Reset for clear after a new click
+                txtBox_error_margin_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (UInt16.TryParse(txtBox_error_margin.Text, out error_margin)) //verify if the content is number and convert it to UINT16
             {
                 if((error_margin >= 0) && (error_margin <= 100)) //verify if the number enter is a percent
                 {
@@ -452,7 +514,15 @@ namespace AutoDiomes
         }
         private void TxtBox_config_name_Leave(object sender, EventArgs e)
         {
-            if (txtBox_config_name.Text.Length < 64) //verify if the content is bellow 60 carac
+            if (txtBox_config_name.Text == "")
+            {
+                txtBox_config_name.BackColor = Color.FromArgb(180, 30, 50); //change the back color of text box
+                txtBox_config_name.Text = "Le champ ne peut être vide !"; //change the text of text box for indicate the error
+                txtBox_config_name_default = true; //Reset for clear after a new click
+                txtBox_config_name_error = true; //Set error to true
+                LabelErrorAnimation();
+            }
+            else if (txtBox_config_name.Text.Length < 64) //verify if the content is bellow 60 carac
             {
                 txtBox_config_name_error = false;
                 txtBox_config_name.BackColor = Color.FromArgb(74, 79, 99); //change the back color of text box

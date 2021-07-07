@@ -375,11 +375,11 @@ namespace AutoDiomes
             this.txtBox_frequency.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_frequency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.txtBox_frequency.Location = new System.Drawing.Point(230, 10);
-            this.txtBox_frequency.Multiline = true;
             this.txtBox_frequency.Name = "txtBox_frequency";
-            this.txtBox_frequency.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_frequency.Size = new System.Drawing.Size(212, 30);
             this.txtBox_frequency.TabIndex = 26;
-            this.txtBox_frequency.Text = "5Hz min - 50KHz max";
+            this.txtBox_frequency.Text = "5Hz min - 50 000Hz max";
+            this.txtBox_frequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_frequency.Click += new System.EventHandler(this.txtBox_frequency_Click);
             this.txtBox_frequency.DoubleClick += new System.EventHandler(this.txtBox_frequency_DoubleClick);
             this.txtBox_frequency.Leave += new System.EventHandler(this.txtBox_frequency_Leave);
@@ -391,13 +391,14 @@ namespace AutoDiomes
             this.txtBox_period.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_period.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.txtBox_period.Location = new System.Drawing.Point(230, 10);
-            this.txtBox_period.Multiline = true;
             this.txtBox_period.Name = "txtBox_period";
-            this.txtBox_period.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_period.Size = new System.Drawing.Size(212, 30);
             this.txtBox_period.TabIndex = 27;
-            this.txtBox_period.Text = "0,2secondes - 0.02ms";
+            this.txtBox_period.Text = "200ms - 0.02ms";
+            this.txtBox_period.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_period.Click += new System.EventHandler(this.txtBox_period_Click);
             this.txtBox_period.DoubleClick += new System.EventHandler(this.txtBox_period_DoubleClick);
+            this.txtBox_period.Leave += new System.EventHandler(this.txtBox_period_Leave);
             // 
             // txtBox_positive_duty
             // 
@@ -406,13 +407,14 @@ namespace AutoDiomes
             this.txtBox_positive_duty.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_positive_duty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.txtBox_positive_duty.Location = new System.Drawing.Point(230, 6);
-            this.txtBox_positive_duty.Multiline = true;
             this.txtBox_positive_duty.Name = "txtBox_positive_duty";
-            this.txtBox_positive_duty.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_positive_duty.Size = new System.Drawing.Size(212, 30);
             this.txtBox_positive_duty.TabIndex = 28;
             this.txtBox_positive_duty.Text = "2 à 98%";
+            this.txtBox_positive_duty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_positive_duty.Click += new System.EventHandler(this.txtBox_positive_duty_Click);
             this.txtBox_positive_duty.DoubleClick += new System.EventHandler(this.txtBox_positive_duty_DoubleClick);
+            this.txtBox_positive_duty.Leave += new System.EventHandler(this.txtBox_positive_duty_Leave);
             // 
             // txtBox_negative_duty
             // 
@@ -421,13 +423,14 @@ namespace AutoDiomes
             this.txtBox_negative_duty.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_negative_duty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.txtBox_negative_duty.Location = new System.Drawing.Point(230, 9);
-            this.txtBox_negative_duty.Multiline = true;
             this.txtBox_negative_duty.Name = "txtBox_negative_duty";
-            this.txtBox_negative_duty.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_negative_duty.Size = new System.Drawing.Size(212, 30);
             this.txtBox_negative_duty.TabIndex = 29;
             this.txtBox_negative_duty.Text = "2 à 98%";
+            this.txtBox_negative_duty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_negative_duty.Click += new System.EventHandler(this.txtBox_negative_duty_Click);
             this.txtBox_negative_duty.DoubleClick += new System.EventHandler(this.txtBox_negative_duty_DoubleClick);
+            this.txtBox_negative_duty.Leave += new System.EventHandler(this.txtBox_negative_duty_Leave);
             // 
             // txtBox_TON
             // 
@@ -435,13 +438,15 @@ namespace AutoDiomes
             this.txtBox_TON.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBox_TON.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_TON.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.txtBox_TON.Location = new System.Drawing.Point(230, 14);
-            this.txtBox_TON.Multiline = true;
+            this.txtBox_TON.Location = new System.Drawing.Point(230, 9);
             this.txtBox_TON.Name = "txtBox_TON";
-            this.txtBox_TON.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_TON.Size = new System.Drawing.Size(212, 30);
             this.txtBox_TON.TabIndex = 30;
+            this.txtBox_TON.Text = "0.004ms - 196ms";
+            this.txtBox_TON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_TON.Click += new System.EventHandler(this.txtBox_TON_Click);
             this.txtBox_TON.DoubleClick += new System.EventHandler(this.txtBox_TON_DoubleClick);
+            this.txtBox_TON.Leave += new System.EventHandler(this.txtBox_TON_Leave);
             // 
             // txtBox_TOFF
             // 
@@ -450,12 +455,14 @@ namespace AutoDiomes
             this.txtBox_TOFF.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_TOFF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.txtBox_TOFF.Location = new System.Drawing.Point(230, 7);
-            this.txtBox_TOFF.Multiline = true;
             this.txtBox_TOFF.Name = "txtBox_TOFF";
-            this.txtBox_TOFF.Size = new System.Drawing.Size(212, 21);
+            this.txtBox_TOFF.Size = new System.Drawing.Size(212, 30);
             this.txtBox_TOFF.TabIndex = 31;
+            this.txtBox_TOFF.Text = "0.004ms - 196ms";
+            this.txtBox_TOFF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBox_TOFF.Click += new System.EventHandler(this.txtBox_TOFF_Click);
             this.txtBox_TOFF.DoubleClick += new System.EventHandler(this.txtBox_TOFF_DoubleClick);
+            this.txtBox_TOFF.Leave += new System.EventHandler(this.txtBox_TOFF_Leave);
             // 
             // panel1
             // 
