@@ -65,6 +65,8 @@ namespace AutoDiomes
             this.pnl_Period = new System.Windows.Forms.Panel();
             this.pnl_Frequency = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtBox_signal_name = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,11 +83,13 @@ namespace AutoDiomes
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.txtBox_signal_name);
             this.panel4.Controls.Add(this.cmbox_ONOFF);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(18, 60);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(446, 57);
+            this.panel4.Size = new System.Drawing.Size(493, 88);
             this.panel4.TabIndex = 16;
             // 
             // cmbox_ONOFF
@@ -105,7 +109,7 @@ namespace AutoDiomes
             "Non",
             "ON",
             "OFF"});
-            this.cmbox_ONOFF.Location = new System.Drawing.Point(253, 14);
+            this.cmbox_ONOFF.Location = new System.Drawing.Point(250, 9);
             this.cmbox_ONOFF.Margin = new System.Windows.Forms.Padding(0);
             this.cmbox_ONOFF.Name = "cmbox_ONOFF";
             this.cmbox_ONOFF.Size = new System.Drawing.Size(150, 28);
@@ -128,11 +132,11 @@ namespace AutoDiomes
             // StateText
             // 
             this.StateText.AutoSize = true;
-            this.StateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StateText.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(226)))), ((int)(((byte)(178)))));
             this.StateText.Location = new System.Drawing.Point(12, 9);
             this.StateText.Name = "StateText";
-            this.StateText.Size = new System.Drawing.Size(392, 32);
+            this.StateText.Size = new System.Drawing.Size(373, 31);
             this.StateText.TabIndex = 15;
             this.StateText.Text = "Ajoutez un nouveau signal :";
             // 
@@ -257,11 +261,11 @@ namespace AutoDiomes
             // NextState
             // 
             this.NextState.AutoSize = true;
-            this.NextState.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextState.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.NextState.Location = new System.Drawing.Point(42, 40);
+            this.NextState.Location = new System.Drawing.Point(41, 32);
             this.NextState.Name = "NextState";
-            this.NextState.Size = new System.Drawing.Size(211, 21);
+            this.NextState.Size = new System.Drawing.Size(197, 20);
             this.NextState.TabIndex = 18;
             this.NextState.Text = "Cliquez dessus pour mesurer";
             this.NextState.Click += new System.EventHandler(this.NextState_Click);
@@ -329,12 +333,12 @@ namespace AutoDiomes
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Location = new System.Drawing.Point(15, 15);
+            this.label13.Location = new System.Drawing.Point(16, 9);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(294, 25);
+            this.label13.Size = new System.Drawing.Size(266, 23);
             this.label13.TabIndex = 23;
             this.label13.Text = "Configuration signal non ON/OFF";
             // 
@@ -467,18 +471,18 @@ namespace AutoDiomes
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.pnl_TOFF);
-            this.panel1.Controls.Add(this.pnl_TON);
-            this.panel1.Controls.Add(this.pnl_Negative_duty);
             this.panel1.Controls.Add(this.pnl_Positive_duty);
+            this.panel1.Controls.Add(this.pnl_TOFF);
             this.panel1.Controls.Add(this.pnl_Period);
             this.panel1.Controls.Add(this.pnl_Frequency);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.NextState);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(18, 135);
+            this.panel1.Controls.Add(this.pnl_Negative_duty);
+            this.panel1.Controls.Add(this.pnl_TON);
+            this.panel1.Location = new System.Drawing.Point(18, 154);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 330);
+            this.panel1.Size = new System.Drawing.Size(493, 310);
             this.panel1.TabIndex = 17;
             // 
             // pnl_TOFF
@@ -486,7 +490,7 @@ namespace AutoDiomes
             this.pnl_TOFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.pnl_TOFF.Controls.Add(this.label8);
             this.pnl_TOFF.Controls.Add(this.txtBox_TOFF);
-            this.pnl_TOFF.Location = new System.Drawing.Point(20, 273);
+            this.pnl_TOFF.Location = new System.Drawing.Point(20, 267);
             this.pnl_TOFF.Name = "pnl_TOFF";
             this.pnl_TOFF.Size = new System.Drawing.Size(445, 42);
             this.pnl_TOFF.TabIndex = 37;
@@ -498,9 +502,9 @@ namespace AutoDiomes
             this.pnl_TON.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.pnl_TON.Controls.Add(this.label7);
             this.pnl_TON.Controls.Add(this.txtBox_TON);
-            this.pnl_TON.Location = new System.Drawing.Point(20, 232);
+            this.pnl_TON.Location = new System.Drawing.Point(20, 222);
             this.pnl_TON.Name = "pnl_TON";
-            this.pnl_TON.Size = new System.Drawing.Size(445, 42);
+            this.pnl_TON.Size = new System.Drawing.Size(445, 46);
             this.pnl_TON.TabIndex = 36;
             this.pnl_TON.Click += new System.EventHandler(this.pnl_TON_Click);
             this.pnl_TON.DoubleClick += new System.EventHandler(this.pnl_TON_DoubleClick);
@@ -510,7 +514,7 @@ namespace AutoDiomes
             this.pnl_Negative_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.pnl_Negative_duty.Controls.Add(this.label6);
             this.pnl_Negative_duty.Controls.Add(this.txtBox_negative_duty);
-            this.pnl_Negative_duty.Location = new System.Drawing.Point(20, 193);
+            this.pnl_Negative_duty.Location = new System.Drawing.Point(20, 180);
             this.pnl_Negative_duty.Name = "pnl_Negative_duty";
             this.pnl_Negative_duty.Size = new System.Drawing.Size(445, 42);
             this.pnl_Negative_duty.TabIndex = 35;
@@ -522,7 +526,7 @@ namespace AutoDiomes
             this.pnl_Positive_duty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.pnl_Positive_duty.Controls.Add(this.txtBox_positive_duty);
             this.pnl_Positive_duty.Controls.Add(this.label5);
-            this.pnl_Positive_duty.Location = new System.Drawing.Point(20, 154);
+            this.pnl_Positive_duty.Location = new System.Drawing.Point(20, 138);
             this.pnl_Positive_duty.Name = "pnl_Positive_duty";
             this.pnl_Positive_duty.Size = new System.Drawing.Size(445, 42);
             this.pnl_Positive_duty.TabIndex = 34;
@@ -534,7 +538,7 @@ namespace AutoDiomes
             this.pnl_Period.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.pnl_Period.Controls.Add(this.txtBox_period);
             this.pnl_Period.Controls.Add(this.label3);
-            this.pnl_Period.Location = new System.Drawing.Point(20, 112);
+            this.pnl_Period.Location = new System.Drawing.Point(20, 97);
             this.pnl_Period.Name = "pnl_Period";
             this.pnl_Period.Size = new System.Drawing.Size(445, 42);
             this.pnl_Period.TabIndex = 33;
@@ -546,7 +550,7 @@ namespace AutoDiomes
             this.pnl_Frequency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.pnl_Frequency.Controls.Add(this.label2);
             this.pnl_Frequency.Controls.Add(this.txtBox_frequency);
-            this.pnl_Frequency.Location = new System.Drawing.Point(20, 70);
+            this.pnl_Frequency.Location = new System.Drawing.Point(20, 55);
             this.pnl_Frequency.Name = "pnl_Frequency";
             this.pnl_Frequency.Size = new System.Drawing.Size(445, 42);
             this.pnl_Frequency.TabIndex = 32;
@@ -557,6 +561,34 @@ namespace AutoDiomes
             // 
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // txtBox_signal_name
+            // 
+            this.txtBox_signal_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtBox_signal_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBox_signal_name.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_signal_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtBox_signal_name.Location = new System.Drawing.Point(250, 45);
+            this.txtBox_signal_name.Name = "txtBox_signal_name";
+            this.txtBox_signal_name.Size = new System.Drawing.Size(212, 30);
+            this.txtBox_signal_name.TabIndex = 27;
+            this.txtBox_signal_name.Text = "ECBV_11, etc...";
+            this.txtBox_signal_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBox_signal_name.Click += new System.EventHandler(this.txtBox_signal_name_Click);
+            this.txtBox_signal_name.Leave += new System.EventHandler(this.txtBox_signal_name_Leave);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Image = global::AutoDiomes.Properties.Resources.signal;
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.Location = new System.Drawing.Point(16, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(154, 21);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Nom du signal        ";
             // 
             // frmSignalAdd
             // 
@@ -636,5 +668,7 @@ namespace AutoDiomes
         private System.Windows.Forms.Panel pnl_Period;
         private System.Windows.Forms.Panel pnl_Frequency;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBox_signal_name;
     }
 }

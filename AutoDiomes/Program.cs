@@ -25,6 +25,7 @@ namespace AutoDiomes
         public static bool automatic_test_defined = false;
         public static Project project = new Project(); //project
         public static Temporary_Project temporary_project = new Temporary_Project(); //real time edited value (for avoid reload of frame)
+        public static Signal[] signal = new Signal[256]; //create 256 signals
     }
 
     class Project
@@ -56,18 +57,20 @@ namespace AutoDiomes
     }
     class Signal
     {
+        public string signal_name;
+        public UInt16 signal_number;
         public string ON_OFF;
         public UInt32 frequency;
-        public UInt32 period;
+        public double period;
         public UInt16 duty_positive;
         public UInt16 duty_negative;
-        public UInt32 TON;
-        public UInt32 TOFF;
-        public UInt16 signal_number;
+        public double TON;
+        public double TOFF;
 
         //Methods for add signal
-        public void AddSignal(string ON_OFF, UInt32 frequency, UInt32 period, UInt16 duty_positive, UInt16 duty_negative, UInt32 TON, UInt32 TOFF)
+        public void AddSignal(string signal_name, string ON_OFF, UInt32 frequency, double period, UInt16 duty_positive, UInt16 duty_negative, double TON, double TOFF)
         {
+            this.signal_name = signal_name;
             this.ON_OFF = ON_OFF;
             this.frequency = frequency;
             this.period = period;
@@ -78,6 +81,7 @@ namespace AutoDiomes
 
             Globals.project.number_signal++;
             Globals.project.number_signal_pos++;
+            this.signal_number = Globals.project.number_signal_pos;
 
         }
         public void RemoveSignal(UInt16 signal_number)
